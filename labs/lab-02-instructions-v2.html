@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Lab 02 - Selecting Groups Within Data</title>
+
+<script src="lab-02-instructions-v2_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="lab-02-instructions-v2_files/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="lab-02-instructions-v2_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="lab-02-instructions-v2_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="lab-02-instructions-v2_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="lab-02-instructions-v2_files/navigation-1.1/tabsets.js"></script>
+<link href="lab-02-instructions-v2_files/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="lab-02-instructions-v2_files/pagedtable-1.1/js/pagedtable.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="textbook.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Lab 02 - Selecting Groups Within Data</h1>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#getting-started">Getting Started</a><ul>
+<li><a href="#functions-used-in-this-lab">Functions Used in this Lab</a></li>
+<li><a href="#data">Data</a></li>
+</ul></li>
+<li><a href="#lab-instructions">Lab Instructions</a><ul>
+<li><a href="#questions">Questions</a></li>
+<li><a href="#challenge-questions">Challenge Questions</a></li>
+<li><a href="#submission-instructions">Submission Instructions</a></li>
+<li><a href="#markdown-trouble">Markdown Trouble?</a></li>
+</ul></li>
+<li><a href="#helpful-hints">Helpful Hints</a><ul>
+<li><a href="#steps-in-identifying-groups">Steps in Identifying Groups</a></li>
+<li><a href="#identifying-unique-values">Identifying Unique Values</a></li>
+<li><a href="#missing-values">Missing Values</a></li>
+<li><a href="#compound-logical-statements">Compound Logical Statements</a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="cpp-526-foundations-of-data-science-i" class="section level4">
+<h4><a href="https://ds4ps.org/cpp-526-spr-2020/">CPP 526: Foundations of Data Science I</a></h4>
+<p><br></p>
+<hr />
+<p><br></p>
+</div>
+<div id="this-lab-offers-practice-with-logical-statements-used-to-create-groups-from-your-data." class="section level4">
+<h4>This lab offers practice with logical statements used to create groups from your data.</h4>
+<p>I have provided you with a <strong>LAB-02 RMD template</strong>:</p>
+<p><a href="https://www.dropbox.com/s/tmiqepil1u05e1q/Lab-02-LastName%20.Rmd?dl=1"><img src="images/download.png" /></a></p>
+<hr />
+<p><br><br></p>
+</div>
+<div id="getting-started" class="section level1">
+<h1>Getting Started</h1>
+<div id="functions-used-in-this-lab" class="section level2">
+<h2>Functions Used in this Lab</h2>
+<p>You will use the following functions for this lab:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">logical <span class="kw">operators</span>  ( <span class="op">==</span>, <span class="op">&gt;</span>, <span class="op">&lt;</span>, <span class="op">!</span><span class="st"> </span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="kw">sum</span>()        <span class="co"># count TRUEs in logical vectors</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="kw">mean</span>()       <span class="co"># proportion of TRUEs in logical vectors</span></a>
+<a class="sourceLine" id="cb1-4" title="4">compound statements with <span class="op">&amp;</span><span class="st"> </span>(AND) and <span class="op">|</span><span class="st"> </span>(OR) operators </a></code></pre></div>
+<p><br><br></p>
+</div>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>This lab uses <a href="https://ds4ps.org/Data-Science-Class/DATA/syr_parcels.html"><strong>city tax parcel data</strong></a>, and open dataset released by the municipal government of Syracuse, NY.</p>
+<ul>
+<li>Each house, business, park or empty lot in the city sits on a parcel of land, and the tax rate for that parcel is determined by the city.</li>
+<li>All of the characteristics of each parcel is stored in a central database, along with information about the land use classifications, owners, and whether the property is up-to-date on taxes and water bills.<br />
+</li>
+<li>Each row represents one tax parcel, and all tax parcels in the city are recorded in the dataset.</li>
+</ul>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-4-1.png" width="960" /></p>
+<p>We will use the downtown area for this lab:</p>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-5-1.png" width="960" /></p>
+<p><br> <br></p>
+<div id="load-the-downtown-syracuse-parcel-map" class="section level4">
+<h4>Load the Downtown Syracuse Parcel Map</h4>
+<p>You will need the following packages for this lab:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">install.packages</span>( <span class="st">&quot;geojsonio&quot;</span> )</a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="kw">install.packages</span>( <span class="st">&quot;sp&quot;</span> )</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="kw">install.packages</span>( <span class="st">&quot;rgdal&quot;</span> )</a></code></pre></div>
+<p>NOTE: do not include include install package commands in your RMD chunks. Trying to install packages while knitting can cause errors.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw">library</span>( geojsonio )</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="kw">library</span>( sp )</a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw">library</span>( rgdal )</a></code></pre></div>
+<p>Load the map file:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">URL &lt;-<span class="st"> &quot;https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/downtown-syr.geojson&quot;</span></a>
+<a class="sourceLine" id="cb4-2" title="2">downtown &lt;-<span class="st"> </span><span class="kw">geojson_read</span>( URL, <span class="dt">what=</span><span class="st">&quot;sp&quot;</span> )</a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="kw">plot</span>( downtown,  <span class="dt">border=</span><span class="st">&quot;gray50&quot;</span>, <span class="dt">col=</span><span class="st">&quot;gray80&quot;</span> )</a></code></pre></div>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-9-1.png" width="960" /></p>
+<p><br></p>
+<hr />
+<p><br></p>
+</div>
+<div id="data-dictionary" class="section level4">
+<h4><a href="https://ds4ps.github.io/Data-Science-Class/DATA/syr_parcels.html">Data Dictionary</a></h4>
+<p><em>Note, the downtown file contains a subset of the fields.</em></p>
+<table>
+<caption>Table continues below</caption>
+<colgroup>
+<col width="15%" />
+<col width="37%" />
+<col width="11%" />
+<col width="35%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">tax_id</th>
+<th align="center">stnum</th>
+<th align="center">stname</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>15584</strong></td>
+<td align="center">31150010100000100080010000</td>
+<td align="center">484-98</td>
+<td align="center">SALINA ST S &amp; ONONDAGA ST</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15604</strong></td>
+<td align="center">31150010300000150050000000</td>
+<td align="center">311-17</td>
+<td align="center">WATER ST E TO ERIE BLVD E</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15607</strong></td>
+<td align="center">31150010300000160010000000</td>
+<td align="center">257</td>
+<td align="center">WATER ST E &amp; MONTGOMERY S</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15611</strong></td>
+<td align="center">31150010300000160020000000</td>
+<td align="center">251</td>
+<td align="center">WATER ST E TO ERIE BLVD E</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15613</strong></td>
+<td align="center">31150010300000160030000000</td>
+<td align="center">243-49</td>
+<td align="center">WATER ST E TO ERIE BLVD E</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15615</strong></td>
+<td align="center">31150010300000160040000000</td>
+<td align="center">239</td>
+<td align="center">WATER ST E TO ERIE BLVD E</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15616</strong></td>
+<td align="center">31150010300000160050000000</td>
+<td align="center">235</td>
+<td align="center">WATER ST E TO ERIE BLVD E</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15618</strong></td>
+<td align="center">31150010300000160060000000</td>
+<td align="center">207-33</td>
+<td align="center">WATER ST E TO ERIE BLVD E</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15619</strong></td>
+<td align="center">31150010300000160070000000</td>
+<td align="center">203</td>
+<td align="center">WATER ST E &amp; WARREN ST S</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15625</strong></td>
+<td align="center">31150010400000170010000000</td>
+<td align="center">135</td>
+<td align="center">WATER ST E &amp; WARREN ST S</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<caption>Table continues below</caption>
+<colgroup>
+<col width="15%" />
+<col width="10%" />
+<col width="15%" />
+<col width="10%" />
+<col width="10%" />
+<col width="13%" />
+<col width="14%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">zip</th>
+<th align="center">frontfeet</th>
+<th align="center">depth</th>
+<th align="center">sqft</th>
+<th align="center">acres</th>
+<th align="center">nhood</th>
+<th align="center">ward</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>15584</strong></td>
+<td align="center">13078</td>
+<td align="center">143.7</td>
+<td align="center">273.2</td>
+<td align="center">57935</td>
+<td align="center">1.33</td>
+<td align="center">Downtown</td>
+<td align="center">09</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15604</strong></td>
+<td align="center">13202</td>
+<td align="center">79.09</td>
+<td align="center">78.71</td>
+<td align="center">6209</td>
+<td align="center">0.1425</td>
+<td align="center">Downtown</td>
+<td align="center">15</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15607</strong></td>
+<td align="center">13202</td>
+<td align="center">41</td>
+<td align="center">60</td>
+<td align="center">2475</td>
+<td align="center">0.05681</td>
+<td align="center">Downtown</td>
+<td align="center">09</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15611</strong></td>
+<td align="center">14534</td>
+<td align="center">40.89</td>
+<td align="center">60</td>
+<td align="center">2467</td>
+<td align="center">0.05662</td>
+<td align="center">Downtown</td>
+<td align="center">09</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15613</strong></td>
+<td align="center">13066</td>
+<td align="center">41.63</td>
+<td align="center">60</td>
+<td align="center">2499</td>
+<td align="center">0.05738</td>
+<td align="center">Downtown</td>
+<td align="center">09</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15615</strong></td>
+<td align="center">13088</td>
+<td align="center">20.81</td>
+<td align="center">60</td>
+<td align="center">1244</td>
+<td align="center">0.02856</td>
+<td align="center">Downtown</td>
+<td align="center">09</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15616</strong></td>
+<td align="center">13202</td>
+<td align="center">20.81</td>
+<td align="center">60</td>
+<td align="center">1248</td>
+<td align="center">0.02865</td>
+<td align="center">Downtown</td>
+<td align="center">09</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15618</strong></td>
+<td align="center">13202</td>
+<td align="center">136.9</td>
+<td align="center">60</td>
+<td align="center">8169</td>
+<td align="center">0.1875</td>
+<td align="center">Downtown</td>
+<td align="center">09</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15619</strong></td>
+<td align="center">13202</td>
+<td align="center">28.26</td>
+<td align="center">59</td>
+<td align="center">1694</td>
+<td align="center">0.03889</td>
+<td align="center">Downtown</td>
+<td align="center">09</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15625</strong></td>
+<td align="center">13088</td>
+<td align="center">57.3</td>
+<td align="center">59.44</td>
+<td align="center">3390</td>
+<td align="center">0.07783</td>
+<td align="center">Downtown</td>
+<td align="center">09</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<caption>Table continues below</caption>
+<colgroup>
+<col width="16%" />
+<col width="19%" />
+<col width="17%" />
+<col width="16%" />
+<col width="10%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">censustract</th>
+<th align="center">landuse</th>
+<th align="center">yearbuilt</th>
+<th align="center">units</th>
+<th align="center">vacantbuild</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>15584</strong></td>
+<td align="center">32</td>
+<td align="center">Parking</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">NA</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15604</strong></td>
+<td align="center">32</td>
+<td align="center">Commercial</td>
+<td align="center">1950</td>
+<td align="center">0</td>
+<td align="center">N</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15607</strong></td>
+<td align="center">32</td>
+<td align="center">Parks</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">N</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15611</strong></td>
+<td align="center">32</td>
+<td align="center">Commercial</td>
+<td align="center">1900</td>
+<td align="center">0</td>
+<td align="center">N</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15613</strong></td>
+<td align="center">32</td>
+<td align="center">Commercial</td>
+<td align="center">1950</td>
+<td align="center">0</td>
+<td align="center">N</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15615</strong></td>
+<td align="center">32</td>
+<td align="center">Commercial</td>
+<td align="center">1950</td>
+<td align="center">0</td>
+<td align="center">N</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15616</strong></td>
+<td align="center">32</td>
+<td align="center">Commercial</td>
+<td align="center">1980</td>
+<td align="center">0</td>
+<td align="center">N</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15618</strong></td>
+<td align="center">32</td>
+<td align="center">Commercial</td>
+<td align="center">1980</td>
+<td align="center">0</td>
+<td align="center">N</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15619</strong></td>
+<td align="center">32</td>
+<td align="center">Commercial</td>
+<td align="center">1940</td>
+<td align="center">0</td>
+<td align="center">N</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15625</strong></td>
+<td align="center">32</td>
+<td align="center">Commercial</td>
+<td align="center">1887</td>
+<td align="center">0</td>
+<td align="center">N</td>
+</tr>
+</tbody>
+</table>
+<table style="width:100%;">
+<caption>Table continues below</caption>
+<colgroup>
+<col width="16%" />
+<col width="14%" />
+<col width="20%" />
+<col width="18%" />
+<col width="18%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">watersvc</th>
+<th align="center">assessedland</th>
+<th align="center">assessedval</th>
+<th align="center">citytaxable</th>
+<th align="center">starc</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>15584</strong></td>
+<td align="center">NA</td>
+<td align="center">650000</td>
+<td align="center">650000</td>
+<td align="center">650000</td>
+<td align="center">650000</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15604</strong></td>
+<td align="center">A</td>
+<td align="center">61600</td>
+<td align="center">112000</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15607</strong></td>
+<td align="center">NA</td>
+<td align="center">24600</td>
+<td align="center">24600</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15611</strong></td>
+<td align="center">A</td>
+<td align="center">24000</td>
+<td align="center">211000</td>
+<td align="center">211000</td>
+<td align="center">211000</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15613</strong></td>
+<td align="center">A</td>
+<td align="center">24600</td>
+<td align="center">384000</td>
+<td align="center">384000</td>
+<td align="center">384000</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15615</strong></td>
+<td align="center">A</td>
+<td align="center">24000</td>
+<td align="center">160000</td>
+<td align="center">160000</td>
+<td align="center">160000</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15616</strong></td>
+<td align="center">A</td>
+<td align="center">24000</td>
+<td align="center">166000</td>
+<td align="center">166000</td>
+<td align="center">166000</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15618</strong></td>
+<td align="center">A</td>
+<td align="center">104400</td>
+<td align="center">225000</td>
+<td align="center">225000</td>
+<td align="center">225000</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15619</strong></td>
+<td align="center">A</td>
+<td align="center">33000</td>
+<td align="center">396000</td>
+<td align="center">205000</td>
+<td align="center">205000</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15625</strong></td>
+<td align="center">A</td>
+<td align="center">100900</td>
+<td align="center">3e+05</td>
+<td align="center">3e+05</td>
+<td align="center">3e+05</td>
+</tr>
+</tbody>
+</table>
+<table>
+<colgroup>
+<col width="15%" />
+<col width="14%" />
+<col width="17%" />
+<col width="21%" />
+<col width="19%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"> </th>
+<th align="center">taxtrust</th>
+<th align="center">amtdelinqt</th>
+<th align="center">taxyrsdelinqt</th>
+<th align="center">overduewater</th>
+<th align="center">totint</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><strong>15584</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15604</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15607</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15611</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15613</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15615</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">45.64</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15616</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">2.13</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15618</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">2.41</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center"><strong>15619</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">323.9</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center"><strong>15625</strong></td>
+<td align="center">NA</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<hr />
+<p><br></p>
+<p><br><br></p>
+</div>
+</div>
+</div>
+<div id="lab-instructions" class="section level1">
+<h1>Lab Instructions</h1>
+<p>Answer the following questions using the Syracuse downtown parcels dataset and the functions listed.</p>
+<p>Your solution should include a written response to the question, as well as the code used to generate the result.</p>
+<p>The images are included so that you can check whether your logical statements are correct.</p>
+<hr />
+<p><br></p>
+<div id="questions" class="section level2">
+<h2>Questions</h2>
+<div id="where-are-the-majority-of-vacant-lots-located-in-the-downtown-produce-a-map-of-your-results-that-matches-the-one-shown-here." class="section level4">
+<h4>1. Where are the majority of vacant lots located in the downtown? Produce a map of your results that matches the one shown here.</h4>
+<blockquote>
+<p><strong>landuse</strong> variable</p>
+</blockquote>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-13-1.png" width="960" /></p>
+<p><br></p>
+</div>
+<div id="how-many-parking-lots-are-in-downtown-syracuse-map-your-results." class="section level4">
+<h4>2. How many parking lots are in downtown Syracuse? Map your results.</h4>
+<blockquote>
+<p><strong>sum()</strong> function and <strong>landuse</strong> variable</p>
+</blockquote>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-14-1.png" width="960" /></p>
+<p><br></p>
+<p><br></p>
+</div>
+<div id="where-is-new-construction-located-in-the-city" class="section level4">
+<h4>3. Where is new construction located in the city?</h4>
+<p><strong>Calculate the number of buildings constructed since 1980.</strong></p>
+<blockquote>
+<p><strong>yearbuilt</strong> variable</p>
+</blockquote>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-15-1.png" width="960" /></p>
+<p><strong>What proportion of commercial properties are built since 1980?</strong></p>
+<blockquote>
+<p>count commercial properties, and buildings constructed since 1980: <strong>landuse</strong> and <strong>yearbuilt</strong> variables</p>
+</blockquote>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-16-1.png" width="1152" /></p>
+<p><br></p>
+</div>
+<div id="how-many-parcels-have-assessed-values-over-10-million-map-your-results." class="section level4">
+<h4>4. How many parcels have assessed values over $10 million? Map your results.</h4>
+<blockquote>
+<p>use the <strong>sum()</strong> function with <strong>assessedval</strong> variable;</p>
+</blockquote>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-18-1.png" width="960" /></p>
+<p><br></p>
+</div>
+<div id="how-many-properties-are-delinquent-on-taxes-map-your-results." class="section level4">
+<h4>5. How many properties are delinquent on taxes? Map your results.</h4>
+<blockquote>
+<p><strong>sum()</strong> with the <strong>amtdelinqt</strong>;</p>
+</blockquote>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-19-1.png" width="960" /></p>
+<p><br></p>
+</div>
+<div id="what-proportion-of-parcels-have-delinquent-tax-payments-owed" class="section level4">
+<h4>6. What proportion of parcels have delinquent tax payments owed?</h4>
+<blockquote>
+<p><strong>mean()</strong> with the <strong>amtdelinqt</strong> variable</p>
+</blockquote>
+<p><br></p>
+</div>
+<div id="what-proportion-of-commercial-properties-are-delinquent-on-taxes-what-proportion-of-delinquent-tax-bills-are-owed-by-commercial-parcels" class="section level4">
+<h4>7. What proportion of commercial properties are delinquent on taxes? What proportion of delinquent tax bills are owed by commercial parcels?</h4>
+<blockquote>
+<p><strong>mean()</strong> with <strong>amtdelinqt</strong> and <strong>landuse</strong> variables define your groups with compound statements first then calculate proportions</p>
+</blockquote>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-20-1.png" width="960" /></p>
+<p><br></p>
+</div>
+<div id="how-many-of-each-land-use-type-are-delinquent-on-taxes" class="section level4">
+<h4>8. How many of each land use type are delinquent on taxes?</h4>
+<blockquote>
+<p><strong>table()</strong> with <strong>amtdelinqt</strong> and <strong>landuse</strong> variables define delinquency first, then create a table with landuse and delinquency</p>
+</blockquote>
+<p><br> <br></p>
+<hr />
+</div>
+</div>
+<div id="challenge-questions" class="section level2">
+<h2>Challenge Questions</h2>
+<p><strong>Map all of the land valued at over $1 million per acre.</strong></p>
+<p><strong>Map all of the land valued at less than $500,000 per acre.</strong></p>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-21-1.png" width="960" /></p>
+<p><strong>What is the total value of all of the commercial parcels in the city?</strong></p>
+<p><strong>What is the total value of all of the non-commercial parcels in the city?</strong></p>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-22-1.png" width="960" /></p>
+<hr />
+<p><br></p>
+</div>
+<div id="submission-instructions" class="section level2">
+<h2>Submission Instructions</h2>
+<p>When you have completed your assignment, knit your RMD file to generate your rendered HTML file.</p>
+<p>Login to Canvas at <a href="http://canvas.asu.edu" class="uri">http://canvas.asu.edu</a> and navigate to the assignments tab in the course repository. Upload your HTML and RMD files to the appropriate lab submission link.</p>
+<p>Platforms like BlackBoard and Canvas sometimes disallow you from submitting HTML files when there is embedded computer code. If this happens create a zipped folder with both the RMD and HTML files.</p>
+<p>Remember to:</p>
+<ul>
+<li>name your files according to the convention: <strong>Lab-##-LastName.Rmd</strong></li>
+<li>show your solution, include your code.</li>
+<li>do not print excessive output (like a full data set).</li>
+<li>follow appropriate style guidelines (spaces between arguments, etc.).</li>
+</ul>
+<p>See <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R Style Guide</a> for examples.</p>
+<hr />
+<p><br></p>
+</div>
+<div id="markdown-trouble" class="section level2">
+<h2>Markdown Trouble?</h2>
+<p>If you are having problems with your RMD file, visit the <a href="https://ds4ps.org/cpp-526-fall-2019/labs/r-markdown-files.html"><strong>RMD File Styles and Knitting Tips</strong></a> manual.</p>
+<div id="notes-on-knitting" class="section level4">
+<h4>Notes on Knitting</h4>
+<p>Note that when you knit a file, it starts from a blank slate. You might have packages loaded or datasets active on your local machine, so you can run code chunks fine. But when you knit you might get errors that functions cannot be located or datasets don’t exist. Be sure that you have included chunks to load these in your RMD file.</p>
+<p>Your RMD file will not knit if you have errors in your code. If you get stuck on a question, just add <code>eval=F</code> to the code chunk and it will be ignored when you knit your file. That way I can give you credit for attempting the question and provide guidance on fixing the problem.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+</div>
+</div>
+</div>
+<div id="helpful-hints" class="section level1">
+<h1>Helpful Hints</h1>
+<p>Some things to keep in mind as you get started:</p>
+<div id="steps-in-identifying-groups" class="section level2">
+<h2>Steps in Identifying Groups</h2>
+<p>For this lab you will construct a group by translating some management question from plain English into a logical statement, then show a map of the newly constructed group by adapting the code provided:</p>
+<p><strong>How many parcels are larger than one acre?</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">these &lt;-<span class="st"> </span>downtown<span class="op">$</span>acres <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>   <span class="co"># the group I am defining</span></a>
+<a class="sourceLine" id="cb5-2" title="2"><span class="kw">sum</span>( these )                  <span class="co"># count of parcels in our defined group</span></a></code></pre></div>
+<pre><code>## [1] 59</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">mean</span>( these )                 <span class="co"># proportion of total parcels in our defined group</span></a></code></pre></div>
+<pre><code>## [1] 0.151671</code></pre>
+<p>To show the location of this group on a map:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">these &lt;-<span class="st"> </span>downtown<span class="op">$</span>acres <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>                               <span class="co"># define your group</span></a>
+<a class="sourceLine" id="cb9-2" title="2">group.colors &lt;-<span class="st"> </span><span class="kw">ifelse</span>( these, <span class="st">&quot;firebrick&quot;</span>, <span class="st">&quot;gray80&quot;</span> )    <span class="co"># don&#39;t change this</span></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="kw">plot</span>( downtown,  <span class="dt">border=</span><span class="st">&quot;gray70&quot;</span>, <span class="dt">col=</span>group.colors )      <span class="co"># don&#39;t change this</span></a></code></pre></div>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-24-1.png" width="960" /></p>
+<p><strong>What proportion of downtown parcels are occupied by commercial buildings?</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">these &lt;-<span class="st"> </span>downtown<span class="op">$</span>landuse <span class="op">==</span><span class="st"> &quot;Commercial&quot;</span></a>
+<a class="sourceLine" id="cb10-2" title="2"><span class="kw">mean</span>( these )  <span class="co"># 54%</span></a></code></pre></div>
+<pre><code>## [1] 0.5372751</code></pre>
+<p>Plot commercial parcels on a map:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">these &lt;-<span class="st"> </span>downtown<span class="op">$</span>landuse <span class="op">==</span><span class="st"> &quot;Commercial&quot;</span></a>
+<a class="sourceLine" id="cb12-2" title="2">group.colors &lt;-<span class="st"> </span><span class="kw">ifelse</span>( these, <span class="st">&quot;firebrick&quot;</span>, <span class="st">&quot;gray90&quot;</span> )     <span class="co"># don&#39;t change this</span></a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="kw">plot</span>( downtown,  <span class="dt">border=</span><span class="st">&quot;gray70&quot;</span>, <span class="dt">col=</span>group.colors )       <span class="co"># don&#39;t change this</span></a></code></pre></div>
+<p><img src="lab-02-instructions-v2_files/figure-html/unnamed-chunk-26-1.png" width="960" /></p>
+<p><br></p>
+<hr />
+<p><br></p>
+</div>
+<div id="identifying-unique-values" class="section level2">
+<h2>Identifying Unique Values</h2>
+<p>We will often define a group using criteria relevant to the management question. For example, we might want to look at all single family homes that are valued over $250,000 in a city. Or perhaps we want to identify all commercial properties that are delinquent on taxes. These are examples of compound logical statements that combine information from two or more variables (land use and value, or land use and tax status).</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="co"># single family homes worth more than $250,000</span></a>
+<a class="sourceLine" id="cb13-2" title="2">downtown<span class="op">$</span>landuse <span class="op">==</span><span class="st"> &quot;Single Family&quot;</span>   <span class="op">&amp;</span><span class="st">    </span>downtown<span class="op">$</span>assessedval <span class="op">&gt;</span><span class="st"> </span><span class="dv">250000</span></a></code></pre></div>
+<p>We can find the current category levels defined within factors or character vectors using a <strong>table()</strong> or <strong>unique()</strong> function.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="kw">table</span>( downtown<span class="op">$</span>landuse )</a></code></pre></div>
+<pre><code>## 
+##          Apartment         Commercial Community Services         Industrial 
+##                  6                209                 17                  4 
+##            Parking              Parks         Recreation          Religious 
+##                 78                  8                  5                  6 
+##            Schools      Single Family          Utilities        Vacant Land 
+##                  4                  1                  6                 45</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="kw">unique</span>( downtown<span class="op">$</span>landuse )</a></code></pre></div>
+<pre><code>##  [1] Parking            Commercial         Parks              Community Services
+##  [5] Vacant Land        Utilities          Apartment          Recreation        
+##  [9] Schools            Religious          Industrial         Single Family     
+## 12 Levels: Apartment Commercial Community Services Industrial Parking ... Vacant Land</code></pre>
+<p>Note that the spelling has to be precise for the statement to work correctly.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">sum</span>( downtown<span class="op">$</span>landuse <span class="op">==</span><span class="st"> &quot;Apartment&quot;</span> )</a></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw">sum</span>( downtown<span class="op">$</span>landuse <span class="op">==</span><span class="st"> &quot;apartment&quot;</span> )</a></code></pre></div>
+<pre><code>## [1] 0</code></pre>
+<p><br></p>
+<hr />
+<p><br></p>
+</div>
+<div id="missing-values" class="section level2">
+<h2>Missing Values</h2>
+<p>When there are missing values (<strong><em>NA</em></strong>s) in a vector you need to tell mathematical functions like <strong>sum()</strong> and <strong>mean()</strong> to ignore them, otherwise they will return NA.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1">x &lt;-<span class="st"> </span><span class="kw">c</span>( <span class="dv">1</span>, <span class="dv">2</span>, <span class="ot">NA</span>, <span class="dv">4</span> )</a>
+<a class="sourceLine" id="cb22-2" title="2"><span class="kw">sum</span>( x )</a></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="kw">sum</span>( x, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 7</code></pre>
+<p>Any ideas why R would default to <code>NA</code> for mathematical functions?</p>
+<p>Consider an example with a free museum that brings in a special exhibit. They don’t charge when you enter, but if you visit the special exhibit you have the option to make a donation to support the event. The computer logs all visitors, but it only enters values for those that visited the special exhibit.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1">x &lt;-<span class="st"> </span><span class="kw">c</span>( <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="dv">20</span>, <span class="ot">NA</span>, <span class="dv">0</span>, <span class="dv">15</span>, <span class="ot">NA</span>, <span class="dv">45</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="dv">10</span>, <span class="dv">0</span>, <span class="ot">NA</span>, <span class="ot">NA</span> )</a>
+<a class="sourceLine" id="cb26-2" title="2"></a>
+<a class="sourceLine" id="cb26-3" title="3"><span class="co"># how many people visited the museum today?</span></a>
+<a class="sourceLine" id="cb26-4" title="4"><span class="kw">length</span>( x )</a></code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="co"># how much was donated to the special exhibit? </span></a>
+<a class="sourceLine" id="cb28-2" title="2"><span class="kw">sum</span>( x, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 90</code></pre>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1"><span class="co"># what was the average donation made to the special exhibit? </span></a>
+<a class="sourceLine" id="cb30-2" title="2"><span class="kw">mean</span>( x, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="co"># if we know that 200 people will visit the meseum this weekend,</span></a>
+<a class="sourceLine" id="cb32-2" title="2"><span class="co"># how much do we expect the special exhibit to raise? </span></a>
+<a class="sourceLine" id="cb32-3" title="3"><span class="co">#</span></a>
+<a class="sourceLine" id="cb32-4" title="4"><span class="co"># people visiting x average donation</span></a>
+<a class="sourceLine" id="cb32-5" title="5"><span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="kw">mean</span>( x, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 3000</code></pre>
+<p>Is this a correct estimate?</p>
+<p>What average does this represent (who is in the denominator)?</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1">x &lt;-<span class="st"> </span><span class="kw">c</span>( <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="dv">20</span>, <span class="ot">NA</span>, <span class="dv">0</span>, <span class="dv">15</span>, <span class="ot">NA</span>, <span class="dv">45</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="ot">NA</span>, <span class="dv">10</span>, <span class="dv">0</span>, <span class="ot">NA</span>, <span class="ot">NA</span> )</a>
+<a class="sourceLine" id="cb34-2" title="2"><span class="co"># what was the average donation made to the special exhibit? </span></a>
+<a class="sourceLine" id="cb34-3" title="3"><span class="kw">mean</span>( x, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<p>When you add <strong>na.rm=T</strong> to the function it will drop all cases with missing data.</p>
+<p>Let’s look at the data again and think about the counts of people more precisely:</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="co"># number of people that visit the museum</span></a>
+<a class="sourceLine" id="cb36-2" title="2"><span class="kw">length</span>( x )</a></code></pre></div>
+<pre><code>## [1] 16</code></pre>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1"><span class="co"># number of people that attended the exhibit</span></a>
+<a class="sourceLine" id="cb38-2" title="2"><span class="kw">sum</span>( x <span class="op">&gt;=</span><span class="st"> </span><span class="dv">0</span>, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 6</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" title="1"><span class="co"># proportion of museum visitors that attended the exhibit</span></a>
+<a class="sourceLine" id="cb40-2" title="2"><span class="kw">sum</span>( x <span class="op">&gt;=</span><span class="st"> </span><span class="dv">0</span>, <span class="dt">na.rm=</span>T ) <span class="op">/</span><span class="st"> </span><span class="kw">length</span>( x )</a></code></pre></div>
+<pre><code>## [1] 0.375</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" title="1"><span class="co"># average donation for ALL museum visitors</span></a>
+<a class="sourceLine" id="cb42-2" title="2"><span class="kw">sum</span>( x, <span class="dt">na.rm=</span>T ) <span class="op">/</span><span class="st"> </span><span class="kw">length</span>( x )</a></code></pre></div>
+<pre><code>## [1] 5.625</code></pre>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb44-1" title="1"><span class="co"># average donation for ONLY THOSE that went to the exhibit</span></a>
+<a class="sourceLine" id="cb44-2" title="2"><span class="kw">sum</span>( x, <span class="dt">na.rm=</span>T ) <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>( x <span class="op">&gt;=</span><span class="st"> </span><span class="dv">0</span>, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 15</code></pre>
+<p>Our initial estimate was incorrect. We multiplied all museum visitors by the average donation of those that attended the exhibit, a subset of all visitors. We will greatly over-estimate the expected event revenue as a result.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb46-1" title="1"><span class="co"># if we know that 200 people will visit the meseum this weekend,</span></a>
+<a class="sourceLine" id="cb46-2" title="2"><span class="co"># how much do we expect the special exhibit to raise? </span></a>
+<a class="sourceLine" id="cb46-3" title="3"><span class="co">#</span></a>
+<a class="sourceLine" id="cb46-4" title="4"><span class="co"># people visiting x average donation per person</span></a>
+<a class="sourceLine" id="cb46-5" title="5"><span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="kw">mean</span>( x, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 3000</code></pre>
+<p>To get an accurate estimate of the special event revenues we need to consider how many museum visitors will attend the exhibit:</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb48-1" title="1"><span class="co"># accurate estimate:</span></a>
+<a class="sourceLine" id="cb48-2" title="2"><span class="co"># people x those at exhibit x ave donation</span></a>
+<a class="sourceLine" id="cb48-3" title="3"><span class="dv">200</span> <span class="op">*</span><span class="st"> </span>( <span class="kw">sum</span>( x <span class="op">&gt;=</span><span class="st"> </span><span class="dv">0</span>, <span class="dt">na.rm=</span>T ) <span class="op">/</span><span class="st"> </span><span class="kw">length</span>( x ) ) <span class="op">*</span><span class="st"> </span><span class="kw">mean</span>( x, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 1125</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb50-1" title="1"><span class="co"># alternatively: </span></a>
+<a class="sourceLine" id="cb50-2" title="2"><span class="co"># number of visitors x ave donation per museum visitor</span></a>
+<a class="sourceLine" id="cb50-3" title="3"><span class="dv">200</span> <span class="op">*</span><span class="st"> </span>( <span class="kw">sum</span>( x, <span class="dt">na.rm=</span>T ) <span class="op">/</span><span class="st"> </span><span class="kw">length</span>(x) )</a></code></pre></div>
+<pre><code>## [1] 1125</code></pre>
+<p>Missing values serve a very important function in statistics, because they force the analyst to decide whether we can ignore them completely, or whether the need to be interpretted if we want the model to be accurate. So when you get this:</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb52-1" title="1"><span class="kw">mean</span>( x )</a></code></pre></div>
+<pre><code>## [1] NA</code></pre>
+<p>R is telling you to take a step back to determine how we should treat these values. We can interpret missing values as zero when we tabulate the total of donations:</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" title="1"><span class="kw">sum</span>( x, <span class="dt">na.rm=</span>T )</a></code></pre></div>
+<pre><code>## [1] 90</code></pre>
+<p>But it is problematic when we are looking at proportions or averages in this context.</p>
+<p>Missing values means something different in every context, so pay attention to them when they exist. I guarantee that you will make an error in an important calculation at least once in your career because you ignore missing values.</p>
+<p><br></p>
+<hr />
+<p><br></p>
+</div>
+<div id="compound-logical-statements" class="section level2">
+<h2>Compound Logical Statements</h2>
+<p>We often want to create a new group by combining existing groups:</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" title="1">public.goods  &lt;-<span class="st">  </span>downtown<span class="op">$</span>landuse <span class="op">==</span><span class="st"> &quot;Parks&quot;</span> <span class="op">|</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb56-2" title="2"><span class="st">                  </span>downtown<span class="op">$</span>landuse <span class="op">==</span><span class="st"> &quot;Parking&quot;</span> <span class="op">|</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb56-3" title="3"><span class="st">                  </span>downtown<span class="op">$</span>landuse <span class="op">==</span><span class="st"> &quot;Vacant Land&quot;</span></a>
+<a class="sourceLine" id="cb56-4" title="4"></a>
+<a class="sourceLine" id="cb56-5" title="5"><span class="kw">mean</span>( public.goods ) <span class="co"># proportion of downtown</span></a></code></pre></div>
+<pre><code>## [1] 0.3367609</code></pre>
+<p>The is a <strong>compound logical statement</strong> because there is more than one criteria used to define the group. Compound statements require the use of the <strong>OR</strong> operator <code>|</code> or the <strong>AND</strong> <code>&amp;</code> operator. They can also combine criteria from multiple variables in the model.</p>
+<p>For example, a brown-eyed girl would be written:</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" title="1">brown.eyed.girl &lt;-<span class="st"> </span>dat<span class="op">$</span>gender <span class="op">==</span><span class="st"> &quot;female&quot;</span> <span class="op">&amp;</span><span class="st"> </span>dat<span class="op">$</span>eye.color <span class="op">==</span><span class="st"> &quot;brown&quot;</span></a></code></pre></div>
+<p>Logical statements are one of the most useful tools in data, but they are a little tricky at first. Consider the difference between the criteria FEMALE &amp; BROWN EYES vs FEMALE | BROWN EYES.</p>
+<p>In a world where eyes is either brown or green and gender is either male or female, these two criteria would return the following:</p>
+<p>FEMALE &amp; BROWN EYES</p>
+<ul>
+<li>female + brown eyes<br />
+</li>
+<li><em>intersection of all females and all people with brown eyes</em></li>
+</ul>
+<p>FEMALE | BROWN EYES</p>
+<ul>
+<li>female + brown eyes</li>
+<li>female + green eyes</li>
+<li>male + brown eyes</li>
+<li><em>all females in the dataset and all people with brown eyes</em></li>
+</ul>
+<p>Note that in plain English we say “females AND people with brown eyes” when we are combining groups, using the OR operator to create a union of groups.</p>
+<p>A good way to keep the logic straight is to add the term “ONLY” to the front of each plain English group descriptor. “ONLY females in the dataset AND ONLY people with brown eyes”.</p>
+<p>Also pay attention to the order of operations when applying the NOT operator <code>!</code> to logical statements. The operator flips each TRUE to a FALSE in a logical vector, and vice-versa each FALSE to TRUE. It creates a compliment set, which is anything not in the current group.</p>
+<p>Consider these two cases:</p>
+<p>! ( FEMALE &amp; BROWN EYES )</p>
+<ul>
+<li>female + green eyes</li>
+<li>male + brown eyes</li>
+<li>male + green eyes</li>
+<li><em>the values of brown-eyed girls become FALSE, and everything else is TRUE or part of the new group</em></li>
+</ul>
+<p>! FEMALE &amp; BROWN EYES</p>
+<ul>
+<li>male + brown eyes</li>
+<li><em>first identify NOT females (all males in the data), then intersect that group with brown eyes</em></li>
+</ul>
+<p>Note that the NOT operator is not equivalent to what some people might consider an OPPOSITE operation. The compliment group of brown-eyed girls is not green-eyed boys! That would be written:</p>
+<p>! FEMALE &amp; ! BROWN EYES</p>
+<p>If you pay attention to the order of operations, just like mathematical operators, it will help you avoid making errors.</p>
+<p><br> <br></p>
+<hr />
+<p><br> <br></p>
+<style>
+blockquote {
+    padding: 11px 22px;
+    margin: 0 0 22px;
+    font-size: 18px;
+    border-left: 5px solid lightgray;
+}
+</style>
+</div>
+</div>
+
+<div class="footer">
+    <div class="footerFloatOuter"><br></div>
+    <div class="footerFloatInner1">
+
+       <a  href="https://ds4ps.org/">
+         <img src="images/ps1-gray.png" alt="ds4ps" width="200" align="middle">
+         <h4 style="text-align: center;color:white;">Data Science for<br>Public Service</h4>
+       </a>
+
+    </div>
+
+    <div class="footerFloatInner2">
+
+     <br>
+     <ul style="list-style-type:none;">
+
+        <br>
+        <li>Labs designed by <a href=https:lecy.info target="_blank">Jesse D. Lecy</a></li>
+        <li>Source code is available on <a href=https://github.com/DS4PS/ target="_blank">GitHub</a></li>
+        <br>
+        <li>Creative Common License:</li>
+        <li><a href=https://creativecommons.org/licenses/by-nc-sa/4.0/ target="_blank"> (CC BY-NC-SA 4.0)</a></li>
+        <br>
+        <li>CPP 526 <a href="https://ds4ps.org/cpp-526-spr-2020/" target="_blank">Foundations of Data Science I</a></li>
+        <li>Part of the <a href=http://ds4ps.org/ms-prog-eval-data-analytics/ target="_blank">MS in Evaluation and Analytics</a></li>
+        <li>@ <a href=https://asuonline.asu.edu/online-degree-programs/graduate/program-evaluation-and-data-analytics-ms/ target="_blank">Arizona State University</a></li>
+        <br>
+        <li>Pages powered by <a href=http://jekyllrb.com target="_blank" style="color:orange">Jekyll</a></li>
+     </ul>
+
+    </div>
+
+    <div class="footerFloatOuter"><br></div>
+
+</div>
+
+
+
+
+<style>
+
+blockquote {
+    padding: 11px 22px;
+    margin: 0 0 22px;
+    font-size: 18px;
+    border-left: 5px solid lightgray;
+}
+
+.footer {
+  color:white;
+  min-height: 500px !important;
+  background-color: #696969;
+  padding-bottom: 3em;
+  padding-top: 3em;
+  margin: auto;
+}
+
+.footer a {
+  color: orange;
+}
+
+.footer body{
+     font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+     font-size:calc(1.5em + 0.25vw);
+     font-weight:300;line-height:1.65;
+     -webkit-font-smoothing:antialiased;
+     -moz-osx-font-smoothing:grayscale;
+     margin-left:20%;
+     margin-right:20%
+}
+
+.footerFloatOuter {
+	width: 25%;
+	float: left;
+}
+
+.footerFloatInner1 {
+	width: 20%;
+	float: left;
+	align: left;
+	margin-left: 0px;
+}
+
+.footerFloatInner2 {
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+
+
+
+.footer ul li {
+	font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size:calc(0.55em + 0.25vw) !important;
+  font-weight:300;
+  line-height:1.2 !important;
+  color: #FFF;
+	text-transform: uppercase;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

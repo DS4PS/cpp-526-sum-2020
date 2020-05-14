@@ -1,0 +1,150 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+
+
+# COURSE INSTRUCTOR: 
+
+author:
+    name:       Jamison Crawford
+    github:     jamisoncrawford   # Github username for avatar
+
+# calendly app for virtual office hours
+calendly:  'https://calendly.com/jamisoncrawford/20min'
+
+
+
+# COURSE INFO:
+
+description:        Intro. course in data-drive management
+
+# Header text at the top left of the website
+
+brand:
+    image:          # logo.svg  # e.g. logo.png, upload logo image file to /assets/img/ folder
+    text:           "Data Science"    # if the above "logo:" image variable  is not set, this text logo is displayed instead
+       # in the default html file add extra fav icons to header for parts II and III
+       # header color set at assets/css/custom.css under default_nav and footer background-color
+
+# Navbar at the top right of the website
+
+header:
+- title: Syllabus
+  url: 
+- title: Course Schedule
+  url: schedule/
+- title: Textbook
+  url: https://ds4ps.org/dp4ss/#dp4ss-data-programming-for-the-social-sciences
+- title: Resources
+  url: resources/
+# - title: Yellowdig
+#   url: https://www.yellowdig.com/board/43114
+# - title: Canvas
+#  url: https://canvas.asu.edu/courses/29528
+- title: Get Help
+  url: help/
+
+
+
+# GITHUB CONFIGURATIONS 
+
+url :               "https://ds4ps.github.io"
+baseurl:            "/cpp-526-spr-2020"
+course_url:         "http://ds4ps.org/cpp-526-spr-2020/"
+title:              DS4PS # don't change this
+
+github_info:
+    username:          DS4PS # Github location of the course
+    branch:            master
+    website-repo:      cpp-526-spr-2020
+    course-repo:       cpp-526-spr-2020
+
+
+
+
+
+
+
+
+
+
+# IGNORE THESE SETTINGS
+
+
+# Permalink URLs structure, for permalink style options see: https://jekyllrb.com/docs/permalinks/
+permalink:          /:title/
+
+
+# Social icons displayed in footer
+social:
+    email:
+    website:
+    facebook:       
+    flickr:
+    dribbble:
+    github:
+    googleplus:
+    instagram:      
+    linkedin:       
+    pinterest:
+    twitter:        
+    vimeo:          
+    youtube:        
+
+# Twitter share button
+twitter_username:
+
+
+# Disqus comments shortname, requires Disqus account https://disqus.com/
+disqus:
+    shortname:      1234
+
+# Google analytics code, get your code here https://www.google.com/analytics/
+google_analytics:   UA-123960540-3
+
+# Google maps API key, get your key here: https://developers.google.com/maps/documentation/javascript/get-api-key
+google_maps_api_key:
+
+# Number of posts displayed on blog page
+paginate: 10
+
+# Blog path
+paginate_path:      "layouts/datasets/:num/"
+
+# Path to post content assets directory i.e post images, pdfs etc
+post_assets:        /assets/posts/
+
+post_css: /assets/css/posts
+
+# Build settings
+markdown:           kramdown
+highlighter:        rouge
+
+gems:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-avatar
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+sass:
+  style:            compressed
+
+collections:
+  docs:
+    output: true
+
+
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+
+
+
+
