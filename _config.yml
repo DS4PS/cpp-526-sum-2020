@@ -52,15 +52,15 @@ header:
 # GITHUB CONFIGURATIONS 
 
 url :               "https://ds4ps.github.io"
-baseurl:            "/cpp-526-spr-2020"
-course_url:         "http://ds4ps.org/cpp-526-spr-2020/"
+baseurl:            "/cpp-526-sum-2020"
+course_url:         "http://ds4ps.org/cpp-526-sum-2020/"
 title:              DS4PS # don't change this
 
 github_info:
     username:          DS4PS # Github location of the course
     branch:            master
-    website-repo:      cpp-526-spr-2020
-    course-repo:       cpp-526-spr-2020
+    website-repo:      cpp-526-sum-2020
+    course-repo:       cpp-526-sum-2020
 
 
 
