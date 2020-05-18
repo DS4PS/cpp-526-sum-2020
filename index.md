@@ -141,7 +141,7 @@ The online discussions are explicitly intended to meet the objectives stated abo
 
 We will use a custom textbook for this course available at the link above. 
 
-* [Course Textbook](https://ds4ps.org/cpp-526-fall-2019/textbook/)
+* [Course Textbook](https://ds4ps.org/dp4ss/)
 
 The following texts are recommended as good reference material for topics covered in this course:
 
@@ -237,7 +237,7 @@ As students are all aware, ASU Online courses are typically offered on a seven a
 
 Please note: the course instructor may from time to time adjust assigned readings or adjust the due dates for assignment. The basic course content approach and learning objectives will not change, but slight modifications are possible if circumstances warrant an adjustment.
 
-[Schedule](/schedule/)
+[Schedule](cpp-526-sum-2020/schedule/)
 
 ## Couse Schedule
 
