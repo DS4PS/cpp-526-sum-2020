@@ -1127,7 +1127,7 @@ This lab is designed to introduce you to primary data join functions in R.
 
 
 
-** Week 7 - Dashboards
+** FINAL DASHBOARD PROJECT
 
 
 *** { @unit = "", @title = "Reflection", @foldout }
