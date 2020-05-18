@@ -3,8 +3,8 @@ layout: schedule
 title: Schedule
 
 canvas: 
-  assignment_url: 'https://canvas.asu.edu/courses/41578/assignments'
-  yellowdig_url: 'https://canvas.asu.edu/courses/41578/assignments/959542'
+  assignment_url: 'https://canvas.asu.edu/courses/54986/assignments'
+  yellowdig_url: 'https://canvas.asu.edu/courses/54986/assignments/1306428'
 ---
  
 <!--- 
@@ -32,42 +32,6 @@ Submit Buttons -
 ** Welcome
 
 
-*** { @unit = "", @title = "PROGRAM ORIENTATION", @lecture, @foldout   }
-
-
-## Welcome !
-
-R is a foundational tool within a toolkit that I will refer to as the "data science ecosystem". 
-
-The orientation video below provides a brief introduction to the "ecosystem" - the community of people that are creating cool analytical tools and building tutorials and case studies for how they might be applied, as well as a core set of tools that are all designed to work nicely together in order to implement projects. 
-
-You can think of R, R Studio, and Markdown kindof like Excel (analysis), Word (report-writing), and Power Point (presentations). R allows you to analyze your data, but these results are not useful unless you can share them with others. Here is where [data-driven documents](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html) developed using R Studio and Markdown really shine. You can quickly package your R code as cool reports, websites, presentations, or dashboards to format the information in whatever way is most accessible and useful for your clients or stakeholders. 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oC1xz97aoYI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-## References
-
-[Course Overview Powerpoint for Zoom Call](https://github.com/DS4PS/dp4ss-textbook/raw/master/resources/Couse-Overview.pdf)
-
-The course shells for CPP 523 and CPP 526 are located at:
-
-[https://ds4ps.org/cpp-526-spr-2020/](https://ds4ps.org/cpp-526-spr-2020/)  
-[https://ds4ps.org/cpp-523-spr-2020/](https://ds4ps.org/cpp-523-spr-2020/)  
-
-The *unofficial* program website can be found at:
-
-[https://ds4ps.org/ms-prog-eval-data-analytics/](https://ds4ps.org/ms-prog-eval-data-analytics/)
-
-And the dashboard example in R can be found here:
-
-[R Storyboard Example](https://beta.rstudioconnect.com/jjallaire/htmlwidgets-showcase-storyboard/htmlwidgets-showcase-storyboard.html)
-
-
-<br>
-<br>
-
-
 *** { @unit = "", @title = "Meet Your Instructor", @lecture, @foldout }
 
 <br>
@@ -91,37 +55,6 @@ picture-in-picture" allowfullscreen></iframe>
 
 
 
-
-
-*** { @unit = "Due Jan 15", @title = "Introduce Yourself", @assignment, @foldout }
-
-<br>
-
-## Introduce yourself to the class
-
-We will be using a discussion board called YellowDig for this course. Introduce yourself to the class and share a bit about:
-
-1. A little about yourself
-2. Your previous experience with data analytics 
-3. One thing you hope to do with your new skills in data analytics 
-
-<a class="uk-button uk-button-default" href="https://canvas.asu.edu/courses/41578/assignments/959542">Post to YellowDig</a>
-
-<br>
-<br>
-
-
-
-
-
-
-
-
-
-** Getting Started
-
-
-
 *** { @unit = "", @title = "Your Course Prep Checklist", @reading, @foldout }
 
 <br>
@@ -129,9 +62,12 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 - [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-spr-2020/) 
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
-- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/41578/assignments/959542) (see below)
+- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (see below)
 
 <br>
+
+
+
 
 
 
@@ -236,7 +172,9 @@ Use the bookmarks in the video description on YouTube to skip ahead to different
 
 ## Getting Help
 
-Nerds are stereotypically perceived as being anti-social, but in reality data analytics is a very social activity and real-world analytics projects are almost always collaborative. 
+Data analytics is a very social endeavor and real-world analytics projects are almost always collaborative. 
+
+These courses are designed to be interactive, and a lot of learning occurs by practicing the technical jargon from the field and learning how to talk about data and models. 
 
 Learning how to seek help and use discussion boards will accelerate learning and facilitate collaboration. Social coding tools like GitHub use these features extensively. 
 
@@ -244,9 +182,9 @@ We are going to throw a lot at you, but also provide a lot of support. Over thes
 
 If you find something confusing let us know (likely others will find it confusing as well). 
 
-* We can jump on a [Zoom call](https://calendly.com/lecy/15min?month=2019-08) to do a screen share if you want to walk through anything. 
-* You can post a question to the homework discussion board for [data science I](https://ds4ps.org/cpp-526-spr-2020/help/) or [program evaluation I](https://ds4ps.org/cpp-523-spr-2020/help/).  
-* Or you can request a walk-through of a problem. The instructor will provide an example with the solution. 
+* You can schedule a Zoom call with your instructor to do a screen share if you want to walk through anything. 
+* You can post a question to the [homework discussion board](https://ds4ps.org/cpp-526-sum-2020/help/).  
+* Or you can request a walk-through of a problem. The instructor will provide an example and steps to solve. 
 
 As a general rule of thumb, if you are stuck on the math or code for a problem, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues then the help discussion page is the easiest and quickest way to get help. If you are confused about concepts or having a hard time even formulating your question then virtual office hours are your best option.
 
@@ -267,8 +205,6 @@ lm( y ~ x1 + x2 )
 
 The fences are three back-ticks. These look like quotation marks, but are actually the character at the top left of your keyboard (if you have a US or European keyboard). 
 
-GitHub does not have a native math rendering language (RMD documents, on the other hand, [support formulas](https://www.calvin.edu/~rpruim/courses/s341/S17/from-class/MathinRmd.html)). So you have two options, type formulas as regular text and use code formatting to make them clear (this option is usually sufficient). Or you can type your formula in a formula editor and copy and paste an image of the nicely-formatted example.  
-
 ````
 ```
 y = b0 + b1•X1 + b2•X2 + e
@@ -279,17 +215,27 @@ b1 = cov(x,y) / var(x)
 
 ----
 
-These courses are designed to be interactive, and a lot of learning occurs by practicing the technical jargon from the field and learning how to talk about data and models. 
-
-Please reach out if you have questions or feel stuck!  
-
-**PRACTICE:**
-
-Navigate to the [Help! Board](https://ds4ps.github.io/cpp-526-spr-2020/help/) for the course. Click on the **practice post**, and reply by telling the class your name and your favorite [**color in R**](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf). 
-
 <br>
 <br>
 
+
+
+*** { @unit = "Due May 20", @title = "Introduce Yourself", @assignment, @foldout }
+
+<br>
+
+## Introduce yourself to the class
+
+We will be using a discussion board called YellowDig for this course. Introduce yourself to the class and share a bit about:
+
+1. A little about yourself
+2. Your previous experience with data analytics 
+3. One thing you hope to do with your new skills in data analytics 
+
+<a class="uk-button uk-button-default" href="https://canvas.asu.edu/courses/54986/assignments/1306428">Post to YellowDig</a>
+
+<br>
+<br>
 
 
 
@@ -410,7 +356,7 @@ Background Chapters:
 
 
 
-*** { @unit = "Due Jan 17th", @title = "Discussion Topic: The Promise of Big and Open Data", @assignment, @foldout  }
+*** { @unit = "Due May 22nd", @title = "Discussion Topic: The Promise of Big and Open Data", @assignment, @foldout  }
 
 ## The Promise of Big, Open Data
 
@@ -455,13 +401,13 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 
 
 
-*** { @unit = "Due Jan 21th", @title = "Lab 01", @assignment, @foldout  }
+*** { @unit = "MON May 25th", @title = "Lab 01", @assignment, @foldout  }
 
 <br>
 
 ## Lab-01 - Practice with Vectors
 
-<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-spr-2020/labs/lab-01-instructions.html">LAB-01 Instructions</a>
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-sum-2020/labs/lab-01-instructions.html">LAB-01 Instructions</a>
 
 ## Submit Solutions to Canvas:
 
@@ -568,7 +514,7 @@ Required:
 
 
 
-*** { @unit = "FRI Jan 24th", @title = "Discussion Topic: A Tour of R Packages", @assignment, @foldout  }
+*** { @unit = "FRI May 29", @title = "Discussion Topic: A Tour of R Packages", @assignment, @foldout  }
 
 <br>
 
@@ -611,7 +557,7 @@ Take note, this assignment asks you to explore a new community where the technic
 
 
 
-*** { @unit = "TUES Jan 28th", @title = "Lab 02", @assignment, @foldout }
+*** { @unit = "MON Jun 1st", @title = "Lab 02", @assignment, @foldout }
 
 <br>
 <br>
@@ -745,7 +691,7 @@ The lab requires you to re-create a graph that was featured in the New York Time
 
 
 
-*** { @unit = "FRI Jan 31st", @title = "Discussion Topic: Data Viz Packages", @assignment, @foldout  }
+*** { @unit = "FRI Jun 5th", @title = "Discussion Topic: Data Viz Packages", @assignment, @foldout  }
 
 <br>
 <br>
@@ -768,7 +714,7 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 
 
 
-*** { @unit = "TUE Feb 4th", @title = "Lab 03", @assignment, @foldout  }
+*** { @unit = "MON June 8th", @title = "Lab 03", @assignment, @foldout  }
 
 <br>
 <br>
@@ -868,7 +814,7 @@ For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudi
 
 
 
-*** { @unit = "FRI Feb 7th", @title = "Discussion Topic", @assignment, @foldout  }
+*** { @unit = "FRI June 12th", @title = "Discussion Topic", @assignment, @foldout  }
 
 <br>
 <br>
@@ -897,7 +843,7 @@ This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-
 
 
 
-*** { @unit = "TUE Feb 11th", @title = "Lab 04", @assignment, @foldout  }
+*** { @unit = "MON June 15th", @title = "Lab 04", @assignment, @foldout  }
 
 
 <br>
@@ -974,7 +920,7 @@ Lab 05 will use data on traffic accidents in the City of Tempe:
 
 
 
-*** { @unit = "FRI Feb 14th", @title = "Discussion Topic Data APIs", @assignment, @foldout  }
+*** { @unit = "FRI June 19th", @title = "Discussion Topic Data APIs", @assignment, @foldout  }
 
 <br>
 <br>
@@ -1010,7 +956,7 @@ You can find APIs through a Google search, or browse datasets on the [DS4PS Open
 
 
 
-*** { @unit = "TUE Feb 18th", @title = "Lab 05", @assignment, @foldout  }
+*** { @unit = "MON June 22nd", @title = "Lab 05", @assignment, @foldout  }
 
 <br>
 <br>
@@ -1088,7 +1034,7 @@ We will join the Salaries table to player bios (Master table) and performance da
 
 
 
-*** { @unit = "FRI Feb 21st", @title = "Discussion Topic", @assignment, @foldout  }
+*** { @unit = "FRI June 19th", @title = "Discussion Topic", @assignment, @foldout  }
 
 <br>
 
@@ -1154,7 +1100,7 @@ Do you think open source frameworks would help open the black box and make gover
 
 
 
-*** { @unit = "TUE Feb 25th", @title = "Lab 06", @assignment, @foldout  }
+*** { @unit = "MON June 22nd", @title = "Lab 06", @assignment, @foldout  }
 
 <br>
 <br>
@@ -1192,7 +1138,7 @@ This lab is designed to introduce you to primary data join functions in R.
 
 
 
-*** { @unit = "MON Mar 2nd", @title = "Code-Through Assignment", @assignment, @foldout  }
+*** { @unit = "FRI June 26th", @title = "Code-Through Assignment", @assignment, @foldout  }
 
 <br>
 
@@ -1202,11 +1148,12 @@ Since you are sharing your code-through with your classmates on Yellowdig, it wi
 
 If you send me your RMD and HTML files via email, I will post them to GitHub and create a link for you if you would like to share a URL instead of a file. 
 
-<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-spr-2020/LABS/code-through-assignment.html">Code-Through Instructions</a>
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html">Code-Through Instructions</a>
 
 ## Submit to Canvas:
 
-<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/814647">SUBMIT CODE-THROUGH</a>
+<a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT CODE-THROUGH</a>
+
 
 ## Post on Yellowdig
 
@@ -1218,7 +1165,7 @@ If you send me your RMD and HTML files via email, I will post them to GitHub and
 
 
 
-*** { @unit = "MON Mar 2nd", @title = "FINAL PROJECT", @assignment, @foldout  }
+*** { @unit = "FRI June 26th", @title = "FINAL PROJECT", @assignment, @foldout  }
 
 <br>
 
