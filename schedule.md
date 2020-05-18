@@ -55,24 +55,13 @@ picture-in-picture" allowfullscreen></iframe>
 
 
 
-*** { @unit = "", @title = "Your Course Prep Checklist", @reading, @foldout }
-
-<br>
-
-- [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-spr-2020/) 
-- [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
-- [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
-- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (see below)
-
-<br>
 
 
 
 
 
 
-
-*** { @unit = "", @title = "The R Toolkit", @reading, @foldout }
+*** { @unit = "", @title = "The R Toolkit", @lecture, @foldout }
 
 ## Introducing R 
 
@@ -168,7 +157,7 @@ Use the bookmarks in the video description on YouTube to skip ahead to different
 
 
 
-*** { @unit = "", @title = "Getting Help", @assignment, @foldout  }
+*** { @unit = "", @title = "Getting Help", @lecture, @foldout  }
 
 ## Getting Help
 
@@ -217,6 +206,22 @@ b1 = cov(x,y) / var(x)
 
 <br>
 <br>
+
+
+
+
+*** { @unit = "", @title = "Your Course Prep Checklist", @assignment, @foldout }
+
+<br>
+
+- [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-spr-2020/) 
+- [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
+- [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
+- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (see below)
+
+<br>
+
+
 
 
 
