@@ -18,22 +18,22 @@ info:
  course_prerequisites:  
  class_meets_when:  Asynchronous  
  class_meets_where:  'https://asu.zoom.us/j/944016877'
- review_sessions_when: TBD 
+ review_sessions_when: TBA 
  review_sessions_where: Zoom
  discussion_board_url: 'https://ds4ps.org/cpp-526-sum-2020/help/'
 
 instructor:
 -  name: Jamison Crawford
    title: Instructor 
-   email: 
+   email: jrcrawf7@asu.edu
    office_location: 
    website_url: https://rpubs.com/JamisonCrawford
    github_url: 'https://github.com/JamisonCrawford' 
    twitter_url: 
    scholar_url: 
-   linked_in_url:
+   linked_in_url: https://www.linkedin.com/in/jamisoncrawford/
    office_hours_time: Flexible
-   office_hours_location:  Zoom
+   office_hours_location: Zoom
    office_hours_app_url:  
    
 
