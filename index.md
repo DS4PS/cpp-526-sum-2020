@@ -27,11 +27,11 @@ instructor:
    title: Instructor 
    email: jrcrawf7@asu.edu
    office_location: 
-   website_url: https://rpubs.com/JamisonCrawford
+   website_url: 'https://rpubs.com/JamisonCrawford'
    github_url: 'https://github.com/JamisonCrawford' 
    twitter_url: 
    scholar_url: 
-   linked_in_url: https://www.linkedin.com/in/jamisoncrawford/
+   linked_in_url: 'https://www.linkedin.com/in/jamisoncrawford/'
    office_hours_time: Flexible
    office_hours_location: Zoom
    office_hours_app_url:  
