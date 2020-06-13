@@ -7,7 +7,6 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -1551,7 +1550,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
       if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -1608,6 +1607,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -1680,6 +1680,18 @@ summary {
   display: none;
 }
 </style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
 
 <!-- code folding -->
 
@@ -1796,6 +1808,9 @@ summary {
 <div id="lab-instructions" class="section level1">
 <h1>Lab Instructions</h1>
 <p>Your task is to replicate as closely as possible the graphic published by the NYT.</p>
+<p><br></p>
+<p><strong>The following provides examples of functions to use as you create your visualization.</strong> <strong>You will have to modify the arguments in each function to replicate the NYT graphic appropriately.</strong></p>
+<p><br></p>
 <div id="plot-average-strike-outs-by-year." class="section level4">
 <h4>1. Plot average strike-outs by year.</h4>
 <p>Use 1900 as the starting year for the graph and 2025 as the end point using the <strong>xlim=c()</strong> argument in the <strong>plot.window()</strong> function.</p>
@@ -1860,7 +1875,10 @@ summary {
 <h4>7. Use the <strong>text()</strong> and <strong>segments()</strong> functions to reproduce at least two of the narrative texts from the graphic (“US enters World War I”, etc.). Note that a line break within text is created by including “\n” in your string.</h4>
 <p>For example:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1"><span class="kw">text</span>( x, y, <span class="dt">text=</span><span class="st">&quot;Strike zone enlarged </span><span class="ch">\n</span><span class="st">from 1963 to 1968.&quot;</span> )</a></code></pre></div>
-<p>Your final plot should be as similar as possible to the NYT graphic!</p>
+<p><br></p>
+</div>
+<div id="continue-to-use-plotting-functions-and-arguments-in-this-weeks-readings-and-other-resources-to-make-your-visualization-as-similar-to-the-nyt-graphic-as-possible." class="section level4">
+<h4>8. Continue to use plotting functions and arguments in this week’s readings and other resources to make your visualization as similar to the NYT graphic as possible.</h4>
 <p><br><br></p>
 </div>
 <div id="hints" class="section level2">
@@ -1908,7 +1926,7 @@ summary {
         <li>Creative Common License:</li>
         <li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"> (CC BY-NC-SA 4.0)</a></li>
         <br>
-        <li>CPP 526 <a href="https://ds4ps.org/cpp-526-spr-2020/" target="_blank">Foundations of Data Science I</a></li>
+        <li>CPP 526 <a href="https://ds4ps.org/cpp-526-sum-2020/" target="_blank">Foundations of Data Science I</a></li>
         <li>Part of the <a href="http://ds4ps.org/ms-prog-eval-data-analytics/" target="_blank">MS in Evaluation and Analytics</a></li>
         <li>@ <a href="https://asuonline.asu.edu/online-degree-programs/graduate/program-evaluation-and-data-analytics-ms/" target="_blank">Arizona State University</a></li>
         <br>
@@ -2023,23 +2041,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

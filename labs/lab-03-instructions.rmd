@@ -128,8 +128,12 @@ summary( ave.so ) %>% pander()
 
 Your task is to replicate as closely as possible the graphic published by the NYT.
 
+<br>
+
 **The following provides examples of functions to use as you create your visualization.**
 **You will have to modify the arguments in each function to replicate the NYT graphic appropriately.**
+
+<br>
 
 #### 1.	Plot average strike-outs by year. 
 
@@ -215,6 +219,7 @@ For example:
 text( x, y, text="Strike zone enlarged \nfrom 1963 to 1968." )
 ```
 
+<br>
 
 #### 8. Continue to use plotting functions and arguments in this week's readings and other resources to make your visualization as similar to the NYT graphic as possible.
 
