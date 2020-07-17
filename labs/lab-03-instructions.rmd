@@ -23,19 +23,24 @@ library( pander )
 
 
 
-You can create a new RMarkdown file, or download the **LAB-03 RMD template**: 
+You can create a new R Markdown file, or download the **LAB-03 RMD template**: 
 
+<center>
 
 [![](images/download.png)](https://www.dropbox.com/s/uz4m8bptbtip8x3/lab-03-template.rmd?dl=1)
 
+</center>
 
 --- 
 
-<br><br>
+<br>
+<br>
 
 ## Replicating NYT Graphics
 
-For this lab you will replicate the following [NYT Graphic](https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?_r=0&ref=baseball). 
+For this lab you will replicate the following [NYT Graphic](https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?_r=0&ref=baseball) *as closely as possible*. 
+
+<br>
 
 ![](images/strikeouts.png)
 
@@ -45,15 +50,16 @@ For this lab you will replicate the following [NYT Graphic](https://archive.nyti
 
 ## Functions 
 
-You will use the following functions:
+You will likely use the following functions. Either `plot()` or `plot.new()` and
+`plot.window()`, as well as:
 
 ```{r, eval=F}
-plot()  or plot.new() + plot.window()
 points()
 gray()
 axis()
 title()
 text()
+mtext()
 segments()
 abline()
 ```
@@ -65,13 +71,17 @@ abline()
 
 # Data
 
-The data comes from the Lahman baseball data package. The **Teams** dataset contains season statistics for each baseball team from the late 1800s onward. The graph reports average strike-outs per game, which is calculated as **ave.so** below:
+The data comes from the `Lahman` baseball data package. The **Teams** dataset contains season statistics for each baseball team from the late 1800s onward. The graph reports average strike-outs per game, which is calculated as **ave.so** below:
 
+<br>
 
 ```{r load_data}
-library( Lahman )
-data( Teams )
+
+library(Lahman)
+data(Teams)
+
 ave.so <- Teams$SO / Teams$G
+
 ```
 
 
@@ -79,178 +89,230 @@ ave.so <- Teams$SO / Teams$G
 head( Teams )
 ```
 
-
 <br>
+<br>
+
+# Preprocessing
 
 You will need only the average strike-outs per game, and the year variables:
 
 ```{r}
-ave.so <- Teams$SO / Teams$G  # average strike-outs per game each season 
+
+ave.so <- Teams$SO / Teams$G        # Average strike-outs per game each season 
 year <- Teams$yearID
+
 ```
 
-It is advisable to keep all of the variables together inside of a data frame. Current **ave.so** is an active vector, but it is not in the same data frame as the other variables. 
+<br>
+
+It is advisable to keep all of the variables together inside of a data frame. Currently, `ave.so` is an active vector, but it is not in the same data frame as the other variables. 
+
+<br>
+<br>
+
+## Creating New Variables
 
 To create a new variable inside of an existing data frame try:
 
-`data.frame.name $ new.variable.name`
+```{r eval=FALSE}
+
+data.frame.name$new.variable.name
+
+```
+
+<br>
 
 For example:
 
 ```{r}
+
 Teams$ave.so <- Teams$SO / Teams$G
+
 ```
 
-Make a mental note of the difference, as some functions (especially the data wrangling functions in the **dplyr** package) will require that all variables are contained within a single data frame. 
+<br>
 
+Make a mental note of the difference, as some functions (especially the data wrangling functions in the **dplyr** package) will require that all variables are contained within a single data frame. 
 
 <br>
 
 ```{r, echo=T}
-summary( ave.so ) %>% pander()
+
+summary(ave.so) %>% 
+  pander()                          # pander() cleanly prints data
+
 ```
 
 <br>
 
-*Note that you don't have to understand baseball to make the graphic.*
+**Note:** *You don't have to understand baseball to recreate the graphic.*
 
-
-<br><br>
-
-
-
-
-
-
-
+<br>
+<br>
 
 # Lab Instructions
 
-Your task is to replicate as closely as possible the graphic published by the NYT.
+Your task is to **replicate as closely as possible** the graphic 
+published by the NYT.
+
+The initial code provided below will help get you started.
+
+<br>
+<br>
+
+#### 1.	Plot Average Strike-Outs by Year 
+
+Since the `Lahman` data is current but the NYT Graphic is from 1900 to 2012, 
+use `xlim = c()` to truncate the years.
 
 <br>
 
-**The following provides examples of functions to use as you create your visualization.**
-**You will have to modify the arguments in each function to replicate the NYT graphic appropriately.**
+```{r fig.align='center'}
 
-<br>
-
-#### 1.	Plot average strike-outs by year. 
-
-Use 1900 as the starting year for the graph and 2025 as the end point using the **xlim=c()** argument in the **plot.window()** function. 
-
-```{r}
 ave.so.min <- min( ave.so, na.rm=T )
 ave.so.max <- max( ave.so, na.rm=T )
 
 plot.new()
-plot.window( xlim=c( 1920, 1980 ), ylim=c( ave.so.min, ave.so.max ) )
-points( year, ave.so )
+
+plot.window(xlim = c(1900, 2012), 
+            ylim = c(ave.so.min, 
+                     ave.so.max))   # Specify dimensions
+
+points(x = year, 
+       y = ave.so)                  # Plot points
+
 ```
 
+<br>
+<br>
 
-#### 2. Use the gray() function to select a shade of gray and add transparency to the points.
+#### 2. Modify the Aesthetics of Plotted Points
 
-```{r}
-ave.so.min <- min( ave.so, na.rm=T )
-ave.so.max <- max( ave.so, na.rm=T )
+In order to replicate the aesthetics of the NYT graphic, we can modify `points()`.
+
+<br>
+
+```{r fig.align='center'}
 
 plot.new()
-plot.window( xlim=c( 1920, 1980 ), ylim=c( ave.so.min, ave.so.max ) )
-points( year, ave.so, col=gray( level=0.2, alpha=0.1 ), pch=17, cex=3 )
+
+plot.window(xlim = c(1900, 2012), 
+            ylim = c(ave.so.min, 
+                     ave.so.max))   # Specify dimensions
+
+points(x = year, 
+       y = ave.so,
+       col = "gray85",              # Color
+       pch = 16,                    # Shape
+       cex = 0.75)                  # Size
+
 ```
 
 
-#### 3. Add a year axis under your graph using the **axis()** function (try **side=1**). 
+<br>
+<br>
 
-```{r}
-plot.new()
-plot.window( xlim=c( 1920, 1980 ), ylim=c( ave.so.min, ave.so.max ) )
-points( year, ave.so, col=gray( level=0.2, alpha=0.1 ), pch=17, cex=3 )
+#### 3. Replicate the Axes 
 
-axis( side=1 )
-```
+You'll need to modify your axes a bit further, but this should get you started.
 
-#### 4. Create grid lines for your y-axis using the **abline()** function. The argument **h=c()** allows you to specify the location of your horizontal lines.
+<br>
 
-```{r}
-plot.new()
-plot.window( xlim=c( 1920, 1980 ), ylim=c( ave.so.min, ave.so.max ) )
-points( year, ave.so, col=gray( level=0.2, alpha=0.1 ), pch=17, cex=3 )
-
-abline( h=c(3,4,5,6,7,8), lty=2, col="gray" )
-```
-
-
-
-
-#### 5. Using the **title()** function to add the main title "Strikeouts On the Rise" at the top.
-
-```{r}
-plot.new()
-plot.window( xlim=c( 1920, 1980 ), ylim=c( ave.so.min, ave.so.max ) )
-points( year, ave.so, col=gray( level=0.2, alpha=0.1 ), pch=17, cex=3 )
-axis( side=1 )
-title( main="some title" )
-```
-
-
-#### 6. The league average for each year is calculated for you below. Use the **points()** function to highlight the league trend line and the argument **type=“b”** to connect each year.  
-
-```{r}
-# create the league average vector
-league.ave <- tapply( X=ave.so, INDEX=as.factor(year), FUN="mean", na.rm=T )
-league.year <- as.numeric( names( league.ave ) )
+```{r fig.align='center'}
 
 plot.new()
-plot.window( xlim=c( 1920, 1980 ), ylim=c( ave.so.min, ave.so.max ) )
-points( year, ave.so, col=gray( level=0.2, alpha=0.1 ), pch=17, cex=3 )
-points( league.year, league.ave, type="b", pch=8, col="red" )
+
+plot.window(xlim = c(1900, 2012), 
+            ylim = c(ave.so.min, 
+                     ave.so.max))   # Specify dimensions
+
+points(x = year, 
+       y = ave.so,
+       col = "gray85",              # Color
+       pch = 16,                    # Shape
+       cex = 0.75)                  # Size
+
+axis(side = 1,                      # Add x-axis
+     lwd = 2,                       # Line width
+     hadj = -0.1,                   # Horizontal label position 
+     padj = -1,                     # Vertical label position
+     at = seq(from = 1900, 
+              to = 2010, 
+              by = 10))             # Specify tick label sequence
+
+axis(side = 4,                      # Add y-axis
+     lwd = 0,                       # Remove axis line
+     las = 1,                       # Rotate labels
+     col.axis = "gray85",           # Adjust label colors
+     at = seq(from = 0,             # Specify axis values
+              to = 9, 
+              by = 1), 
+     font.axis = 2)                 # Set labels to bold
+
 ```
 
+#### 4. Continue to Replicate the Graphic
 
+Use the above recommended functions and modifications to **create as close a replication as possible**. 
 
+<br>
+<br>
 
-#### 7.	Use the **text()** and **segments()** functions to reproduce at least two of the narrative texts from the graphic (“US enters World War I”, etc.). Note that a line break within text is created by including “\\n” in your string. 
+## Hints
+
+You can often rely on internal documentation as well as the web.
+
+<br>
+
+### Internal Documentation
+
+If you need help looking up arguments remember these two helpful functions:
+
+* `help()`
+* `args()`
+
+<br>
 
 For example:
 
 ```{r, eval=F}
-text( x, y, text="Strike zone enlarged \nfrom 1963 to 1968." )
+
+args(abline)
+help(mtext)
+
 ```
 
 <br>
 
-#### 8. Continue to use plotting functions and arguments in this week's readings and other resources to make your visualization as similar to the NYT graphic as possible.
+### External Message Boards
 
-<br><br>
+This lab assignment will push you to explore the nuances of these 
+functions and their arguments.  Don't hesitate to use the web to overcome 
+challenging function modifications.
 
-## Hints
-
-If you need help looking up arguments remember these two helpful functions:
-
-```{r, eval=F}
-args( abline )
-help( abline )
-```
-
+1. Include the language, i.e. "r"
+2. Include the function name, e.g. `text()`
+3. Concisely describe your intent, e.g. "allow text overflow" 
 
 <br>
 <br>
-
-
-
 
 # Submission Instructions
 
-Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your HTML file and RMD file to the appropriate lab submission link.
+**Canvas:** If using *Canvas*, upload your .HTML file and .RMD file to the 
+appropriate lab submission link. 
+
+**iCollege:** If using *iCollege*, zip your .HTML and .RMD files and submit the 
+zipped file to the appropriate lab submission link.
+
+<br>
 
 Remember to:
 
-* name your files according to the convention: **Lab-##-LastName.Rmd**
-* show your solution, include your code.
-* do not print excessive output (like a full data set).
-* follow appropriate style guidelines (spaces between arguments, etc.).
+* Name your files according to the convention: **Lab-##-LastName.Rmd**
+* Show your solution, including your code
+* Do not print excessive output (like a full data set)
+* Follow appropriate style guidelines (spaces between arguments, etc.)
 
 <br>
 <br>
@@ -258,8 +320,4 @@ Remember to:
 
 --------
 
-
 <br>
-
-
-
