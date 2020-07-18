@@ -727,7 +727,7 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
 [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
 
-<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-spr-2020/labs/lab-03-instructions.html">LAB-03 Instructions</a>
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-sum-2020/labs/lab-03-instructions.html">LAB-03 Instructions</a>
 
 ## Submit Solutions to Canvas:
 
