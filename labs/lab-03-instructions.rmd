@@ -64,10 +64,8 @@ segments()
 abline()
 ```
 
-
-
-
-<br><br>
+<br>
+<br>
 
 # Data
 
@@ -83,7 +81,6 @@ data(Teams)
 ave.so <- Teams$SO / Teams$G
 
 ```
-
 
 ```{r, echo=F}
 head( Teams )
