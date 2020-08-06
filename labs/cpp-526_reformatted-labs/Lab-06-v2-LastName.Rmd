@@ -1,0 +1,281 @@
+---
+title: "Lab 06 - Dataset Joins"
+author: "Your Name"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    df_print: paged
+    theme: flatly
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+---
+
+```{r include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10)     # Global knitr options
+
+library(dplyr)
+library(pander)
+library(Lahman)                           # Load packages
+
+data(Teams)
+data(Salaries)                            # Load data
+
+options(scipen = 999)                     # Disable sci. notation
+
+```
+
+<br>
+
+# Introduction
+
+The following work identifies the baseball teams that have achieved the largest 
+number of wins on the smallest budgets since 1985 per the `Lahman` data package.
+
+<br>
+
+# Preprocessing
+
+This analysis links two `Lahman` package tables, viz. `Salaries` and `Teams`, 
+to determine total wins per season and the salary cost of each win earned. See 
+the following preview of the first observations in `Salaries`:
+
+<br>
+
+```{r echo = FALSE}
+
+head(Salaries) %>%
+  pander()
+
+```
+
+<br>
+
+See the following preview of select variables and first observations in `Teams`:
+
+<br>
+
+```{r echo = FALSE}
+
+Teams %>%
+  select(yearID, teamID, lgID, G, W, L) %>%
+  head() %>%
+  pander()
+
+```
+
+<br>
+
+Lastly, `Salaries` data are adjusted for inflation at a constant annual increase 
+rate of 3%. Observe:
+
+<br>
+
+```{r echo = TRUE}
+
+Salaries <- Salaries %>% 
+  mutate(salary.adj = salary * (1.03)^(max(yearID) - yearID))
+
+head(Salaries) %>%
+  pander()
+
+```
+
+<br>
+
+In order to calculate the cost per win, adjusted individual player salaries from 
+the `Salaries` table must be aggregated by team and year in the `Teams` table.
+
+<br>
+<br>
+
+# Step 1: Aggregating Salaries
+
+Using the `Salaries` table and grouping on variables `yearID` and `teamID` via
+package `dplyr` function `group_by()`, the following uses function 
+`summarize()` to *calculate and name* the following summary variables for 
+*each year and team*: 
+
+<br>
+
+* Total adjusted team budget using `salary.adj` and `sum()`
+ 
+* Total players using `n()`
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+<br>
+
+# Step 2: Join Salaries & Teams
+
+The following merges the `Salaries` summary data and full `Teams` tables using 
+either base R function `merge()` or package `dplyr` functions `left_join()`. 
+
+<br>
+
+* Variables `teamID` and `yearID` are unique merging keys
+ 
+* Example: `dataset_1 %>% left_join(dataset_2)`
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+<br>
+
+# Step 3: Calculate Cost per Win
+
+The following uses the merged `Salaries` summary data and `Teams` data to 
+create a new variable with function `mutate()` that calculates the total 
+team salary cost per win, divided by $100,000.
+
+<br>
+
+* Divide (`/`) total salaries from **Step 1** by total wins (`W`)
+ 
+* Divide (`/`) that value by `100000`
+
+<br>
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+<br>
+
+# Step 4: Select, Filter, & Arrange
+
+The following filters out teams in merged data with less than 25 players on 
+their annual roster. It then arranges teams in ascending order by cost per win. 
+Lastly, only variables are preserved to create the full version of the 
+table preview.
+
+<br>
+
+* Use `filter()` to remove observations with less than 25 players
+ 
+* Use `arrange()` to order observations by total cost per win
+ 
+* Use `select()` to preserve only essential variables
+
+<br>
+
+**Objective:** The following contains variables and initial values 
+of the full table.  Variable names may differ.
+
+<br>
+
+```{r echo = FALSE}
+
+data.frame(yearID = c(1988, 1986, 1987),
+           teamID = c("PIT", "TEX", "ML4"),
+           lgID = c("NL", "AL", "AL"),
+           Rank = c(2, 2, 3),
+           G = c(160, 162, 162),
+           W = c(85, 87, 91),
+           n = c(27, 26, 28),
+           team.budget = c(13724134, 16367320, 17186960),
+           cost.per.win = c(1.614604, 1.881301, 1.888677)) %>%
+  pander()
+
+```
+
+<br>
+
+**Solution:** Create the full version of the table below.
+
+```{r}
+
+# Your code here
+
+```
+
+<br>
+<br>
+
+<center>------------<h4> **DELETE THIS LINE & ALL LINES BELOW BEFORE SUBMITTING** </h4>------------</center>
+
+<br>
+<br>
+
+#### **Tips & Tricks**
+
+The following tips and tricks are essential to understand in order to complete this assignment.
+
+<br>
+<br>
+
+#### **How to Submit**
+
+Use the following instructions to submit your assignment, which may vary depending on your course's platform.
+
+<br>
+<br>
+
+#### **Knitting to HTML**
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+<br>
+
+#### **Special Instructions**
+
+Perform the following depending on your course's platform:
+
+* **Canvas:** Upload both your `.RMD` and `.HTML` files to the appropriate link
+* **Blackboard or iCollege:** Compress your `.RMD` and `.HTML` files in a `.ZIP` file and upload to the appropriate link
+
+`.HTML` files are preferred but not allowed by all platforms.
+
+<br>
+<br>
+
+#### **Before You Submit**
+
+Remember to ensure the following before submitting your assignment.
+
+1. Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
+3. Do not show excessive output; truncate your output, e.g. with function `head()`
+4. Follow appropriate styling conventions, e.g. spaces after commas, etc.
+5. Above all, ensure that your conventions are consistent
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+#### **Common Knitting Issues**
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect their use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
+
+<br>
+<br>
+<br>

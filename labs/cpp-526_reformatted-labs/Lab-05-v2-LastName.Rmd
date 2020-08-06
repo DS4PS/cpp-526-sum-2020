@@ -1,0 +1,503 @@
+---
+title: "Lab 05: - Tempe Accident Analysis"
+author: "Your Name"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    df_print: paged
+    theme: flatly
+    highlight: haddock
+    toc: yes
+    toc_float: yes
+---
+
+```{r include = FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE, 
+                      fig.width = 10)     # Knitting options
+
+library(dplyr)
+library(pander)                           # Load required packages
+
+```
+
+<br>
+
+# Source Data
+
+The following analysis uses data comprised of traffic accidents in the city of 
+Tempe, Arizona. They constitute 28,470 observations and 32 variables. You can 
+find more details in the dataset documentation at the 
+[**Tempe Open Data Portal**](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08). 
+
+```{r include = FALSE}
+
+# READ IN DATA
+
+url <- paste0("https://github.com/DS4PS/Data-Science-Class/blob",
+              "/master/DATA/TempeTrafficAccidents.rds?raw=true")
+
+dat <- readRDS(gzcon(url(url)))     # Method per instructions
+
+```
+
+<br>
+
+## Preview
+
+We can explore the first six observations in the following table using function `head()`.
+
+```{r}
+
+head(dat)
+
+```
+
+<br>
+<br>
+
+# Preprocessing
+
+All data preprocessing are available in **Appendix A: Data Preprocessing**.
+
+```{r include = FALSE}
+
+date.vec <- strptime(dat$DateTime, 
+                     format = "%m/%d/%y %H:%M")       # Create date fields
+
+dat$hour   <- format(date.vec, format = "%H")
+dat$month  <- format(date.vec, format = "%b")
+dat$day    <- format(date.vec, format = "%a")
+dat$day365 <- format(date.vec, format = "%j")
+dat$week   <- format(date.vec, format = "%V")
+
+dat$day <- factor(dat$day, 
+                  levels = c("Mon",
+                             "Tue",
+                             "Wed",
+                             "Thu",
+                             "Fri",
+                             "Sat",
+                             "Sun"))                  # Order weekdays
+
+dat$hour12 <- format(date.vec, 
+                     format="%l %p")                  # Create 12-hour format
+
+time.levels <- c("12 AM", paste(1:11, "AM"), 
+                 "12 PM", paste(1:11, "PM"))
+
+dat$hour12 <- factor(dat$hour12, 
+                     labels = time.levels)            # Order time intervals
+
+age.labels <- paste0("Age ", 
+                     c(16,18,25,35,45,55,65,75), "-", 
+                     c(18,25,35,45,55,65,75,100) )
+
+dat$age <- cut(dat$Age_Drv1, 
+               breaks = c(16,18,25,
+                          35,45,55,
+                          65,75,100), 
+               labels = age.labels)                   # Discretize age ranges
+
+```
+
+<br>
+<br>
+
+# Part I: Summaries
+
+The following provides brief exploratory summaries on key data points.
+
+<br>
+
+## 1. Mondays Accidents
+
+**Question:** *How many accidents happened on Mondays?*
+
+**Note:** *This solution has been completed for you.*
+
+<br>
+
+```{r}
+
+sum(dat$day == "Mon", 
+    na.rm = TRUE)
+
+```
+
+<br>
+
+**Answer:** **4,094** accidents occurred on Mondays.
+
+<br>
+
+## 2. Monday Accidents (%)
+
+**Question:** *What proportion of accidents each week occur on Monday??*
+
+<br>
+
+```{r}
+
+# Code
+
+```
+
+<br>
+
+**Answer:** **[X]%** of all accidents occur on Mondays.
+
+<br>
+
+## 3. Harmful Monday Accidents (%)
+
+**Question:** *What proportion of accidents on Mondays result in harm??*
+
+**Note:** *"Harm" is defined as any accident that causes at least one injury or* 
+*fatality, a.k.a. a "casualty".*
+
+<br>
+
+```{r}
+
+# Code
+
+```
+
+<br>
+
+**Answer:** **[X]%** of all Monday accidents have at least one casualty.
+
+<br>
+
+## 4. Most Common Accidents
+
+**Question:** *What is the most common accident type on Mondays?*
+
+<br>
+
+```{r}
+
+dat %>%
+  filter(day == "Mon") %>%
+  count(Collisionmanner) %>%
+  arrange(desc(n))
+
+```
+
+<br>
+
+**Answer:** **[X]** collisions are the most common accident types.
+
+<br>
+
+## 5. Differences in Accidents
+
+**Question:** *Are there differences in the proportion of accidents that result in harm each day of the week?*
+
+<br>
+
+```{r}
+
+# Code
+
+```
+
+<br>
+
+**Answer:** Significantly more accidents occur **[X]**.
+
+<br>
+
+## 6. Accident Stats by Weekday
+
+**Instructions:** Create a table that reports the following for each day of the week.
+
+* Total accidents
+* Total injuries
+* Total fatalities
+* Proportion of harmful accidents (i.e. casualties)
+
+<br>
+
+```{r}
+
+dat %>%
+  group_by(day) %>%
+  mutate(harm_acc = Totalinjuries > 0 | Totalfatalities > 0) %>%
+  summarize(n = n(),
+            injuries = sum(Totalinjuries),
+            fatalities = sum(Totalfatalities),
+            harm.rate = mean(harm_acc))
+
+```
+
+<br>
+<br>
+
+# Part II: Age Groups
+
+The following provides summaries of accidents by age groups.
+
+<br>
+
+## 1. Accidents by Hour & Age
+
+**Instructions:** Create a table of counts of accidents by time of day (`hour12`) and age of driver (`age`).
+
+**Question:** *Which age group has the largest number of accidents at 7 AM?*
+
+<br>
+
+```{r}
+
+# Code
+
+```
+
+<br>
+
+**Answer:** Drivers of **[X]** have the greatest number of accidents from 7:00 to 7:59 AM.
+
+<br>
+
+## 2. Accidents by Hour & Age (%)
+
+**Instructions:** Create a new table of time of day and age group that reports the proportion of accidents at "7 AM" (`hour12`) for each age group (`age`). *The proportions within each age group should sum to one.*
+
+<br>
+<br>
+
+**Objective:** The table should contain the following columns and initial values:
+
+```{r echo = FALSE}
+
+data.frame(age = c("Age 16-18", "Age 18-25", "Age 25-35"),
+           hour12 = c("7 AM", "7 AM", "7 AM"),
+           n = c(77, 408, 371),
+           n.age = c(1458, 8796, 5456),
+           n.hour = c(1606, 1606, 1606),
+           p = c(0.05, 0.25, 0.23),
+           p.age = c(0.05, 0.05, 0.07),
+           p.hour = c(0.05, 0.25, 0.23)) %>%
+  pander()
+
+```
+
+<br>
+<br>
+
+**Solution:** *The solution has been partially provided. Use the hints provided to create the table.*
+
+```{r}
+
+dat %>% 
+  group_by(hour12, age) %>% 
+  summarize(n = n()) %>%      # Partial solution
+  group_by(age) %>%           # Requires two new variables in 'mutate()'
+  mutate()                    # Lastly, requires function 'filter()
+
+```
+
+<br>
+<br>
+
+# Part III: Rates of Harm
+
+The following reports the accidents, casualties, proportion, and average 
+casualties per harmful accident.
+
+<br>
+
+## 1. Accidents by Hour
+
+**Instructions:** Visualize total accidents by time of day (`hour`).
+
+**Note:** *This solution has been completed for you.*
+
+<br>
+
+```{r}
+
+dat %>%
+  group_by(hour) %>%
+  summarize(n = n()) %>%
+  plot(type = "b",
+       bty = "n",
+       pch = 19,
+       cex = 2,
+       xlab = "Hour",
+       ylab = "Total Accidents",
+       main = "Total Accidents by Time of Day")
+
+```
+
+<br>
+
+## 2. Total Casualties by Hour
+
+**Instructions:** Visualize total injuries and fatalities by time of day (`hour`).
+
+<br>
+
+```{r}
+
+# Code
+
+```
+
+<br>
+
+## 3. Accidents with Casualties (%)
+
+**Instructions:** Visualize the proportion of harmful collisions our of all collisions by time of day (`hour`).
+
+<br>
+
+```{r}
+
+# Code
+
+```
+
+<br>
+
+## 4. Avg. Harm by Harmful Accident
+
+**Instructions:** Visualize average injuries or fatalities per harmful collision.
+
+<br>
+
+```{r}
+
+# Code
+
+```
+
+<br>
+
+# Appendix
+
+The following code is used for preprocessing tasks in the above solutions.
+
+<br>
+
+## A: Data Preprocessing
+
+These expressions transform, format, and create myriad new variables used in this report.
+
+<br>
+
+```{r eval = FALSE, echo = TRUE, include = TRUE}
+
+date.vec <- strptime(dat$DateTime, 
+                     format = "%m/%d/%y %H:%M")       # Create date fields
+
+dat$hour   <- format(date.vec, format = "%H")
+dat$month  <- format(date.vec, format = "%b")
+dat$day    <- format(date.vec, format = "%a")
+dat$day365 <- format(date.vec, format = "%j")
+dat$week   <- format(date.vec, format = "%V")
+
+dat$day <- factor(dat$day, 
+                  levels = c("Mon",
+                             "Tue",
+                             "Wed",
+                             "Thu",
+                             "Fri",
+                             "Sat",
+                             "Sun"))                  # Order weekdays
+
+dat$hour12 <- format(date.vec, 
+                     format="%l %p")                  # Create 12-hour format
+
+time.levels <- c("12 AM", paste(1:11, "AM"), 
+                 "12 PM", paste(1:11, "PM"))
+
+dat$hour12 <- factor(dat$hour12, 
+                     levels = time.levels)            # Order time intervals
+
+age.labels <- paste0("Age ", 
+                     c(16,18,25,35,45,55,65,75), "-", 
+                     c(18,25,35,45,55,65,75,100) )
+
+dat$age <- cut(dat$Age_Drv1, 
+               breaks = c(16,18,25,
+                          35,45,55,
+                          65,75,100), 
+               labels = age.labels)                   # Discretize age ranges
+
+```
+
+<br>
+<br>
+
+<center>------------<h4> **DELETE THIS LINE & ALL LINES BELOW BEFORE SUBMITTING** </h4>------------</center>
+
+<br>
+<br>
+
+#### **Tips & Tricks**
+
+The following tips and tricks are essential to understand in order to complete this assignment.
+
+<br>
+<br>
+
+#### **How to Submit**
+
+Use the following instructions to submit your assignment, which may vary depending on your course's platform.
+
+<br>
+<br>
+
+#### **Knitting to HTML**
+
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+<br>
+
+#### **Special Instructions**
+
+Perform the following depending on your course's platform:
+
+* **Canvas:** Upload both your `.RMD` and `.HTML` files to the appropriate link
+* **Blackboard or iCollege:** Compress your `.RMD` and `.HTML` files in a `.ZIP` file and upload to the appropriate link
+
+`.HTML` files are preferred but not allowed by all platforms.
+
+<br>
+<br>
+
+#### **Before You Submit**
+
+Remember to ensure the following before submitting your assignment.
+
+1. Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
+3. Do not show excessive output; truncate your output, e.g. with function `head()`
+4. Follow appropriate styling conventions, e.g. spaces after commas, etc.
+5. Above all, ensure that your conventions are consistent
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+#### **Common Knitting Issues**
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect their use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
+
+<br>
+<br>
+<br>
