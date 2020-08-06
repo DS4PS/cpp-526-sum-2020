@@ -162,3 +162,7 @@ For those that are new to data science, I have compiled some useful resources fo
 </div>
 <br><br><br>
 
+<a href="https://raw.githubusercontent.com/DS4PS/cpp-529-master/master/labs/lab-03-tutorial.rmd" download>TEST</a>
+
+
+
