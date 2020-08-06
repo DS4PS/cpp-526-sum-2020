@@ -1,0 +1,201 @@
+---
+title: "Lab-04 Dynamic Graphics"
+output: flexdashboard::flex_dashboard
+runtime: shiny
+---
+
+```{r global, include = FALSE}
+
+  # PROVIDED CODE
+
+      # The following code was provided in the
+      # .Rmd file used for the Lab 04 template.
+
+      # What does it do? It "preprocesses" 
+      # your data - that is, it prepares your 
+      # data for the visualization and app.
+
+      # These are also known as "variable
+      # transformations", since you are trans-
+      # forming existing variables to make 
+      # new ones.
+
+      # Only one additional line of code was 
+      # required, which is added at the very 
+      # bottom.
+
+
+library(Lahman)
+library(dplyr)
+data(Teams)
+
+ave.so <- Teams$SO / Teams$G
+year <- Teams$yearID
+
+ave.so.min <- min(ave.so, na.rm = TRUE)
+ave.so.max <- max(ave.so, na.rm = TRUE)
+
+league.ave <- tapply(X = ave.so, 
+                     INDEX = as.factor(year), 
+                     FUN = "mean", 
+                     na.rm = TRUE)
+
+league.year <- as.numeric(names(league.ave))
+
+
+  # REQUIRED ADDITIONAL CODE
+
+      # This line takes the vector of team 
+      # averages, 'ave.so', and appends it to 
+      # the dataset 'Teams' as a new variable.
+
+  # HOW IT WORKS
+
+      # When you assign values to a non-
+      # existent variable by using '$' on an 
+      # existing dataset, you create a new, 
+      # permanent variable in the dataset.
+
+      # For example:
+      # 'dat$new_variable <- some_vector'
+
+      # Dataset 'dat' would now have a new 
+      # variable, called 'new_variable', 
+      # that contains the values of
+      # vector 'some_vector'.
+
+Teams$ave.so <- ave.so
+
+```
+
+
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+Select a team to highlight on the graph.
+
+```{r}
+
+  # REQUIRED CODE: ADD ARGUMENT PARAMETERS
+
+      # The following is required to set 
+      # up the widgets in your app.
+
+
+selectInput(
+  
+  
+      # Specifically and respectively, it 
+      # names your "reactive" object, for 
+      # later use in your visualization 
+      # ('inputId ='). This can be named 
+      # anything that doesn't have oper-
+      # ators (e.g. '$' or '>'). You just
+      # have to make sure that this name 
+      # is used again in 'renderPlot()'.
+  
+  
+  inputId = "my_team",
+  
+  
+      # It also sets up a prompt for your 
+      # widget with argument 'label ='. 
+      # This could be anything, but it's
+      # an opportunity to guide your app
+      # end users and improve their UX
+      # (user experience), e.g. "Choose 
+      # team." or "Pick your favorite:".
+  
+  
+  label = "Select a team:",
+  
+  
+      # It provides the choices available
+      # for end users to select in argu-
+      # ment 'choices ='. While you could
+      # have used something like:
+      # 'unique(Teams$name)[1:25]', you
+      # may have found that many of the 
+      # early-mentioned teams don't have
+      # a lot 21st century data. 
+      # Therefore, it's easier to name
+      # teams manually within 'c()'!
+  
+      # Here are a few examples to get
+      # you started.
+  
+  
+  choices = c("New York Yankees",
+              "Boston Red Sox",
+              "Oakland Athletics"),
+  
+  
+      # Lastly, you can select a default 
+      # value for your selected team by 
+      # using argument 'selected ='. The
+      # app plots this team by default.
+  
+  
+  selected = "Boston Red Sox"
+  
+  )
+
+```
+
+
+**Author:** Your Name
+
+**Date:**  `r format(Sys.time(), '%B %d, %Y')`
+
+
+Column
+-----------------------------------------------------------------------
+
+### Strikeouts on the Rise
+
+```{r}
+
+renderPlot({
+
+index <- which(Teams$yearID <= 2012 & Teams$yearID >= 1900)
+
+Teams <- Teams[index, ]
+  
+index <- which(year <= 2012 & year >= 1900)
+
+ave.so <- ave.so[index]
+year <- year[index]
+
+index <- which(league.year <= 2012 
+               & league.year >= 1900)
+
+league.ave <- league.ave[index]
+league.year <- league.year[index]
+
+team.name <- input$my_team                  # 'team.name' takes the name of selected team
+                                            # Calls to 'input$' must occur in 'renderPlot({...})'
+
+dat.one.team <- filter(Teams, 
+                       name == team.name)   # Filtering to include only selected team
+
+                                            # You now have to use 'dat.one.team' in your
+                                            # visualization's code for the "highlighted"
+                                            # team trend line
+
+plot.new()
+
+plot.window(xlim = c(1900, 2012), 
+            ylim = c(ave.so.min, 
+                     ave.so.max))
+
+points(x = year, 
+       y = ave.so,
+       col = "gray85",
+       pch = 16,
+       cex = 0.75)
+  
+})
+
+```
+
