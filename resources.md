@@ -159,10 +159,33 @@ For those that are new to data science, I have compiled some useful resources fo
 
 [**DS4PS** (Data Science for the Public Sector)](https://ds4ps.org) Site
 
+
+
+<br>
+<br>
+<br>
+
+
+<a href="https://raw.githubusercontent.com/DS4PS/cpp-529-master/master/labs/lab-03-tutorial.rmd" download="lab-03-tutorial.rmd"> TEST1 </a>
+
+<button type="submit" onclick="window.open('https://raw.githubusercontent.com/DS4PS/cpp-529-master/master/labs/lab-03-tutorial.rmd')"> TEST2 </button>
+
+<form method="get" action="https://raw.githubusercontent.com/DS4PS/cpp-529-master/master/labs/lab-03-tutorial.rmd">
+   <button type="submit"> TEST3 </button>
+</form>
+
+<a class="btn btn-danger" role="button" href="https://raw.githubusercontent.com/DS4PS/cpp-529-master/master/labs/lab-03-tutorial.rmd"
+   download="lab-03-tutorial.rmd">
+  TEST4
+</a>
+
+<button type="submit" onclick="window.location.href='file.doc'"> TEST5 </button>
+
+
 </div>
 <br><br><br>
 
-<a href="https://raw.githubusercontent.com/DS4PS/cpp-529-master/master/labs/lab-03-tutorial.rmd" download>TEST</a>
+
 
 
 
