@@ -13,10 +13,9 @@ library( dplyr )
 library( pander )
 ```
 
-#### [CPP 526: Foundations of Data Science I](https://ds4ps.org/cpp-526-fall-2019/)
+#### [CPP 526: Foundations of Data Science I](https://ds4ps.org/cpp-526-sum-2020/)
 
 <br>
-
 
 ---
 
@@ -24,16 +23,10 @@ library( pander )
 
 #### This lab offers practice with some basic R functions for summarizing vectors.
 
-
-I have provided you with a **LAB-01 RMD template** to get you started: 
-
-
-[![](images/download.png)](https://www.dropbox.com/s/43dj0oszgg34clc/Lab-01-LastName.Rmd?dl=1)
-
-
 --- 
 
-<br><br>
+<br>
+<br>
 
 ## Functions
 
