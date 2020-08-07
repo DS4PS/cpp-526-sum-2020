@@ -171,17 +171,19 @@ The assigned work for the term comes in the form of four elements, described bel
 
 <br>
 
-### **Weekly Labs (50%)**  
+### Weekly Labs (50%)  
 
 Each week you will receive a short lab that will help you synthesize the lectures from the week though exercises that involve data, analysis, and important formulas from the lectures. These labs contain exercises that are similar in form or difficulty to what will be presented on the final exam. **They are graded pass / fail** by the instructors based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection.
 
-### **Code-Through Assignment (10%)**  
+### Code-Through Assignment (10%)
 
 You are invited to pick one topic from the class that you want to learn more about, or that you think might provide value to your classmates. Create a short tutorial to make your topic accessible to your peers. It can be a blog post, a video, a GIF, or a tutorial that explains an important concept from data programming, presents a helpful framework, illustrates a useful R tool or approach to data programming, or introduces classmates to a new package or function.
 
-### **Final Dashboard Project (30%)**  
+### Final Dashboard Project (30%)  
 
-This course will close with a final project that requires you to transform data and allow the exploration of new insights using interactive mechanisms in a pre-built data dashboard. It is designed to give you practice integrating material the we have covered throughout the course with latitude to implement creativity and your own data product style. The following criteria, description, and corresponding points are used to evaluate the project:
+This course will close with a final project that requires you to transform data and allow the exploration of new insights using interactive mechanisms in a pre-built data dashboard. It is designed to give you practice integrating material the we have covered throughout the course with latitude to implement creativity and your own data product style. 
+
+The following criteria, description, and corresponding points are used to evaluate the project (30 points total):
  
   - **New Tabs Added:** Custom tabs successfully integrated; runs without errors **(10 pts)** 
   - **Widget Integration:** Widgets correctly linked; visual output is reactive **(8 pts)**
@@ -190,7 +192,7 @@ This course will close with a final project that requires you to transform data 
   - **Style:** Content exceeds expectations in functionality, design, layout, analysis, or insights **(3 pts)**
   - **Upload to Shinyapps.io:** Dashboard posted to Shinyapps.io and available through an active URL **(3 pts)**
 
-### **Discussion Topics (10%)**  
+### Discussion Topics (10%)
 
 YellowDig discussion topics are used to introduce you to the data science ecosystem. Since this course focuses on the skill of learning data programming we cannot cover go in-depth into exciting resources and developments in the broad field of data science. The weekly discussion topics are a chance to explore some resources or reflect on a specific theme or article. We will use YellowDig discussion boards for this assignment. You earn points through your activities on the board. You need to earn at least 100 points by posting topics and interacting with peers in order to earn full credit. The points are allocated as follows:
 
