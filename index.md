@@ -207,7 +207,9 @@ YellowDig discussion topics are used to introduce you to the data science ecosys
   - **Comments Made:** Creating a comment on another pin **(2 pts)**
   - **Likes:** Liking another pin **(1 pt)**
 
-**A maximum of 20 points can be earned in each week's discussions.**  *Earning an "Instructor Badge" nets an additional 5 points.*
+**A maximum of 20 points can be earned in each week's discussions.**  
+
+*Earning an "Instructor Badge" nets an additional 5 points.*
 
 <br>
 
