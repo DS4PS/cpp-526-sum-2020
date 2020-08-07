@@ -439,13 +439,6 @@ dat$age <- cut(dat$Age_Drv1,
 <br>
 <br>
 
-#### **Tips & Tricks**
-
-The following tips and tricks are essential to understand in order to complete this assignment.
-
-<br>
-<br>
-
 #### **How to Submit**
 
 Use the following instructions to submit your assignment, which may vary depending on your course's platform.

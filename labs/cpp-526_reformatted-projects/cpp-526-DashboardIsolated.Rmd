@@ -1,0 +1,223 @@
+---
+title: "Final Project: Practice Tab"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: spacelab
+    source: embed
+    smart: false
+runtime: shiny
+---
+
+```{r include = FALSE}
+
+# DESCRIPTION
+
+  # This code chunk is for preprocessing only.
+  # If you are not transforming any variables, ignore this section.
+  # The variables created in this chunk make it easier to create a dashboard.
+
+
+
+# LOAD PACKAGES
+
+library(DT)
+library(ggmap)
+library(shiny)
+library(knitr)
+library(pander)
+library(leaflet)
+library(viridis)
+library(rsconnect)
+library(tidyverse)
+library(flexdashboard)
+
+
+
+# READ IN DATA
+
+url <- paste0("https://github.com/DS4PS/Data-",
+              "Science-Class/blob/master/DATA",
+              "/TempeTrafficAccidents.rds?raw=true")
+
+dat <- readRDS(gzcon(url(url)))
+
+
+
+# DATA PREPROCESSING I: INJURIES & FATALITIES
+
+dat        <- na.omit(dat)                                       # Remove NA
+dat$fatal  <- dat$Totalfatalities > 0                            # 1+ fatalities
+dat$inj    <- dat$Totalinjuries > 0 & dat$Totalfatalities == 0   # 1+ injuries, 0 fatal
+dat$nohurt <- dat$Totalfatalities + dat$Totalinjuries == 0       # Harmless
+
+date.vec   <- strptime(dat$DateTime, format = "%m/%d/%y %H:%M")  # Datetime variables
+dat$hour   <- format(date.vec, format = "%H") %>% as.numeric()
+dat$month  <- format(date.vec, format = "%b")
+dat$day    <- format(date.vec, format = "%a")
+dat$day365 <- format(date.vec, format = "%j")
+dat$week   <- format(date.vec, format = "%V")
+
+
+
+# DATA PREPROCESSING II: NAMED INTERVALS OF TIME
+
+dat <- dat %>% 
+  mutate(time.of.day = case_when(hour >= 6 & hour <= 9 ~ "Morning Commute", 
+                                 hour >= 16 & hour <= 19 ~ "Evening Commute", 
+                                 hour >= 14 & hour <= 15 ~ "School Pickup", 
+                                 hour >= 9 & hour <= 13 ~ "Work", 
+                                 hour >= 20 & hour <= 23 ~ "Night", 
+                                 hour <= 5 & hour >= 0 ~ "Midnight to Dawn"))
+
+dat$harm <- ifelse(test = dat$Totalinjuries > 0 | dat$Totalfatalities > 0, 
+                   yes = "Harm", 
+                   no = "No Harm")
+
+
+
+# DATA PREPROCESSING III: PERMUTATIONS OF INEBRIATION
+
+dat <- dat %>% 
+  mutate(d1.substance = case_when(AlcoholUse_Drv1 == "Alcohol" & 
+                                  DrugUse_Drv1 == "No Apparent Influence" ~ "Alcohol", 
+                                  AlcoholUse_Drv1 == "No Apparent Influence" & 
+                                  DrugUse_Drv1 == "Drugs" ~ "Drugs", 
+                                  AlcoholUse_Drv1 == "Alcohol" & 
+                                  DrugUse_Drv1 == "Drugs" ~ "Alcohol and Drugs", 
+                                  AlcoholUse_Drv1 == "No Apparent Influence" & 
+                                  DrugUse_Drv1 == "No Apparent Influence" ~ "No Apparent Influence"))
+
+dat <- dat %>% 
+  mutate(d2.substance = case_when(AlcoholUse_Drv2 == "Alcohol" & 
+                                  DrugUse_Drv2 == "No Apparent Influence" ~ "Alcohol", 
+                                  AlcoholUse_Drv2 == "No Apparent Influence" & 
+                                  DrugUse_Drv2 == "Drugs" ~ "Drugs", 
+                                  AlcoholUse_Drv2 == "Alcohol" & 
+                                  DrugUse_Drv2 == "Drugs" ~ "Alcohol and Drugs", 
+                                  AlcoholUse_Drv2 == "No Apparent Influence" & 
+                                  DrugUse_Drv2 == "No Apparent Influence" ~ "No Apparent Influence"))
+
+
+
+# DATA PREPROCESSING IV: AGE CATEGORIES
+
+dat$age.cat <- case_when(dat$Age_Drv1 >= 0 & 
+                         dat$Age_Drv1 <= 18 ~ "Youth", 
+                         dat$Age_Drv1 >= 19 & 
+                         dat$Age_Drv1 <= 25 ~ "Young Adult", 
+                         dat$Age_Drv1 >= 26 & 
+                         dat$Age_Drv1 <= 64 ~ "Adult", 
+                         dat$Age_Drv1 >= 65 ~ "Senior")
+
+```
+
+[The Title of Your Tab]
+=====================================  
+
+Inputs {.sidebar}
+-------------------------------------
+
+```{r}
+
+# USER INPUT WIDGETS
+
+    # Allows users to change how data are filtered.
+    # Each input widget function has a unique 'inputId ='.
+    # The 'inputId' is called with 'input$' in the next code chunk.
+
+    # 'selectInput()' and 'sliderInput()' are examples of widget functions.
+    # Each widget has different arguments depending on the type of input used.
+    # Find new input widgets here: https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/
+
+
+
+selectInput(inputId = "direction1",                 # The unique ID for the input selected
+            label = h4("[Dropdown Widget Label]"),
+            choices = c("North",                    # The options users can select 
+                        "South",                    # These must have corresponding values in the variable
+                        "East", 
+                        "West"),
+            selected = "North")                     # The default input selected
+
+selectInput(inputId = "direction2", 
+            label = h4("[Dropdown Widget Label]"),  # The label of your widget
+            choices = c("North", 
+                        "South", 
+                        "East", 
+                        "West"),
+            selected = "North")
+
+
+
+# A NUMERIC INPUT WIDGET
+
+    # The following 'sliderInput()' takes two numeric inputs (minimum and maximum).
+    # Since these are numeric inputs, they are different from the text data inputs above.
+
+sliderInput(inputId = "hour",                       # The unique ID
+            label = h4("[Slider Widget Label]"), 
+            min = 0,                                # The minimum value
+            max = 23,                               # The maximum value
+            value = c(6, 12))                       # A pair of default values
+
+```
+
+Outputs
+-------------------------------------
+
+### [The Title of Your Map]
+
+```{r}
+
+renderLeaflet({
+  
+  # WHERE UNIQUE IDs ARE USED TO FILTER YOUR DATA
+  
+      # Function 'filter()' from package 'dplyr' filters data ccording to user inputs.
+      # Note that the selected values in each widget above is "called" here with 'input$' and its ID
+      # Each input ID must correspond to an existing variable and the input values must also match those of the variable
+
+
+
+  d5 <- dat %>%
+    filter(Traveldirection_One == input$direction1,   # The unique ID 'direction1' called with 'input$'
+           Traveldirection_Two == input$direction2,   # All unique IDs must have a corresponding variable in the data
+           hour >= input$hour[1],
+           hour <= input$hour[2])                     # Since the slider input has two values, the ID is called twice
+
+
+
+  # IF CREATING A MAP, YOU CAN IGNORE EVERYTHING BELOW THIS COMMENT
+  
+  d5$col.vec <- ifelse(test = d5$nohurt, 
+                       yes = "gray20", 
+                       no = ifelse(test = d5$inj, 
+                                   yes = "steelblue", 
+                                   no = "darkorange")) 
+  
+  point.size <- d5$Totalinjuries + d5$Totalfatalities
+
+  crash.details <- paste0("Time: ", d5$DateTime, "<br>",
+                          "Total Fatalities: ", d5$Totalfatalities, "<br>",
+                          "Total Injuries: ", d5$Totalinjuries, "<br>",
+                          "Collision type: ", d5$Collisionmanner)
+  
+  tempe <- leaflet() %>% 
+    addProviderTiles("CartoDB.Positron") %>%
+    setView(lng = -111.9278, 
+            lat = 33.39951, 
+            zoom = 13)
+  
+  
+  addCircles(tempe, 
+             lng = d5$Longitude, 
+             lat = d5$Latitude,
+             fillColor = d5$col.vec, 
+             fillOpacity = 0.5, 
+             stroke = FALSE, 
+             radius = 50 * (1 + 0.33 * point.size),
+             popup = crash.details)
+
+})
+
+```   
