@@ -1,5 +1,5 @@
 ---
-title: "Lab 05: - Tempe Accident Analysis"
+title: "Lab 05 - Tempe Accident Analysis"
 author: "Your Name"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
