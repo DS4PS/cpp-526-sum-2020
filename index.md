@@ -194,6 +194,7 @@ In general, any submitted work written work (assignments and/or exams) is assess
 - Assignment completeness – all elements of the assignment are addressed
 - Quality of analysis – substantively rigorous in addressing the assignment
 - Demonstrated synthesis of core concepts from lecture notes and ability to apply to new problems
+- Consistent use of formatting, style, and conventions in code; proper grammer, spelling, and formatting in text
 
 Most assignments in this course are labs that are graded pass-fail based upon completeness and correctness of responses (every attempt must be made to complete labs, and they must be more than 50% correct to receive credit). Discussion boards that accumulate points through each activity on the board. 
 
