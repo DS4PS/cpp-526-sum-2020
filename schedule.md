@@ -409,6 +409,8 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-sum-2020/labs/lab-01-instructions.html">LAB-01 Instructions</a>
 
+<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-labs/Lab-01-v2_LastName.Rmd">LAB-01 Template</a>
+
 ## Submit Solutions to Canvas:
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
