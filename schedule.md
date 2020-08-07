@@ -409,6 +409,8 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-sum-2020/labs/lab-01-instructions.html">LAB-01 Instructions</a>
 
+Visit the template and right-click to save the file to your machine.
+
 <a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-labs/Lab-01-v2_LastName.Rmd">LAB-01 Template</a>
 
 ## Submit Solutions to Canvas:
@@ -580,6 +582,10 @@ The rest of the chapter is useful information to come back to, but not needed fo
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-sum-2020/labs/lab-02-instructions-v2.html">LAB-02 Instructions</a>
 
+Visit the template and right-click to save the file to your machine.
+
+<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-labs/Lab-02-v2-LastName.rmd">LAB-02 Template</a>
+
 
 ## Submit Solutions to Canvas:
 
@@ -731,6 +737,10 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-sum-2020/labs/lab-03-instructions.html">LAB-03 Instructions</a>
 
+Visit the template and right-click to save the file to your machine.
+
+<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-labs/Lab-03-v2-LastName.Rmd">LAB-03 Template</a>
+
 ## Submit Solutions to Canvas:
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
@@ -856,6 +866,10 @@ This lab is designed to introduce you to R Shiny functions by adding a dynamic e
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-spr-2020/labs/lab-04-instructions.html">LAB-04 Instructions</a>
 
+Visit the template and right-click to save the file to your machine.
+
+<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-labs/Lab-04-v2-LastName.Rmd">LAB-04 Template</a>
+
 ## Submit Solutions to Canvas:
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
@@ -969,6 +983,10 @@ This lab offers practice analyzing traffic accident patterns using **dplyr** dat
 *Note, this data will be used for your final dashboard. This assignment is a preview of the types of analysis and graphics you might report on the dashboard.*
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-spr-2020/labs/lab-05-instructions.html">LAB-05 Instructions</a>
+
+Visit the template and right-click to save the file to your machine.
+
+<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-labs/Lab-05-v2-LastName.Rmd">LAB-05 Template</a>
 
 ## Submit Solutions to Canvas:
 
@@ -1111,6 +1129,10 @@ Do you think open source frameworks would help open the black box and make gover
 This lab is designed to introduce you to primary data join functions in R.
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-spr-2020/labs/lab-06-instructions.html">LAB-06 Instructions</a>
+
+Visit the template and right-click to save the file to your machine.
+
+<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-labs/Lab-06-v2-LastName.Rmd">LAB-06 Template</a>
 
 ## Submit Solutions to Canvas:
 
