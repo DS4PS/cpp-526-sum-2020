@@ -1208,7 +1208,7 @@ Visit the final project template and right-click to save the file to your machin
 
 The dashboard already has multiple tabs.  We recommended creating tabs independently and incorporating them into the final dashboard using the isolated tab template below.
 
-<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-projects/cpp-526-DashboardFull-LastName.Rmd">Isolated Tab Template</a>
+<a class="uk-button uk-button-default" onclick="window.open('https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-projects/cpp-526-DashboardFull-LastName.Rmd')">Isolated Tab Template</a>
 
 ## Submit to Canvas:
 
