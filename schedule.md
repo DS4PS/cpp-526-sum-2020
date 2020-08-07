@@ -262,10 +262,11 @@ This section introduces functions and vectors, two important building blocks of 
 
 ## Learning Objectives
 
-Once you have completed this section you will be able to 
-* create new objects in R 
-* use functions 
-* summarize vectors by type
+Once you have completed this section you will be able to:
+
+* Create new objects in R 
+* Use functions 
+* Summarize vectors by type
   - numeric vectors 
   - character vectors 
   - logical vectors 
@@ -278,12 +279,12 @@ Lab-01 covers the following topics:
 
 * R Markdown (template provided)
 * Vectors
-  - numeric 
-  - character 
-  - factor 
-  - logical 
+  - Numeric 
+  - Character 
+  - Factor 
+  - Logical 
 
-**Functions**
+### Functions
 
 ```r
 names()                 # variable names
@@ -295,28 +296,34 @@ sum(), summary()        # summarize numeric vectors
 table()                 # summarize factors / character vectors
 ```
 
-**Data**:
+### Practice Data
 
-Syracuse tax parcels: [ [documentation](https://ds4ps.org/Data-Science-Class/DATA/syr_parcels.html) ]
+This assignement uses Downtown Syracuse tax parcel data. View the documentation **[here](https://ds4ps.org/Data-Science-Class/DATA/syr_parcels.html)**.
+
+These data are imported using the following code.
 
 ```r
-URL <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv"
-dat <- read.csv( URL, stringsAsFactors=FALSE )
-head( dat )
+
+url <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv"
+dat <- read.csv(url, stringsAsFactors = FALSE)
+head(dat)
+
 ```
 
-**Downtown Syracuse**
+#### Downtown Syracuse
+
+View the portion of Syracuse represented by these data.
 
 ![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/downtown-syr.png?raw=true)
 
-**All 42,000 Parcels**
+##### All of Syracuse
+
+Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels containing homes with single families.
 
 ![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/syracus-parcels.png?raw=true)
 
 <br>
 <br>
-
-
 
 
 *** { @unit = "", @title = "Readings", @reading, @foldout  }
