@@ -1173,6 +1173,10 @@ If you send me your RMD and HTML files via email, I will post them to GitHub and
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html">Code-Through Instructions</a>
 
+Visit the suggested code-through template and right-click to save the file to your machine.
+
+<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-projects/cpp-526-CodeThrough-LastName.Rmd">Code-Through Template</a>
+
 ## Submit to Canvas:
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT CODE-THROUGH</a>
@@ -1198,20 +1202,20 @@ Working with the crash data from Lab-05, you will extend the work you began in L
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html">Final Project Instructions</a>
 
+Visit the final project template and right-click to save the file to your machine.
+
+<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-projects/cpp-526-DashboardIsolated.Rmd">Final Project Template</a>
+
+The dashboard already has multiple tabs.  We recommended creating tabs independently and incorporating them into the final dashboard using the isolated tab template below.
+
+<a class="uk-button uk-button-default" href="https://raw.githubusercontent.com/DS4PS/cpp-526-sum-2020/master/labs/cpp-526_reformatted-projects/cpp-526-DashboardFull-LastName.Rmd">Isolated Tab Template</a>
+
 ## Submit to Canvas:
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT DASHBOARD</a>
 
 <br>
 <br>
-
-
-
-
-
-
-
-
 
 
 
