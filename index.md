@@ -182,7 +182,7 @@ The assigned work for the term comes in the form of four elements, described bel
   - 2 point if you receive a comment on your pin.
   - 1 point for liking another pin.
   - 5 points if you earn an instructor badge for an informative post.
-  - max of 20 points can be earned each week.
+  - Maximum of 20 points can be earned each week.
 
 <br>
 
