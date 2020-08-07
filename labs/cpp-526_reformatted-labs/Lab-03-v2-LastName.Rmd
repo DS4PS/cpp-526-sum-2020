@@ -1,6 +1,6 @@
 ---
-title: 'Lab 03 - Graphics'
-author: 'Your Name'
+title: "Lab 03 - Graphics"
+author: "Your Name"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
