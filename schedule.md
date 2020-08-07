@@ -318,7 +318,7 @@ View the portion of Syracuse represented by these data.
 
 ##### All of Syracuse
 
-Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels containing homes with single families.
+Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels with single family homes.
 
 ![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/syracus-parcels.png?raw=true)
 
