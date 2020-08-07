@@ -167,7 +167,7 @@ Letter grades comport with a traditional set of intervals:
 83 – 80%    |  B –  
 Below 80%   |  C, D, F  
 
-The assigned work for the term comes in the form of four elements, described below:
+The assigned work for the term comes in the form of four elements, described below.
 
 <br>
 
@@ -204,7 +204,6 @@ YellowDig discussion topics are used to introduce you to the data science ecosys
 A maximum of 20 points can be earned in each week's discussions.  Earning an "Instructor Badge" nets an additional 5 points.
 
 <br>
-
 
 ## D. General Grading Rubric for Written Work
 
