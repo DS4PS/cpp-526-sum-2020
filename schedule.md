@@ -338,7 +338,7 @@ Play the video below for an overview of objects and assignment in R.
 <br>
 <br>
 
-<iframe width="560" height="315" src="https://youtu.be/q6kdjxSlq40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q6kdjxSlq40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 <br>
@@ -352,7 +352,7 @@ Play the video below for an overview of functions in R.
 <br>
 <br>
 
-<iframe width="560" height="315" src="https://youtu.be/QoMX6ZauH5k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QoMX6ZauH5k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 <br>
@@ -366,7 +366,7 @@ Play the video below for an overview of basic exploratory functions for a vector
 <br>
 <br>
 
-<iframe width="560" height="315" src="https://youtu.be/6TF6UuM0IbI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6TF6UuM0IbI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 <br>
