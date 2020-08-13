@@ -871,7 +871,7 @@ This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-
 
 This lab is designed to introduce you to R Shiny functions by adding a dynamic element to the NYT graphic from last week.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-spr-2020/labs/lab-04-instructions.html')">LAB-04 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-04-instructions.html')">LAB-04 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
@@ -989,7 +989,7 @@ This lab offers practice analyzing traffic accident patterns using **dplyr** dat
 
 *Note, this data will be used for your final dashboard. This assignment is a preview of the types of analysis and graphics you might report on the dashboard.*
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-spr-2020/labs/lab-05-instructions.html')">LAB-05 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-05-instructions.html')">LAB-05 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
@@ -1135,7 +1135,7 @@ Do you think open source frameworks would help open the black box and make gover
 
 This lab is designed to introduce you to primary data join functions in R.
 
-<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-spr-2020/labs/lab-06-instructions.html')">LAB-06 Instructions</a>
+<a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-06-instructions.html')">LAB-06 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
