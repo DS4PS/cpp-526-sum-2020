@@ -301,6 +301,18 @@ Play the video below for an overview of functions in R.
 
 <br>
 
+## Understanding Vectors
+
+Play the video below for an overview of vectors: What they are, how to make them, and different types.
+
+*Click on the video to navigate using bookmarks and timestamps.*
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6TF6UuM0IbI?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
 ## Exploring Vectors
 
 Play the video below for an overview of basic exploratory functions for a vector, i.e. a series of values.
@@ -434,6 +446,23 @@ Lab-02 covers the following topics:
 * Logical operators
 * Group construction 
 * Descriptive statistics 
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Video Overviews", @lecture, @foldout }
+
+<br>
+
+## Logical Vectors
+
+Play the video below for an overview of logical vectors, i.e. a series of `TRUE` and `FALSE` values. 
+
+*Click on the video to navigate using bookmarks and timestamps.*
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l9WhjLMMWH4?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 <br>
@@ -728,6 +757,28 @@ But we will now add an input widget that allows users to select one team that wi
 <br>
 <br>
 
+*** { @unit = "", @title = "Video Overviews", @lecture, @foldout }
+
+<br>
+
+## Introducing Shiny
+
+Play the video below for an overview of interactive graphics with Shiny. Specifically:
+
+* How to create a hard-coded graphic
+* The logic behind making graphics dynamic
+* An example of a dynamic Shiny app in RStudio
+* How to create a new Shiny app with user inputs
+
+*Click on the video to navigate using bookmarks and timestamps.*
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UF7T7kAtetQ?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+<br>
+
 *** { @unit = "", @title = "Demo of Shiny Widgets", @foldout }
 
 <br>
@@ -822,6 +873,23 @@ Lab 05 will use data on traffic accidents in the City of Tempe:
 <br>
 
 ![](assets/img/traffic-accidents.png)
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Video Overviews", @lecture, @foldout }
+
+<br>
+
+## Introducing Shiny
+
+Play the video below for an overview of package **dplyr**.
+
+*Click on the video to navigate using bookmarks and timestamps.*
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M2QuERvxwm0?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 <br>
