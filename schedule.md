@@ -414,13 +414,15 @@ You can earn up to 20 points a week, and points reset on Fridays. You need to ea
 
 ## Lab-01 - Practice with Vectors
 
+This lab is designed to introduce you to basic functions that explore datasets and variables.
+
 <a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-01-instructions.html')">LAB-01 Instructions</a>
 
 Click to download the lab template. Modify and submit using the instructions.
 
 <a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-01-v2_LastName.zip?raw=true')">LAB-01 Template</a>
 
-## Submit Solutions to Canvas:
+## Submit Solutions to Canvas
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
 
@@ -575,17 +577,19 @@ Take note, this assignment asks you to explore a new community where the technic
 
 ## Lab-02 - Constructing Groups
 
-Read the following sections from the [course chapter on groups](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html) before starting the lab:
+Read the following sections from the [course chapter on groups](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html) before starting the lab.
 
-1 Constructing Groups    
-- 1.1 Logical Operators  
-- 1.2 Selector Vectors  
-- 1.3 Usefulness of Selector Vectors  
-2 Subsets  
-- 2.1 Compound Logical Statements  
-- 2.2 The Opposite-Of Operator  
+You will need a basic understanding of constructing groups and subsets in these sections.
 
-The rest of the chapter is useful information to come back to, but not needed for the lab. Similar to last week the chapter will highlight some easy ways to make errors with your code, not to convince you that R is hard, but rather to ensure you are paying attention to some subtle features of computer languages that can impact your data. 
+* Logical Operators (1.1)
+* Selector Vectors (1.2)
+* Usefulness of Selector Vectors (1.3)
+* Compound Logical Statements (2.1)  
+* The Opposite-Of Operator (2.2)  
+
+The rest of the chapter is useful information to come back to, but not needed for the lab. 
+
+*Similar to last week, the chapter highlights some easy ways to make errors with your code. We don't want to convince you that R is hard, but rather to ensure that you are paying attention to some subtle features of machine language that can impact your data.*
 
 <a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-02-instructions-v2.html')">LAB-02 Instructions</a>
 
@@ -594,7 +598,7 @@ Click to download the lab template. Modify and submit using the instructions.
 <a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-02-v2-LastName.zip?raw=true')">LAB-02 Template</a>
 
 
-## Submit Solutions to Canvas:
+## Submit Solutions to Canvas
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
 
@@ -735,12 +739,14 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 
 ## Lab-03 - Graphics
 
-This lab is designed to introduce you to core graphing functions in R by replicating a New York Times graphic.
+This lab is designed to introduce you to core visualization functions by replicating an elaborate graphic.
 
-You are advised to **skim** the chapters on graphing functions and custom graphics in R, but sample code has been provided for each step of the lab. 
+We recommend you **skim** the chapters on graphing functions and custom graphics in R. 
 
-[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
-[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+* [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
+* [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+
+Code is provided to get you started, but you will have to use documentation and the web to push the boundaries of your new knowledge of these functions.
 
 <a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-03-instructions.html')">LAB-03 Instructions</a>
 
@@ -748,7 +754,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-03-v2-LastName.zip?raw=true')">LAB-03 Template</a>
 
-## Submit Solutions to Canvas:
+## Submit Solutions to Canvas
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
 
@@ -869,7 +875,7 @@ This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-
 
 ## Lab-04 - Dynamic Graphics
 
-This lab is designed to introduce you to R Shiny functions by adding a dynamic element to the NYT graphic from last week.
+This lab is designed to introduce you to R Shiny by making last week's graphic interactive and dynamic.
 
 <a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-04-instructions.html')">LAB-04 Instructions</a>
 
@@ -877,7 +883,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-04-v2-LastName.zip?raw=true')">LAB-04 Template</a>
 
-## Submit Solutions to Canvas:
+## Submit Solutions to Canvas
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
 
@@ -987,7 +993,7 @@ You can find APIs through a Google search, or browse datasets on the [DS4PS Open
 
 This lab offers practice analyzing traffic accident patterns using **dplyr** data wrangling functions. 
 
-*Note, this data will be used for your final dashboard. This assignment is a preview of the types of analysis and graphics you might report on the dashboard.*
+*Note that these data and techniques will be used for your final project - building an interactive dashboard.*
 
 <a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-05-instructions.html')">LAB-05 Instructions</a>
 
@@ -995,7 +1001,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-05-v2-LastName.zip?raw=true')">LAB-05 Template</a>
 
-## Submit Solutions to Canvas:
+## Submit Solutions to Canvas
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
 
@@ -1141,7 +1147,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-06-v2-LastName.zip?raw=true')">LAB-06 Template</a>
 
-## Submit Solutions to Canvas:
+## Submit Solutions to Canvas
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT LAB</a>
 
@@ -1186,7 +1192,7 @@ Download the recommended template for your code-through with the below link.
 
 <a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-projects/cpp-526-CodeThrough-LastName.zip?raw=true')">Base Code-Through Template</a>
 
-## Submit to Canvas:
+## Submit to Canvas
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT CODE-THROUGH</a>
 
@@ -1201,7 +1207,7 @@ Download the recommended template for your code-through with the below link.
 
 
 
-*** { @unit = "FRI June 26th", @title = "FINAL PROJECT", @assignment, @foldout  }
+*** { @unit = "FRI June 26th", @title = "Final Project", @assignment, @foldout  }
 
 <br>
 
@@ -1220,7 +1226,7 @@ We recommended creating new tabs independently, then incorporating them into the
 
 <a class="uk-button uk-button-default" onclick="window.open('https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-projects/cpp-526-DashboardTemplates.zip?raw=true')">Final Project Templates</a>
 
-## Submit to Canvas:
+## Submit to Canvas
 
 <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">SUBMIT DASHBOARD</a>
 
