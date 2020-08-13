@@ -887,7 +887,7 @@ Lab 05 will use data on traffic accidents in the City of Tempe:
 
 <br>
 
-## Introducing Shiny
+## Introducing dplyr
 
 Play the video below for an overview of package **dplyr**.
 
