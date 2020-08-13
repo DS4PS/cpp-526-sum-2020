@@ -43,7 +43,7 @@ Play the video below to learn a bit more about Jamison Crawford, Associate Facul
 <br>
 <br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xQA9OSjGQok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xQA9OSjGQok?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 <br>
@@ -336,12 +336,8 @@ Play the video below for an overview of objects and assignment in R.
 *Click on the video to navigate using bookmarks and timestamps.*
 
 <br>
-<br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/q6kdjxSlq40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q6kdjxSlq40?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Functions in R
 
@@ -350,12 +346,8 @@ Play the video below for an overview of functions in R.
 *Click on the video to navigate using bookmarks and timestamps.*
 
 <br>
-<br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QoMX6ZauH5k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QoMX6ZauH5k?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Exploring Vectors
 
@@ -364,9 +356,8 @@ Play the video below for an overview of basic exploratory functions for a vector
 *Click on the video to navigate using bookmarks and timestamps.*
 
 <br>
-<br>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6TF6UuM0IbI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6TF6UuM0IbI?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br>
 <br>
