@@ -343,6 +343,20 @@ Play the video below for an overview of objects and assignment in R.
 <br>
 <br>
 
+## Functions in R
+
+Play the video below for an overview of functions in R.
+
+*Click on the video to navigate using bookmarks and timestamps.*
+
+<br>
+<br>
+
+<iframe width="560" height="315" src="https://youtu.be/QoMX6ZauH5k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+<br>
+
 ## Exploring Vectors
 
 Play the video below for an overview of basic exploratory functions for a vector, i.e. a series of values.
