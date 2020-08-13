@@ -36,9 +36,18 @@ library( rgdal )
 
 #### This lab offers practice with logical statements used to create groups from your data.
 
+I have provided you with a **LAB-02 RMD template**: 
+
+<center>
+
+[![](images/download.png)](https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-02-v2-LastName.zip?raw=true)
+
+</center>
+
 --- 
 
-<br><br>
+<br>
+<br>
 
 # Getting Started 
 
