@@ -25,9 +25,13 @@ We will use the following packages for the lab:
 library( dplyr )
 ```
 
-You can create a new RMarkdown file, or download the lab template: 
+You can create a new R Markdown file, or download the **LAB-06 RMD template**: 
 
-[RMD Template](https://cdn.rawgit.com/DS4PS/Data-Science-Class/c464d527/TEMPLATES/MarkdownTemplateSimple.Rmd)
+<center>
+
+[![](images/download.png)](https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-06-v2-LastName.zip?raw=true)
+
+</center>
 
 <br><br>
 
@@ -274,15 +278,55 @@ If you are interested in some of the actual math behind Moneyball ("Sabermetrics
 
 <br><br>
 
-# Submission Instructions
+# How to Submit
 
-After you have completed your lab, knit your RMD file. **Submit your code and a printed view of your final table.**
+Use the following instructions to submit your assignment, which may vary depending on your course's platform.
 
-Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your RMD and your HTML files to the appropriate lab submission link.
+<br>
 
-Remember to:
+### Knitting to HTML
 
-* name your files according to the convention: **Lab-##-LastName.Rmd**
-* show your solution, include your code.
-* do not print excessive output (like a full data set).
-* follow appropriate style guidelines (spaces between arguments, etc.).
+When you have completed your assignment, click the "Knit" button to render your `.RMD` file into a `.HTML` report.
+
+<br>
+
+### Special Instructions
+
+Perform the following depending on your course's platform:
+
+* **Canvas:** Upload both your `.RMD` and `.HTML` files to the appropriate link
+* **Blackboard or iCollege:** Compress your `.RMD` and `.HTML` files in a `.ZIP` file and upload to the appropriate link
+
+`.HTML` files are preferred but not allowed by all platforms.
+
+<br>
+
+### Before You Submit
+
+Remember to ensure the following before submitting your assignment.
+
+1. Name your files using this format: **Lab-##-LastName.rmd** and **Lab-##-LastName.html**
+2. Show both the solution for your code and write out your answers in the body text 
+3. Do not show excessive output; truncate your output, e.g. with function `head()`
+4. Follow appropriate styling conventions, e.g. spaces after commas, etc.
+5. Above all, ensure that your conventions are consistent
+
+See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples of common conventions.
+
+<br>
+<br>
+
+### Common Knitting Issues
+
+`.RMD` files are knit into `.HTML` and other formats procedural, or line-by-line.
+
+* An error in code when knitting will halt the process; error messages will tell you the specific line with the error
+* Certain functions like `install.packages()` or `setwd()` are bound to cause errors in knitting 
+* Altering a dataset or variable in one chunk will affect their use in all later chunks
+* If an object is "not found", make sure it was created or loaded with `library()` in a previous chunk
+
+**If All Else Fails:** If you cannot determine and fix the errors in a code chunk that's preventing you from knitting your document, add `eval = FALSE` inside the brackets of `{r}` at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: `{r eval = FALSE}`. This will prevent an erroneous chunk of code from halting the knitting process.  
+
+<br>
+<br>
+<br>

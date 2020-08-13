@@ -37,9 +37,11 @@ plot( dt,  border=NA, col="gray80" )
 
 I have provided you with a **LAB-02 RMD template**: 
 
+<center>
 
-[![](images/download.png)](https://www.dropbox.com/s/tmiqepil1u05e1q/Lab-02-LastName%20.Rmd?dl=1)
+[![](images/download.png)](https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-02-v2-LastName.zip?raw=true)
 
+</center>
 
 --- 
 

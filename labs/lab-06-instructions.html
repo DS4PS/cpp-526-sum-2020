@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -200,6 +199,22 @@ window.buildTabsets = function(tocID) {
   });
 };
 
+</script>
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
 </script>
 <style type="text/css">.pagedtable {
 overflow: auto;
@@ -1476,9 +1491,9 @@ window.onload = function() {
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -1488,14 +1503,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -1504,9 +1521,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  { background-color: #f8f8f8; }
+  {  background-color: #f8f8f8; }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -1669,6 +1686,7 @@ summary {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -1710,9 +1728,11 @@ summary {
 <p><br></p>
 <p>This lab demonstrates the process of joining two datasets through a <strong>merge()</strong> function. This is one of the most common and most important processes in data science, because it allows you to combine multiple datasets to link observations that pertain to the same individuals / cases. The deepest insights often come from bringing data together in this way.</p>
 <p>We will use the following packages for the lab:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>( dplyr )</a></code></pre></div>
-<p>You can create a new RMarkdown file, or download the lab template:</p>
-<p><a href="https://cdn.rawgit.com/DS4PS/Data-Science-Class/c464d527/TEMPLATES/MarkdownTemplateSimple.Rmd">RMD Template</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>( dplyr )</span></code></pre></div>
+<p>You can create a new R Markdown file, or download the <strong>LAB-06 RMD template</strong>:</p>
+<center>
+<p><a href="https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-06-v2-LastName.zip?raw=true"><img src="data:image/png;base64,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" /></a></p>
+</center>
 <p><br><br></p>
 </div>
 <div id="overview-of-joins" class="section level1">
@@ -1842,7 +1862,7 @@ summary {
 </tbody>
 </table>
 <p>The RIGHT way to merge these tables is to specify the set of IDs that allow you to indentify unique observations. The employee ID is not sufficient in this case because there are separate observations for each year. As a result,</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">merge</span>( dat1, dat2, <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&quot;id&quot;</span>,<span class="st">&quot;year&quot;</span>) )         <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pander</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">merge</span>( dat1, dat2, <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&quot;id&quot;</span>,<span class="st">&quot;year&quot;</span>) )         <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pander</span>()</span></code></pre></div>
 <table style="width:43%;">
 <colgroup>
 <col width="6%"></col>
@@ -1899,7 +1919,7 @@ summary {
 </table>
 <p>The WRONG way to merge these two datasets is to use only the employee ID. In this case, since the rows are now no longer unique, the only choice the merge() function has is to join EVERY instance on the right to each instance on the left. It has the effect of blowing up the size of the database (notice we have increased from 6 to 12 rows), as well as duplicating fields and incorrectly aligning data.</p>
 <p>Row number 2, for example, reports that employee A received a bonus on $54,000 in sales.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">merge</span>( dat1, dat2, <span class="dt">by=</span><span class="st">&quot;id&quot;</span> )         <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pander</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">merge</span>( dat1, dat2, <span class="dt">by=</span><span class="st">&quot;id&quot;</span> )         <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pander</span>()</span></code></pre></div>
 <table style="width:58%;">
 <colgroup>
 <col width="6%"></col>
@@ -2010,18 +2030,18 @@ summary {
 <div id="merge-keys" class="section level2">
 <h2>Merge Keys</h2>
 <p>Your “keys” are the shared IDs across your datasets used for the join. You can check for shared variable names by looking at the intersection of column names in both datasets:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">intersect</span>( <span class="kw">names</span>(dat1), <span class="kw">names</span>(dat2) )</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">intersect</span>( <span class="kw">names</span>(dat1), <span class="kw">names</span>(dat2) )</span></code></pre></div>
 <pre><code>## [1] &quot;id&quot;   &quot;year&quot;</code></pre>
-<p>This works when the datasets were generated from a common system that uses standardized and identical ID names. In other cases, the same key may be spelled differently (‘year’ vs. ‘YEAR’) or have completely different names.</p>
+<p>This works when the datasets were generated from a common system that uses standardized and identical ID names. In other cases, the same key may be spelled differently (‘year’ vs. ‘YEAR’) or have completely different names.</p>
 <p>The check above at least allows you to catch instances where variable names would be repeated, and thus duplicated in the merged file. When this happens, like the ‘year’ variable in the example above, the merge operation will add an ‘x’ and ‘y’ to the end of the variable names to specify which dataset they originated from (‘year.x’ and ‘year.y’ in the example above).</p>
 <p>In instances where variable names differ, you can specify the names directly using “by.x=” and “by.y=”:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">merge</span>( dat1, dat2, <span class="dt">by.x=</span><span class="st">&quot;fips&quot;</span>, <span class="dt">by.y=</span><span class="st">&quot;FIPS&quot;</span> ) </a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">merge</span>( dat1, dat2, <span class="dt">by.x=</span><span class="st">&quot;fips&quot;</span>, <span class="dt">by.y=</span><span class="st">&quot;FIPS&quot;</span> ) </span></code></pre></div>
 <p><br><br></p>
 </div>
 <div id="in-summary" class="section level2">
 <h2>In Summary</h2>
 <p>You will be using the merge() function in this lab to join datasets. You need to specify two arguments in each merge call.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">merge</span>( dat1, dat2, <span class="dt">by=</span><span class="st">&quot;&quot;</span>, <span class="dt">all=</span><span class="st">&quot;&quot;</span> )</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">merge</span>( dat1, dat2, <span class="dt">by=</span><span class="st">&quot;&quot;</span>, <span class="dt">all=</span><span class="st">&quot;&quot;</span> )</span></code></pre></div>
 <p>Your IDs used to join dataset:</p>
 <ul>
 <li>Use “by=” when variable names are identical</li>
@@ -2041,22 +2061,22 @@ summary {
 <div id="data" class="section level1">
 <h1>Data</h1>
 <p>This week’s lab uses the Lahman baseball dataset.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">library</span>( Lahman )</a>
-<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="kw">data</span>( People )</a>
-<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="kw">data</span>( Batting )</a>
-<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="kw">data</span>( Salaries )</a>
-<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="kw">data</span>( Teams )</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">library</span>( Lahman )</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="kw">data</span>( People )</span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="kw">data</span>( Batting )</span>
+<span id="cb8-4"><a href="#cb8-4"></a><span class="kw">data</span>( Salaries )</span>
+<span id="cb8-5"><a href="#cb8-5"></a><span class="kw">data</span>( Teams )</span></code></pre></div>
 <p>We are interested in identifying the teams that have achieved the largest number of wins on the smallest budgets. Who are the teams that have far outperformed their resource constraints?</p>
 <p>This analysis requires us to link two tables from Lahman - the Salaries table for pay, and the Teams table for total wins per season. Our outcome of interest will be the cost of each win that a team earns in a season.</p>
 <p>If we are comparing salaries across several decades, it is important to adjust salaries for inflation so that everything is in 2016 dollars. For simplicity sake we are assuming steady 3% inflation each year since 1985. Tranform the raw numbers and save the variable as <strong>salary.adj</strong>.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="co"># adjust old salaries for inflation</span></a>
-<a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co"># to convert all salaries into 2016 dollars</span></a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co"># assuming a 3 percent inflation each year </span></a>
-<a class="sourceLine" id="cb9-4" data-line-number="4">Salaries &lt;-<span class="st"> </span></a>
-<a class="sourceLine" id="cb9-5" data-line-number="5"><span class="st">  </span>Salaries <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="st">  </span><span class="kw">mutate</span>( <span class="dt">salary.adj =</span> salary<span class="op">*</span>(<span class="fl">1.03</span>)<span class="op">^</span>( <span class="kw">max</span>(yearID) <span class="op">-</span><span class="st"> </span>yearID ) )</a>
-<a class="sourceLine" id="cb9-7" data-line-number="7"></a>
-<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="kw">head</span>( Salaries ) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pander</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="co"># adjust old salaries for inflation</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="co"># to convert all salaries into 2016 dollars</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a><span class="co"># assuming a 3 percent inflation each year </span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>Salaries &lt;-<span class="st"> </span></span>
+<span id="cb9-5"><a href="#cb9-5"></a><span class="st">  </span>Salaries <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="st">  </span><span class="kw">mutate</span>( <span class="dt">salary.adj =</span> salary<span class="op">*</span>(<span class="fl">1.03</span>)<span class="op">^</span>( <span class="kw">max</span>(yearID) <span class="op">-</span><span class="st"> </span>yearID ) )</span>
+<span id="cb9-7"><a href="#cb9-7"></a></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="kw">head</span>( Salaries ) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pander</span>()</span></code></pre></div>
 <table style="width:82%;">
 <colgroup>
 <col width="12%"></col>
@@ -2128,7 +2148,7 @@ summary {
 </tbody>
 </table>
 <p>Total wins for each season are reported in the <strong>Teams</strong> table:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">head</span>( Teams ) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pander</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">head</span>( Teams ) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pander</span>()</span></code></pre></div>
 <table>
 <caption>Table continues below</caption>
 <colgroup>
@@ -2674,20 +2694,53 @@ summary {
 <li><strong>Rank</strong> is from Teams, and is their final league ranking at the end of the season.</li>
 </ul>
 <p><br></p>
-<p>If you are interested in some of the actual math behind Moneyball (“Sabermetrics”) that breaks open the black box of each season to figure out what types of players to recruit to maximize wins, you should check out <a href="https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53">this nice blog</a> or this <a href="https://www.amazon.com/Analyzing-Baseball-Data-Chapman-Hall/dp/1466570229">R book</a> on baseball statistics.</p>
+<p>If you are interested in some of the actual math behind Moneyball (“Sabermetrics”) that breaks open the black box of each season to figure out what types of players to recruit to maximize wins, you should check out <a href="https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53">this nice blog</a> or this <a href="https://www.amazon.com/Analyzing-Baseball-Data-Second-Chapman/dp/0815353510">R book</a> on baseball statistics.</p>
 <p><br><br></p>
 </div>
-<div id="submission-instructions" class="section level1">
-<h1>Submission Instructions</h1>
-<p>After you have completed your lab, knit your RMD file. <strong>Submit your code and a printed view of your final table.</strong></p>
-<p>Login to Canvas at <a href="http://canvas.asu.edu" class="uri">http://canvas.asu.edu</a> and navigate to the assignments tab in the course repository. Upload your RMD and your HTML files to the appropriate lab submission link.</p>
-<p>Remember to:</p>
+<div id="how-to-submit" class="section level1">
+<h1>How to Submit</h1>
+<p>Use the following instructions to submit your assignment, which may vary depending on your course’s platform.</p>
+<p><br></p>
+<div id="knitting-to-html" class="section level3">
+<h3>Knitting to HTML</h3>
+<p>When you have completed your assignment, click the “Knit” button to render your <code>.RMD</code> file into a <code>.HTML</code> report.</p>
+<p><br></p>
+</div>
+<div id="special-instructions" class="section level3">
+<h3>Special Instructions</h3>
+<p>Perform the following depending on your course’s platform:</p>
 <ul>
-<li>name your files according to the convention: <strong>Lab-##-LastName.Rmd</strong></li>
-<li>show your solution, include your code.</li>
-<li>do not print excessive output (like a full data set).</li>
-<li>follow appropriate style guidelines (spaces between arguments, etc.).</li>
+<li><strong>Canvas:</strong> Upload both your <code>.RMD</code> and <code>.HTML</code> files to the appropriate link</li>
+<li><strong>Blackboard or iCollege:</strong> Compress your <code>.RMD</code> and <code>.HTML</code> files in a <code>.ZIP</code> file and upload to the appropriate link</li>
 </ul>
+<p><code>.HTML</code> files are preferred but not allowed by all platforms.</p>
+<p><br></p>
+</div>
+<div id="before-you-submit" class="section level3">
+<h3>Before You Submit</h3>
+<p>Remember to ensure the following before submitting your assignment.</p>
+<ol style="list-style-type: decimal">
+<li>Name your files using this format: <strong>Lab-##-LastName.rmd</strong> and <strong>Lab-##-LastName.html</strong></li>
+<li>Show both the solution for your code and write out your answers in the body text</li>
+<li>Do not show excessive output; truncate your output, e.g. with function <code>head()</code></li>
+<li>Follow appropriate styling conventions, e.g. spaces after commas, etc.</li>
+<li>Above all, ensure that your conventions are consistent</li>
+</ol>
+<p>See <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R Style Guide</a> for examples of common conventions.</p>
+<p><br> <br></p>
+</div>
+<div id="common-knitting-issues" class="section level3">
+<h3>Common Knitting Issues</h3>
+<p><code>.RMD</code> files are knit into <code>.HTML</code> and other formats procedural, or line-by-line.</p>
+<ul>
+<li>An error in code when knitting will halt the process; error messages will tell you the specific line with the error</li>
+<li>Certain functions like <code>install.packages()</code> or <code>setwd()</code> are bound to cause errors in knitting</li>
+<li>Altering a dataset or variable in one chunk will affect their use in all later chunks</li>
+<li>If an object is “not found”, make sure it was created or loaded with <code>library()</code> in a previous chunk</li>
+</ul>
+<p><strong>If All Else Fails:</strong> If you cannot determine and fix the errors in a code chunk that’s preventing you from knitting your document, add <code>eval = FALSE</code> inside the brackets of <code>{r}</code> at the beginning of a chunk to ensure that R does not attempt to evaluate it, that is: <code>{r eval = FALSE}</code>. This will prevent an erroneous chunk of code from halting the knitting process.</p>
+<p><br> <br> <br></p>
+</div>
 </div>
 
 

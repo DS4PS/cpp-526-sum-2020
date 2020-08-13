@@ -200,6 +200,22 @@ window.buildTabsets = function(tocID) {
 };
 
 </script>
+<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
+// v0.0.1
+// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
+
+document.addEventListener('DOMContentLoaded', function() {
+  const codeList = document.getElementsByClassName("sourceCode");
+  for (var i = 0; i < codeList.length; i++) {
+    var linkList = codeList[i].getElementsByTagName('a');
+    for (var j = 0; j < linkList.length; j++) {
+      if (linkList[j].innerHTML === "") {
+        linkList[j].setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+});
+</script>
 <style type="text/css">.pagedtable {
 overflow: auto;
 padding-left: 8px;
@@ -1475,9 +1491,9 @@ window.onload = function() {
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
@@ -1487,14 +1503,16 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(title);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -1503,9 +1521,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  { background-color: #f8f8f8; }
+  {  background-color: #f8f8f8; }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ef2929; } /* Alert */
 code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
@@ -1724,84 +1742,86 @@ summary {
 </ul>
 <p>When you include “runtime: shiny” in the header, you do not need to load the shiny package in your document setup steps.</p>
 <p>Note that running shiny creates an object called <strong>input</strong> which stores the values from your input widgets. Whatever you assign for the input widget ID will be the address for the value, which you can then access at <strong>input$your_id</strong>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">selectInput</span>( </a>
-<a class="sourceLine" id="cb1-2" title="2">             <span class="dt">inputId=</span><span class="st">&quot;my_widget_id&quot;</span>,</a>
-<a class="sourceLine" id="cb1-3" title="3">             <span class="dt">label=</span><span class="st">&quot;My Shiny Widget&quot;</span>,</a>
-<a class="sourceLine" id="cb1-4" title="4">             <span class="dt">choices=</span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>),</a>
-<a class="sourceLine" id="cb1-5" title="5">             <span class="dt">selected=</span><span class="st">&quot;B&quot;</span>   </a>
-<a class="sourceLine" id="cb1-6" title="6">           )</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">selectInput</span>( </span>
+<span id="cb1-2"><a href="#cb1-2"></a>             <span class="dt">inputId=</span><span class="st">&quot;my_widget_id&quot;</span>,</span>
+<span id="cb1-3"><a href="#cb1-3"></a>             <span class="dt">label=</span><span class="st">&quot;My Shiny Widget&quot;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4"></a>             <span class="dt">choices=</span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>,<span class="st">&quot;B&quot;</span>,<span class="st">&quot;C&quot;</span>),</span>
+<span id="cb1-5"><a href="#cb1-5"></a>             <span class="dt">selected=</span><span class="st">&quot;B&quot;</span>   </span>
+<span id="cb1-6"><a href="#cb1-6"></a>           )</span></code></pre></div>
 <p>Shiny automatically creates an object called “input” for you. When you create a widget, shiny will perform the folowing assignment implicitly in the background:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">input<span class="op">$</span>my_widget_id &lt;-<span class="st"> &quot;B&quot;</span>  <span class="co"># user selected value</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>input<span class="op">$</span>my_widget_id &lt;-<span class="st"> &quot;B&quot;</span>  <span class="co"># user selected value</span></span></code></pre></div>
 <p>Before the user selects a value from the dropdown menu, the “<em>selected=</em>” argument specifies the default value. In this case, <em>input$my_widget_id</em> would store the value “B” by default. When the user makes a new selection, that value is updated with whatever option the user selected.</p>
 <p>In the rest of your code, you can then reference the user input value at:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">input<span class="op">$</span>my_widget_id</a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>input<span class="op">$</span>my_widget_id</span></code></pre></div>
 <p><br></p>
 <div id="adding-a-team-trend-to-the-graph" class="section level4">
 <h4>Adding a Team Trend to the Graph</h4>
 <p>The solutions for last week’s lab include an example of how you can add a specific team to the graph. It generalizes the team by using a generic <strong>team.name</strong> variable that stores the value.</p>
 <p>Note that in the subsequent code instead of using the specific team name for data steps and graphing functions it references the placeholder variable <strong>team.name</strong>. This enables you to change all of the team name references in one place, simplifying your code.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="co">## TEAM NAME HARD-CODED: APPEARS MULTIPLE TIMES IN CODE</span></a>
-<a class="sourceLine" id="cb4-2" title="2"></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="co"># adding season stats for the team:</span></a>
-<a class="sourceLine" id="cb4-4" title="4">dat.one.team &lt;-<span class="st"> </span><span class="kw">filter</span>( Teams, name <span class="op">==</span><span class="st"> &quot;Chicago Cubs&quot;</span> )</a>
-<a class="sourceLine" id="cb4-5" title="5"><span class="kw">points</span>( <span class="dt">x=</span>dat.one.team<span class="op">$</span>yearID, <span class="dt">y=</span>dat.one.team<span class="op">$</span>ave.so, </a>
-<a class="sourceLine" id="cb4-6" title="6">        <span class="dt">pch=</span><span class="dv">20</span>,  <span class="dt">cex=</span><span class="fl">1.2</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">type=</span><span class="st">&quot;b&quot;</span> )</a>
-<a class="sourceLine" id="cb4-7" title="7"></a>
-<a class="sourceLine" id="cb4-8" title="8"><span class="co"># adding the team name to the legend:</span></a>
-<a class="sourceLine" id="cb4-9" title="9"><span class="kw">segments</span>( <span class="dt">x0=</span><span class="dv">1900</span>, <span class="dt">y0=</span><span class="fl">8.3</span>, <span class="dt">x1=</span><span class="dv">1904</span>, <span class="dt">y1=</span><span class="fl">8.32</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">lwd =</span> <span class="fl">1.5</span> )</a>
-<a class="sourceLine" id="cb4-10" title="10"><span class="kw">points</span>( <span class="dt">x=</span><span class="kw">c</span>(<span class="dv">1900</span>,<span class="dv">1904</span>), <span class="dt">y=</span><span class="kw">c</span>(<span class="fl">8.3</span>,<span class="fl">8.3</span>), <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">pch=</span><span class="dv">20</span>, <span class="dt">cex=</span><span class="fl">1.2</span> )</a>
-<a class="sourceLine" id="cb4-11" title="11"><span class="kw">text</span> ( <span class="dt">x=</span><span class="dv">1912</span>, <span class="dt">y=</span><span class="fl">8.3</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">labels=</span><span class="st">&quot;Chicago Cubs&quot;</span>, <span class="dt">cex=</span><span class="fl">0.8</span> )</a>
-<a class="sourceLine" id="cb4-12" title="12"></a>
-<a class="sourceLine" id="cb4-13" title="13"></a>
-<a class="sourceLine" id="cb4-14" title="14"><span class="co">## GENERALIZED TEAM NAME:</span></a>
-<a class="sourceLine" id="cb4-15" title="15"></a>
-<a class="sourceLine" id="cb4-16" title="16">team.name &lt;-<span class="st"> &quot;Chicago Cubs&quot;</span>   <span class="co"># only place it appears</span></a>
-<a class="sourceLine" id="cb4-17" title="17"></a>
-<a class="sourceLine" id="cb4-18" title="18"><span class="co"># adding season stats for the team:</span></a>
-<a class="sourceLine" id="cb4-19" title="19">dat.one.team &lt;-<span class="st"> </span><span class="kw">filter</span>( Teams, name <span class="op">==</span><span class="st"> </span>team.name )</a>
-<a class="sourceLine" id="cb4-20" title="20"><span class="kw">points</span>( <span class="dt">x=</span>dat.one.team<span class="op">$</span>yearID, <span class="dt">y=</span>dat.one.team<span class="op">$</span>ave.so, </a>
-<a class="sourceLine" id="cb4-21" title="21">        <span class="dt">pch=</span><span class="dv">20</span>,  <span class="dt">cex=</span><span class="fl">1.2</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">type=</span><span class="st">&quot;b&quot;</span> )</a>
-<a class="sourceLine" id="cb4-22" title="22"></a>
-<a class="sourceLine" id="cb4-23" title="23"><span class="co"># adding the team name to the legend:</span></a>
-<a class="sourceLine" id="cb4-24" title="24"><span class="kw">segments</span>( <span class="dt">x0=</span><span class="dv">1900</span>, <span class="dt">y0=</span><span class="fl">8.3</span>, <span class="dt">x1=</span><span class="dv">1904</span>, <span class="dt">y1=</span><span class="fl">8.32</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">lwd =</span> <span class="fl">1.5</span> )</a>
-<a class="sourceLine" id="cb4-25" title="25"><span class="kw">points</span>( <span class="dt">x=</span><span class="kw">c</span>(<span class="dv">1900</span>,<span class="dv">1904</span>), <span class="dt">y=</span><span class="kw">c</span>(<span class="fl">8.3</span>,<span class="fl">8.3</span>), <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">pch=</span><span class="dv">20</span>, <span class="dt">cex=</span><span class="fl">1.2</span> )</a>
-<a class="sourceLine" id="cb4-26" title="26"><span class="kw">text</span> ( <span class="dt">x=</span><span class="dv">1912</span>, <span class="dt">y=</span><span class="fl">8.3</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">labels=</span>team.name, <span class="dt">cex=</span><span class="fl">0.8</span> )</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">## TEAM NAME HARD-CODED: APPEARS MULTIPLE TIMES IN CODE</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co"># adding season stats for the team:</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>dat.one.team &lt;-<span class="st"> </span><span class="kw">filter</span>( Teams, name <span class="op">==</span><span class="st"> &quot;Chicago Cubs&quot;</span> )</span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="kw">points</span>( <span class="dt">x=</span>dat.one.team<span class="op">$</span>yearID, <span class="dt">y=</span>dat.one.team<span class="op">$</span>ave.so, </span>
+<span id="cb4-6"><a href="#cb4-6"></a>        <span class="dt">pch=</span><span class="dv">20</span>,  <span class="dt">cex=</span><span class="fl">1.2</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">type=</span><span class="st">&quot;b&quot;</span> )</span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co"># adding the team name to the legend:</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="kw">segments</span>( <span class="dt">x0=</span><span class="dv">1900</span>, <span class="dt">y0=</span><span class="fl">8.3</span>, <span class="dt">x1=</span><span class="dv">1904</span>, <span class="dt">y1=</span><span class="fl">8.32</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">lwd =</span> <span class="fl">1.5</span> )</span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="kw">points</span>( <span class="dt">x=</span><span class="kw">c</span>(<span class="dv">1900</span>,<span class="dv">1904</span>), <span class="dt">y=</span><span class="kw">c</span>(<span class="fl">8.3</span>,<span class="fl">8.3</span>), <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">pch=</span><span class="dv">20</span>, <span class="dt">cex=</span><span class="fl">1.2</span> )</span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="kw">text</span> ( <span class="dt">x=</span><span class="dv">1912</span>, <span class="dt">y=</span><span class="fl">8.3</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">labels=</span><span class="st">&quot;Chicago Cubs&quot;</span>, <span class="dt">cex=</span><span class="fl">0.8</span> )</span>
+<span id="cb4-12"><a href="#cb4-12"></a></span>
+<span id="cb4-13"><a href="#cb4-13"></a></span>
+<span id="cb4-14"><a href="#cb4-14"></a><span class="co">## GENERALIZED TEAM NAME:</span></span>
+<span id="cb4-15"><a href="#cb4-15"></a></span>
+<span id="cb4-16"><a href="#cb4-16"></a>team.name &lt;-<span class="st"> &quot;Chicago Cubs&quot;</span>   <span class="co"># only place it appears</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a></span>
+<span id="cb4-18"><a href="#cb4-18"></a><span class="co"># adding season stats for the team:</span></span>
+<span id="cb4-19"><a href="#cb4-19"></a>dat.one.team &lt;-<span class="st"> </span><span class="kw">filter</span>( Teams, name <span class="op">==</span><span class="st"> </span>team.name )</span>
+<span id="cb4-20"><a href="#cb4-20"></a><span class="kw">points</span>( <span class="dt">x=</span>dat.one.team<span class="op">$</span>yearID, <span class="dt">y=</span>dat.one.team<span class="op">$</span>ave.so, </span>
+<span id="cb4-21"><a href="#cb4-21"></a>        <span class="dt">pch=</span><span class="dv">20</span>,  <span class="dt">cex=</span><span class="fl">1.2</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">type=</span><span class="st">&quot;b&quot;</span> )</span>
+<span id="cb4-22"><a href="#cb4-22"></a></span>
+<span id="cb4-23"><a href="#cb4-23"></a><span class="co"># adding the team name to the legend:</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a><span class="kw">segments</span>( <span class="dt">x0=</span><span class="dv">1900</span>, <span class="dt">y0=</span><span class="fl">8.3</span>, <span class="dt">x1=</span><span class="dv">1904</span>, <span class="dt">y1=</span><span class="fl">8.32</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">lwd =</span> <span class="fl">1.5</span> )</span>
+<span id="cb4-25"><a href="#cb4-25"></a><span class="kw">points</span>( <span class="dt">x=</span><span class="kw">c</span>(<span class="dv">1900</span>,<span class="dv">1904</span>), <span class="dt">y=</span><span class="kw">c</span>(<span class="fl">8.3</span>,<span class="fl">8.3</span>), <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">pch=</span><span class="dv">20</span>, <span class="dt">cex=</span><span class="fl">1.2</span> )</span>
+<span id="cb4-26"><a href="#cb4-26"></a><span class="kw">text</span> ( <span class="dt">x=</span><span class="dv">1912</span>, <span class="dt">y=</span><span class="fl">8.3</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">labels=</span>team.name, <span class="dt">cex=</span><span class="fl">0.8</span> )</span></code></pre></div>
 <p>After you build your widget you can make the team selection dynamic by linking the user selection to your generic <strong>team.name</strong> variable.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">team.name &lt;-<span class="st"> </span>input<span class="op">$</span>my_widget_id  <span class="co"># input widget value</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>team.name &lt;-<span class="st"> </span>input<span class="op">$</span>my_widget_id  <span class="co"># input widget value</span></span></code></pre></div>
 <p><br> <br></p>
 </div>
 </div>
 <div id="lab-instructions" class="section level1">
 <h1>Lab Instructions</h1>
 <p>This lab requires the following packages:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1"><span class="kw">install.packages</span>( <span class="st">&quot;shiny&quot;</span> )</a>
-<a class="sourceLine" id="cb6-2" title="2"><span class="kw">install.packages</span>( <span class="st">&quot;flexdashboard&quot;</span> )</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">install.packages</span>( <span class="st">&quot;shiny&quot;</span> )</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="kw">install.packages</span>( <span class="st">&quot;flexdashboard&quot;</span> )</span></code></pre></div>
 <p>Note that you need to install packages before starting your lab. You cannot include an install commands inside of your RMD file.</p>
 <p>You will likely use these packages as well:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1"><span class="kw">library</span>( dplyr )</a>
-<a class="sourceLine" id="cb7-2" title="2"><span class="kw">library</span>( pander )</a>
-<a class="sourceLine" id="cb7-3" title="3"><span class="kw">library</span>( Lahman )</a>
-<a class="sourceLine" id="cb7-4" title="4"><span class="kw">data</span>( Teams )</a></code></pre></div>
-<p>Use the following template to complete this lab:</p>
-<p><a href="https://www.dropbox.com/s/lfw91ev0fl182n3/lab-04-template.rmd?dl=1"><img src="data:image/png;base64,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" /></a></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">library</span>( dplyr )</span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="kw">library</span>( pander )</span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="kw">library</span>( Lahman )</span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="kw">data</span>( Teams )</span></code></pre></div>
+<p>To get started, download the <strong>Lab-04 RMD template</strong>:</p>
+<center>
+<p><a href="https://github.com/DS4PS/cpp-526-sum-2020/blob/master/labs/cpp-526_reformatted-labs/Lab-04-v2-LastName.zip?raw=true"><img src="data:image/png;base64,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" /></a></p>
+</center>
 <p><br><br></p>
 <div id="step-1" class="section level3">
 <h3>Step (1)</h3>
 <p><strong>In the provided template, place your code from last week into the code chunk with the renderPlot() function:</strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1"><span class="kw">renderPlot</span>({</a>
-<a class="sourceLine" id="cb8-2" title="2">  </a>
-<a class="sourceLine" id="cb8-3" title="3"><span class="co"># your code here</span></a>
-<a class="sourceLine" id="cb8-4" title="4">  </a>
-<a class="sourceLine" id="cb8-5" title="5">})</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">renderPlot</span>({</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  </span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="co"># your code here</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>  </span>
+<span id="cb8-5"><a href="#cb8-5"></a>})</span></code></pre></div>
 </div>
 <div id="step-2" class="section level3">
 <h3>Step (2)</h3>
 <p><strong>Create a user-input widget on the left side bar by adding the proper values to these arguments:</strong></p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">selectInput</span>( <span class="dt">inputId=</span>,   <span class="co"># creates slot in input to hold values: input$your_inputId</span></a>
-<a class="sourceLine" id="cb9-2" title="2">             <span class="dt">label=</span>,     <span class="co"># title of the input widget</span></a>
-<a class="sourceLine" id="cb9-3" title="3">             <span class="dt">choices=</span>,   <span class="co"># options for the user</span></a>
-<a class="sourceLine" id="cb9-4" title="4">             <span class="dt">selected=</span>   <span class="co"># set the default option</span></a>
-<a class="sourceLine" id="cb9-5" title="5">           )</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">selectInput</span>( <span class="dt">inputId=</span>,   <span class="co"># creates slot in input to hold values: input$your_inputId</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>             <span class="dt">label=</span>,     <span class="co"># title of the input widget</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>             <span class="dt">choices=</span>,   <span class="co"># options for the user</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>             <span class="dt">selected=</span>   <span class="co"># set the default option</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>           )</span></code></pre></div>
 <p>Note that “choices=” will determine the teams visible in the drop-down box. You will be selecting from baseball team names.</p>
 <ul>
 <li>Use the variable “name” in the dataset instead of teamID since it is more user-friendly.<br />
@@ -1815,28 +1835,28 @@ summary {
 <h3>Step (3)</h3>
 <p><strong>Similar to the NYT graphic, add the team trend line to the graphic in orange.</strong></p>
 <p>Note that you would add a single team to the graphic something like this:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">Teams<span class="op">$</span>ave.so &lt;-<span class="st"> </span>Teams<span class="op">$</span>SO <span class="op">/</span><span class="st"> </span>Teams<span class="op">$</span>G  <span class="co"># to make subsetable, add back to data frame</span></a>
-<a class="sourceLine" id="cb10-2" title="2">one.team &lt;-<span class="st"> </span><span class="kw">filter</span>( Teams, name <span class="op">==</span><span class="st"> &quot;Cincinnati Reds&quot;</span> )</a>
-<a class="sourceLine" id="cb10-3" title="3"><span class="kw">points</span>( <span class="dt">x=</span>one.team<span class="op">$</span>yearID, <span class="dt">y=</span>one.team<span class="op">$</span>ave.so, <span class="dt">type=</span><span class="st">&quot;b&quot;</span>, <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkorange4&quot;</span> )</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>Teams<span class="op">$</span>ave.so &lt;-<span class="st"> </span>Teams<span class="op">$</span>SO <span class="op">/</span><span class="st"> </span>Teams<span class="op">$</span>G  <span class="co"># to make subsetable, add back to data frame</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>one.team &lt;-<span class="st"> </span><span class="kw">filter</span>( Teams, name <span class="op">==</span><span class="st"> &quot;Cincinnati Reds&quot;</span> )</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="kw">points</span>( <span class="dt">x=</span>one.team<span class="op">$</span>yearID, <span class="dt">y=</span>one.team<span class="op">$</span>ave.so, <span class="dt">type=</span><span class="st">&quot;b&quot;</span>, <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">col=</span><span class="st">&quot;darkorange4&quot;</span> )</span></code></pre></div>
 <p>This code will also go inside the renderPlot() function in Step 1. You first need to replace the specific team name with the generalized input value from your selectInput() widget.</p>
 <p><br> <br></p>
 <p><strong>Notes on identifying team unique names.</strong></p>
 <p>Note there are 139 unique team names in the dataset:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="kw">unique</span>( Teams<span class="op">$</span>name ) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">unique</span>( Teams<span class="op">$</span>name ) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>()</span></code></pre></div>
 <pre><code>## [1] &quot;Boston Red Stockings&quot;    &quot;Chicago White Stockings&quot;
 ## [3] &quot;Cleveland Forest Citys&quot;  &quot;Fort Wayne Kekiongas&quot;   
 ## [5] &quot;New York Mutuals&quot;        &quot;Philadelphia Athletics&quot;</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="kw">unique</span>( Teams<span class="op">$</span>name ) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">length</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">unique</span>( Teams<span class="op">$</span>name ) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">length</span>()</span></code></pre></div>
 <pre><code>## [1] 139</code></pre>
 <p>You do NOT want to use “choices=Teams$name” for the argument because each team name is repeated multiple times. This drop-down box would then have several thousand choices.</p>
 <p>Instead select 10-25 teams, and include their full name in the choices list only once.</p>
 <p>You might favor teams that have longer trend lines. The Cincinnati Reds and Pittsburgh Pirates have been in the dataset from the beginning, and the rest of the teams have been added along the way.</p>
 <p>This table reports the total number of seasons they have each appeared:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">Teams <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb15-2" title="2"><span class="st">  </span><span class="kw">count</span>( name ) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb15-3" title="3"><span class="st">  </span><span class="kw">arrange</span>( <span class="op">-</span><span class="st"> </span>n ) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb15-4" title="4"><span class="st">  </span><span class="kw">head</span>( <span class="dv">10</span> ) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb15-5" title="5"><span class="st">  </span><span class="kw">pander</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>Teams <span class="op">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="st">  </span><span class="kw">count</span>( name ) <span class="op">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a><span class="st">  </span><span class="kw">arrange</span>( <span class="op">-</span><span class="st"> </span>n ) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="st">  </span><span class="kw">head</span>( <span class="dv">10</span> ) <span class="op">%&gt;%</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a><span class="st">  </span><span class="kw">pander</span>()</span></code></pre></div>
 <table style="width:42%;">
 <colgroup>
 <col width="33%"></col>
@@ -1851,101 +1871,113 @@ summary {
 <tbody>
 <tr class="odd">
 <td align="center">Cincinnati Reds</td>
-<td align="center">128</td>
+<td align="center">129</td>
 </tr>
 <tr class="even">
 <td align="center">Pittsburgh Pirates</td>
-<td align="center">128</td>
+<td align="center">129</td>
 </tr>
 <tr class="odd">
 <td align="center">Philadelphia Phillies</td>
-<td align="center">127</td>
+<td align="center">128</td>
 </tr>
 <tr class="even">
 <td align="center">St. Louis Cardinals</td>
-<td align="center">119</td>
+<td align="center">120</td>
 </tr>
 <tr class="odd">
 <td align="center">Chicago White Sox</td>
-<td align="center">118</td>
+<td align="center">119</td>
 </tr>
 <tr class="even">
 <td align="center">Detroit Tigers</td>
-<td align="center">118</td>
+<td align="center">119</td>
 </tr>
 <tr class="odd">
 <td align="center">Chicago Cubs</td>
-<td align="center">116</td>
+<td align="center">117</td>
 </tr>
 <tr class="even">
 <td align="center">Boston Red Sox</td>
-<td align="center">111</td>
+<td align="center">112</td>
 </tr>
 <tr class="odd">
 <td align="center">New York Yankees</td>
-<td align="center">106</td>
+<td align="center">107</td>
 </tr>
 <tr class="even">
 <td align="center">Cleveland Indians</td>
-<td align="center">104</td>
+<td align="center">105</td>
 </tr>
 </tbody>
 </table>
 <p>Some of these professional baseball teams you might not recognize because they only lasted for a short time:</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">Teams <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb16-2" title="2"><span class="st">  </span><span class="kw">count</span>( name ) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb16-3" title="3"><span class="st">  </span><span class="kw">arrange</span>( <span class="op">-</span><span class="st"> </span>n ) <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb16-4" title="4"><span class="st">  </span><span class="kw">tail</span>( <span class="dv">10</span> ) <span class="op">%&gt;%</span></a>
-<a class="sourceLine" id="cb16-5" title="5"><span class="st">  </span><span class="kw">pander</span>()</a></code></pre></div>
-<table style="width:42%;">
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>Teams <span class="op">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="st">  </span><span class="kw">count</span>( name ) <span class="op">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="st">  </span><span class="kw">arrange</span>( <span class="op">-</span><span class="st"> </span>n ) <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="st">  </span><span class="kw">tail</span>( <span class="dv">10</span> ) <span class="op">%&gt;%</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a><span class="st">  </span><span class="kw">pander</span>()</span></code></pre></div>
+<table style="width:56%;">
 <colgroup>
+<col width="13%"></col>
 <col width="36%"></col>
 <col width="5%"></col>
 </colgroup>
 <thead>
 <tr class="header">
+<th align="center"> </th>
 <th align="center">name</th>
 <th align="center">n</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
+<td align="center"><strong>130</strong></td>
 <td align="center">Rockford Forest Citys</td>
 <td align="center">1</td>
 </tr>
 <tr class="even">
+<td align="center"><strong>131</strong></td>
 <td align="center">Seattle Pilots</td>
 <td align="center">1</td>
 </tr>
 <tr class="odd">
+<td align="center"><strong>132</strong></td>
 <td align="center">St. Louis Perfectos</td>
 <td align="center">1</td>
 </tr>
 <tr class="even">
+<td align="center"><strong>133</strong></td>
 <td align="center">St. Louis Red Stockings</td>
 <td align="center">1</td>
 </tr>
 <tr class="odd">
+<td align="center"><strong>134</strong></td>
 <td align="center">St. Paul White Caps</td>
 <td align="center">1</td>
 </tr>
 <tr class="even">
+<td align="center"><strong>135</strong></td>
 <td align="center">Toledo Blue Stockings</td>
 <td align="center">1</td>
 </tr>
 <tr class="odd">
+<td align="center"><strong>136</strong></td>
 <td align="center">Toledo Maumees</td>
 <td align="center">1</td>
 </tr>
 <tr class="even">
+<td align="center"><strong>137</strong></td>
 <td align="center">Washington Blue Legs</td>
 <td align="center">1</td>
 </tr>
 <tr class="odd">
+<td align="center"><strong>138</strong></td>
 <td align="center">Washington Statesmen</td>
 <td align="center">1</td>
 </tr>
 <tr class="even">
+<td align="center"><strong>139</strong></td>
 <td align="center">Wilmington Quicksteps</td>
 <td align="center">1</td>
 </tr>
@@ -1954,17 +1986,46 @@ summary {
 <p><br> <br></p>
 </div>
 </div>
-<div id="submission-instructions" class="section level1">
-<h1>Submission Instructions</h1>
-<p><strong>Submit your RMD file but no HTML file this time.</strong> When you include “runtime: shiny” in your header, it launches a real-time app instead of generating an HTML file that can be shared.</p>
-<p>Remember to:</p>
+<div id="how-to-submit" class="section level1">
+<h1>How to Submit</h1>
+<p>Use the following instructions to submit your assignment, which may vary depending on your course’s platform.</p>
+<p><br></p>
+<div id="knitting-to-html" class="section level3">
+<h3>Knitting to HTML</h3>
+<p>When you have completed your assignment, click the “Run App” button to ensure your dashboard functions.</p>
+<p><br></p>
+</div>
+<div id="special-instructions" class="section level3">
+<h3>Special Instructions</h3>
+<p>Perform the following depending on your course’s platform:</p>
 <ul>
-<li>name your files according to the convention: <strong>Lab-##-LastName.Rmd</strong></li>
-<li>show your solution, include your code.</li>
-<li>do not print excessive output (like a full data set).</li>
-<li>follow appropriate style guidelines (spaces between arguments, etc.).</li>
+<li><strong>Canvas:</strong> Upload your <code>.RMD</code> file to the appropriate link</li>
+<li><strong>Blackboard or iCollege:</strong> Compress your <code>.RMD</code> file in a <code>.ZIP</code> file and upload to the appropriate link</li>
 </ul>
+<p><br></p>
+</div>
+<div id="before-you-submit" class="section level3">
+<h3>Before You Submit</h3>
+<p>Remember to ensure the following before submitting your assignment.</p>
+<ol style="list-style-type: decimal">
+<li>Name your files using this format: <strong>Lab-##-LastName.rmd</strong> and <strong>Lab-##-LastName.html</strong></li>
+<li>Follow appropriate styling conventions, e.g. spaces after commas, etc.</li>
+<li>Above all, ensure that your conventions are consistent</li>
+</ol>
+<p>See <a href="https://google.github.io/styleguide/Rguide.xml">Google’s R Style Guide</a> for examples of common conventions.</p>
 <p><br> <br></p>
+</div>
+<div id="common-knitting-issues" class="section level3">
+<h3>Common Knitting Issues</h3>
+<p><code>.RMD</code> files are knit into <code>.HTML</code> and other formats procedural, or line-by-line.</p>
+<ul>
+<li>An error in code when knitting will halt the process; error messages will tell you the specific line with the error</li>
+<li>Certain functions like <code>install.packages()</code> or <code>setwd()</code> are bound to cause errors in knitting</li>
+<li>Altering a dataset or variable in one chunk will affect their use in all later chunks</li>
+<li>If an object is “not found”, make sure it was created or loaded with <code>library()</code> in a previous chunk</li>
+</ul>
+<p><br> <br> <br></p>
+</div>
 </div>
 
 <div class="footer">
@@ -1989,7 +2050,7 @@ summary {
         <li>Creative Common License:</li>
         <li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"> (CC BY-NC-SA 4.0)</a></li>
         <br>
-        <li>CPP 526 <a href="https://ds4ps.org/cpp-526-spr-2020/" target="_blank">Foundations of Data Science I</a></li>
+        <li>CPP 526 <a href="https://ds4ps.org/cpp-526-sum-2020/" target="_blank">Foundations of Data Science I</a></li>
         <li>Part of the <a href="http://ds4ps.org/ms-prog-eval-data-analytics/" target="_blank">MS in Evaluation and Analytics</a></li>
         <li>@ <a href="https://asuonline.asu.edu/online-degree-programs/graduate/program-evaluation-and-data-analytics-ms/" target="_blank">Arizona State University</a></li>
         <br>
