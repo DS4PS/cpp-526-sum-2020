@@ -108,24 +108,24 @@ picture-in-picture" allowfullscreen></iframe>
  
 <br>
 
-Use the bookmarks in the video description of chapters in the progress bar to skip to each topic.
+Visit the video on YouTube to use bookmarks in the description or chapters in the progress bar.
 
-1. 00:00 Introduction & Defining Integrated Development Environments (IDE)
-2. 00:41 The Five Key Components of RStudio
-3. 02:17 Using the Console vs. Using Scripts
-4. 04:29 Shortcuts: Jumping Around, Full Screen, Saving
-5. 05:27 How to Save an R Script
-6. 06:36 Shortcuts: Moving Between & Exiting Scripts
-7. 07:19 "Session" & Setting Working Directories
-8. 08:07 Exporting Data as CSV Files
-9. 09:04 "Tools" & Customizing Your RStudio Interface
-10. 10:02 "Help" & Accessing Cheat Sheets
-11. 10:42 Global Environment & Objects
-12. 13:20 RStudio's Data Import Wizard
-13. 14:35 "Files" & Directory Contents
-14. 14:57 "Plots" & Graphics in R
-15. 15:44 "Help" & Documentation
-16. 17:01 Conclusions
+* (**00:00**) Introduction & Defining Integrated Development Environments (IDE)
+* (**00:41**) The Five Key Components of RStudio
+* (**02:17**) Using the Console vs. Using Scripts
+* (**04:29**) Shortcuts: Jumping Around, Full Screen, Saving
+* (**05:27**) How to Save an R Script
+* (**06:36**) Shortcuts: Moving Between & Exiting Scripts
+* (**07:19**) "Session" & Setting Working Directories
+* (**08:07**) Exporting Data as CSV Files
+* (**09:04**) "Tools" & Customizing Your RStudio Interface
+* (**10:02**) "Help" & Accessing Cheat Sheets
+* (**10:42**) Global Environment & Objects
+* (**13:20**) RStudio's Data Import Wizard
+* (**14:35**) "Files" & Directory Contents
+* (**14:57**) "Plots" & Graphics in R
+* (**15:44**) "Help" & Documentation
+* (**17:01**) Conclusions
 
 <br>
 <br>
