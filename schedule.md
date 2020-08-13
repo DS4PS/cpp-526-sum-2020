@@ -1010,7 +1010,7 @@ Click to download the lab template. Modify and submit using the instructions.
 <br>
 <br>
 
-** Final Dashboard Project
+** FINAL PROJECTS
 
 
 *** { @unit = "", @title = "Reflection", @foldout }
