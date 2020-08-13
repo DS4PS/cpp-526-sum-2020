@@ -224,7 +224,7 @@ b1 = cov(x,y) / var(x)
 
 <br>
 
-## Introduce yourself to the class
+## Introduce Yourself to the Class
 
 We will be using a discussion board called YellowDig for this course. Introduce yourself to the class and share a bit about:
 
@@ -325,6 +325,37 @@ Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels with singl
 <br>
 <br>
 
+*** { @unit = "", @title = "Video Overviews", @lecture, @foldout }
+
+<br>
+
+## Objects & Assignment
+
+Play the video below for an overview of objects and assignment in R. 
+
+*Click on the video to navigate using bookmarks and timestamps.*
+
+<br>
+<br>
+
+<iframe width="560" height="315" src="https://youtu.be/q6kdjxSlq40" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+<br>
+
+## Exploring Vectors
+
+Play the video below for an overview of basic exploratory functions for a vector, i.e. a series of values.
+
+*Click on the video to navigate using bookmarks and timestamps.*
+
+<br>
+<br>
+
+<iframe width="560" height="315" src="https://youtu.be/6TF6UuM0IbI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+<br>
 
 *** { @unit = "", @title = "Readings", @reading, @foldout  }
 
