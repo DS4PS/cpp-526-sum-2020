@@ -94,32 +94,38 @@ RStudio is a graphical user interface (GUI) and integrated developer environment
 
 <br>
 
-#### [R Studio Walk-Through](https://www.youtube.com/watch?v=Qc7BNlozOcE)
+#### RStudio: A Guided Tour
+
+The following video provides a tour of the RStudio interface and key components for getting started.
+
+<br>
  
 <iframe width="560" height="315" 
-src="https://www.youtube.com/embed/Qc7BNlozOcE?controls=0&amp;start=35" 
+src="https://www.youtube.com/embed/xgPwDlAtuNI??rel=0&modestbranding=1&autohide=1&showinfo=0" 
 frameborder="0" allow="accelerometer; 
 autoplay; encrypted-media; gyroscope; 
 picture-in-picture" allowfullscreen></iframe>
  
 <br>
 
-Use the bookmarks in the video description on YouTube to skip ahead to different parts of the tutorial. 
+Use the bookmarks in the video description of chapters in the progress bar to skip to each topic.
 
-**Content:**
-* Opening a New Script: 00:31
-* Saving Scripts: 01:35
-* Sessions & Setting Working Directories: 04:13
-* The Source/Script Pane: 06:15
-* The Console Pane: 09:12 
-* The Environment, History, & Connections Panes: 12:04 
-* Importing Data: 12:26 
-* Objects & the Environment Pane: 14:26 
-* The Files, Plots, Packages, Help Panes: 16:16 
-* The Help Pane: 18:04 
-* Keyboard Shortcuts: 23:48 
-* The RStudio Cheatsheet: 29:07 
-* Customizing Your Interface: 30:20 
+1. 00:00 Introduction & Defining Integrated Development Environments (IDE)
+2. 00:41 The Five Key Components of RStudio
+3. 02:17 Using the Console vs. Using Scripts
+4. 04:29 Shortcuts: Jumping Around, Full Screen, Saving
+5. 05:27 How to Save an R Script
+6. 06:36 Shortcuts: Moving Between & Exiting Scripts
+7. 07:19 "Session" & Setting Working Directories
+8. 08:07 Exporting Data as CSV Files
+9. 09:04 "Tools" & Customizing Your RStudio Interface
+10. 10:02 "Help" & Accessing Cheat Sheets
+11. 10:42 Global Environment & Objects
+12. 13:20 RStudio's Data Import Wizard
+13. 14:35 "Files" & Directory Contents
+14. 14:57 "Plots" & Graphics in R
+15. 15:44 "Help" & Documentation
+16. 17:01 Conclusions
 
 <br>
 <br>
