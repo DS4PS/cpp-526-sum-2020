@@ -36,8 +36,8 @@ Submit Buttons -
 
 Play the video below to learn a bit more about your instructor for the course, Jamison Crawford.
 
-* Visit my [GitHub](https://github.com/jamisoncrawford) profile
-* View my [RPubs](https://rpubs.com/jamisoncrawford) portfolio
+* Visit his [GitHub](https://github.com/jamisoncrawford) profile
+* View his [RPubs](https://rpubs.com/jamisoncrawford) portfolio
 * Connect on [LinkedIn](https://www.linkedin.com/in/jamisoncrawford/)
 
 <br>
