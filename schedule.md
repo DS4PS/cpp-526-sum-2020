@@ -306,7 +306,7 @@ Visit the [video](https://youtu.be/q6kdjxSlq40) to navigate using timestamps in 
 * (**00:58**) Arithmetic Operations in R
 * (**03:38**) Order of Operations ("PEMDAS")
 * (**05:30**) Creating Objects with Assignment
-* (**07:00**) Assigning Multiple Values with 'c()'
+* (**07:00**) Assigning Multiple Values with `c()`
 * (**08:12**) Assigning Tabular Data to Objects
 * (**12:46**) Assigning Functions to Objects
 * (**14:50**) Using Objects Algebraically
@@ -338,13 +338,13 @@ Visit the [video](https://youtu.be/QoMX6ZauH5k) to navigate using timestamps in 
 
 * (**00:00**) Introduction
 * (**00:54**) What Are Functions?
-* (**01:45**) Example of a Function: 'mean()'
-* (**03:16**) Meta-Functions without Specifications: 'getwd()'
-* (**04:56**) Package Functions: 'read_csv()'
+* (**01:45**) Example of a Function: `mean()`
+* (**03:16**) Meta-Functions without Specifications: `getwd()`
+* (**04:56**) Package Functions: `read_csv()`
 * (**05:12**) Running Functions without Required Specifications
 * (**05:30**) Functions Under the Hood
 * (**06:52**) How to Create New Functions
-* (**09:45**) Function Documentation: 'help()'
+* (**09:45**) Function Documentation: `help()`
 * (**10:24**) What Are Function Arguments?
 * (**11:34**) Using Autocomplete & Tool Tips
 * (**13:00**) Implicit (Unnamed) Argument Order
@@ -375,20 +375,20 @@ Visit the [video](https://youtu.be/2uavlW7Ytb8) to navigate using timestamps in 
 * (**00:00**) Introduction
 * (**00:57**) Reviewing Assignment & Objects
 * (**00:57**) Reviewing Assignment & Objects
-* (**01:31**) Creating Vectors with Function 'c()'
+* (**01:31**) Creating Vectors with Function `c()`
 * (**03:20**) Creating Integer Vectors
 * (**04:07**) Creating Character Vectors
 * (**04:50**) Creating Logical Vectors
-* (**06:00**) Creating Sequences with ':'
-* (**06:46**) Determining the Length of Vectors with 'length()'
-* (**09:06**) Determining Vector Classes with 'class()'
-* (**11:47**) "Casting" Vector Classes with 'as.*()' Functions
+* (**06:00**) Creating Sequences with `:`
+* (**06:46**) Determining the Length of Vectors with `length()`
+* (**09:06**) Determining Vector Classes with `class()`
+* (**11:47**) "Casting" Vector Classes with `as.*()` Functions
 * (**14:06**) What Are Factors?
 * (**15:12**) An Example of Categorical Values
-* (**15:45**) Specifying a Factor with 'as.factor()'
+* (**15:45**) Specifying a Factor with `as.factor()`
 * (**16:07**) Factor Levels in R
 * (**16:48**) The Importance of Identifying Factors in R
-* (**20:46**) Additional Casting, or 'as.*()' Functions
+* (**20:46**) Additional Casting, or `as.*()` Functions
 * (**22:26**) Casting Data Structures with Data Frames
 * (**24:25**) Casting as Matrices
 * (**25:08**) Casting & Coercion
@@ -420,23 +420,23 @@ Visit the [video](https://youtu.be/6TF6UuM0IbI) to navigate using timestamps in 
 * (**01:23**) Practice Dataset 'mtcars'
 * (**01:56**) Exploring Documentation in R
 * (**03:22**) Anatomy of Tabular Data
-* (**04:21**) Listing Variables with Function 'names()'
+* (**04:21**) Listing Variables with Function `names()`
 * (**04:56**) Listing Column & Row Names
-* (**05:32**) Dataset Dimensions with Function 'dim()'
+* (**05:32**) Dataset Dimensions with Function `dim()`
 * (**05:56**) Row & Column Dimensions
-* (**06:22**) Previewing First Observations with 'head()'
-* (**07:09**) Summarizing Dataset Structures with 'str()'
-* (**08:10**) Summarizing Structures with 'glimpse()'
+* (**06:22**) Previewing First Observations with `head()`
+* (**07:09**) Summarizing Dataset Structures with `str()`
+* (**08:10**) Summarizing Structures with `glimpse()`
 * (**09:31**) Extracting & Operating on Variables as Vectors
 * (**11:20**) Storing Vectors as Objects
-* (**11:32**) Determining Total Elements with 'length()'
-* (**12:28**) Summing Numeric Variables with 'sum()'
-* (**13:26**) Arithmetic Functions with Missing Values & 'na.rm ='
-* (**14:32**) Calculating Averages with Function 'mean()'
-* (**15:23**) Summarizing Vectors with Function 'summary()'
-* (**16:49**) Tallying Unique Values & Occurrences with Functions 'unique()' & 'table()'
-* (**18:23**) Creating Crosstabs with Two Variables in 'table()'
-* (**19:56**) (Optional) Count & Proportion of 'TRUE' with Function 'mean()'
+* (**11:32**) Determining Total Elements with `length()`
+* (**12:28**) Summing Numeric Variables with `sum()`
+* (**13:26**) Arithmetic Functions with Missing Values & `na.rm =`
+* (**14:32**) Calculating Averages with Function `mean()`
+* (**15:23**) Summarizing Vectors with Function `summary()`
+* (**16:49**) Tallying Unique Values & Occurrences with Functions `unique()` & `table()`
+* (**18:23**) Creating Crosstabs with Two Variables in `table()`
+* (**19:56**) (**Optional**) Count & Proportion of `TRUE` with Function `mean()`
 
 <br>
 <br>
@@ -878,18 +878,42 @@ But we will now add an input widget that allows users to select one team that wi
 
 ## Introducing Shiny
 
-Play the video below for an overview of interactive graphics with Shiny. Specifically:
+Play the video below for an overview of interactive graphics with Shiny.
 
 * How to create a hard-coded graphic
 * The logic behind making graphics dynamic
 * An example of a dynamic Shiny app in RStudio
 * How to create a new Shiny app with user inputs
 
-*Click on the video to navigate using bookmarks and timestamps.*
-
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UF7T7kAtetQ?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the [video](https://youtu.be/UF7T7kAtetQ) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:38**) What Is a Shiny App?
+* (**02:07**) Exploring Practice Data `faithful`
+* (**03:24**) Recreating a Histogram of Wait Times
+* (**04:59**) Adjusting Argument `breaks =` with "Hard" Values
+* (**05:36**) Adjusting Argument `breaks =` with a Dynamic Values
+* (**06:43**) Understanding Shiny Logic
+* (**07:19**) Opening a New Shiny App
+* (**08:41**) Cleaning RStudio's Example Shiny App
+* (**09:43**) Comparing the App and Code
+* (**10:25**) User Interfaces (UI)
+* (**12:28**) Connecting Inputs (UI) with the Backend (Server)
+* (**14:11**) Creating a New Shiny App
+* (**15:01**) Connecting UI & Server-Side Plots ID
+* (**15:32**) Using a New Input Widget - Radio Buttons
+* (**16:55**) Creating a Dynamic Plot
+* (**17:38**) Critical Arguments for Input Widget Functions
+* (**19:43**) Inserting Server-Side Dynamic Values from User Inputs
+* (**22:44**) Tying It All Together
+* (**24:05**) Additional Notes
+* (**25:13**) Conclusions
 
 <br>
 <br>
@@ -1021,16 +1045,16 @@ Visit the [video](https://youtu.be/M2QuERvxwm0) to navigate using timestamps in 
 * (**05:46**) 'dplyr' Functions Without Pipe Operators
 * (**07:48**) Bare Variable Names
 * (**09:08**) Reviewing 'dplyr' Syntax
-* (**09:46**) Main Verbs: 'select()'
-* (**14:44**) Main Verbs: 'filter()'
-* (**19:15**) Main Verbs: 'arrange()'
-* (**24:26**) Main Verbs: 'mutate()'
-* (**27:30**) Main Verbs: 'summarize()'
-* (**33:20**) Main Verbs: 'group_by()'
-* (**34:41**) 'group_by()' & 'mutate()' Operations
-* (**37:37**) Don't Forget to 'ungroup()'!
-* (**39:04**) 'group_by()' & 'summarize()' Operations
-* (**41:36**) Helper Verbs in 'dplyr', e.g. 'desc()', 'pull()'
+* (**09:46**) Main Verbs: `select()`
+* (**14:44**) Main Verbs: `filter()`
+* (**19:15**) Main Verbs: `arrange()`
+* (**24:26**) Main Verbs: `mutate()`
+* (**27:30**) Main Verbs: `summarize()`
+* (**33:20**) Main Verbs: `group_by()`
+* (**34:41**) `group_by()` & `mutate()` Operations
+* (**37:37**) Don't Forget to `ungroup()`!
+* (**39:04**) `group_by()` & `summarize()` Operations
+* (**41:36**) Helper Verbs in 'dplyr', e.g. `desc()`, `pull()`
 * (**44:25**) Putting It All Together
 
 <br>
