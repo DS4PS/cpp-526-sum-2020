@@ -902,7 +902,7 @@ Play the video below for an overview of data manipulation with package **dplyr**
 
 <br>
 
-Visit the video on YouTube to navigate using timestamps in the description or bookmarks in the progress bar.
+Visit the [video](https://youtu.be/M2QuERvxwm0) to navigate using timestamps in the description or bookmarks in the progress bar.
 
 * (**00:00**) Introduction & About Package 'dplyr'
 * (**02:12**) Opening RStudio & Creating Our Script
