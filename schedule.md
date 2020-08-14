@@ -170,7 +170,7 @@ GitHub Issues allow you to quickly troubleshoot issues with instructors and peer
 
 <br>
 
-#### RStudio: A Guided Tour
+#### GitHub Issues: A Tutorial
 
 The following video provides a tutorial for using GitHub Issues.
 
