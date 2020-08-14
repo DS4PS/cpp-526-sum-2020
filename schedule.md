@@ -84,13 +84,13 @@ You will have plenty of practice with these tools this semester. You will submit
 <br>
 <br>
 
-*** { @unit = "", @title = "Tour of R Studio", @lecture, @foldout }
+*** { @unit = "", @title = "RStudio: A Guided Tour", @lecture, @foldout }
 
 <br>
 
 ## Getting to Know RStudio
 
-RStudio is a graphical user interface (GUI) and integrated developer environment (IDE) that makes it much easier to use R for writing code, importing and exporting data, installing extensions, and many other features.
+RStudio is a graphical user interface (GUI) and integrated developer environment (IDE) that makes it much easier to use R for writing code, importing data, installing packages, and other features.
 
 <br>
 
@@ -108,7 +108,7 @@ picture-in-picture" allowfullscreen></iframe>
  
 <br>
 
-Visit the video on YouTube to use bookmarks in the description or chapters in the progress bar.
+Visit the [video](https://youtu.be/xgPwDlAtuNI) to navigate using timestamps in the description or bookmarks in the progress bar.
 
 * (**00:00**) Introduction & Defining Integrated Development Environments (IDE)
 * (**00:41**) The Five Key Components of RStudio
