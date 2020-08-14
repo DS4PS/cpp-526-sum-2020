@@ -175,7 +175,7 @@ GitHub Issues allow you to quickly troubleshoot issues with instructors and peer
 The following video provides a tutorial for using GitHub Issues.
 
 * Locating the Issues page
-* Exploring previous posts
+* Exploring previously posted Issues
 * Creating, labeling, and assigning collaborators
 
 <br>
