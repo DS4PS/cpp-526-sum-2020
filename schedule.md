@@ -32,13 +32,29 @@ Submit Buttons -
 
 <br>
 
-## Introduction
+## About Me
 
-Play the video below to learn a bit more about Jamison Crawford, Associate Faculty member at Arizona State University and your instructor for Foundations of Data Science: Part I.
+Play the video below to learn a bit more about your instructor for the course, Jamison Crawford.
+
+* Visit my [GitHub](https://github.com/jamisoncrawford) profile
+* View my [RPubs]((https://rpubs.com/jamisoncrawford) portfolio
+* Connect on [LinkedIn](https://www.linkedin.com/in/jamisoncrawford/)
 
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xQA9OSjGQok?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the [video](https://youtu.be/xQA9OSjGQok) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction & Welcome
+* (**00:47**) An Overview of What I Do Professionally
+* (**02:44**) My Background in Public Administration
+* (**03:22**) Where I'm From, Where I've Been, & My Teaching Career
+* (**03:54**) How I Became Involved in Co-Creating & Teaching the Course
+* (**05:18**) The Personal & Professional Importance of the Course
+* (**05:48**) Why I'm Excited to See What You Can Do!
 
 <br>
 
