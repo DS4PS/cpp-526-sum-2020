@@ -32,7 +32,7 @@ Submit Buttons -
 
 <br>
 
-## About Me
+## About Your Instructor
 
 Play the video below to learn a bit more about your instructor for the course, Jamison Crawford.
 
@@ -87,6 +87,12 @@ The following resources will help you get a better understanding of these tools.
 * [Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html): How R Markdown is used for interactive and dynamic reports
 
 * [A Guide to Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html): How to use Markdown - the easy-to-learn formatting syntax
+
+<br>
+
+## Visualizing Tooling
+
+Each tool you'll use in this course has a corresponding image, summarized below. 
 
 <br>
 
@@ -205,7 +211,9 @@ b1 = cov(x,y) / var(x)
 
 *** { @unit = "", @title = "Your Course Prep Checklist", @assignment, @foldout }
 
-<br>
+## Getting Started
+
+The following checklist will help you organize and prepare for success in this course.
 
 - [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-spr-2020/) 
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
