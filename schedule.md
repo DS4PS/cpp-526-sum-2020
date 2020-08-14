@@ -285,9 +285,13 @@ Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels with singl
 
 ## Objects & Assignment
 
-Play the video below for an overview of objects and assignment in R. 
+Play the video below for an overview of objects and assignment in R.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* How to open a new script in RStudio
+* Arithmetic and the order of operations
+* Creating different objects with assignments
+* Using objects algebraically and arithmetically
+* Common conventions and limitations in naming objects
 
 <br>
 
@@ -295,11 +299,34 @@ Play the video below for an overview of objects and assignment in R.
 
 <br>
 
+Visit the [video](https://youtu.be/q6kdjxSlq40) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:36**) Clearing Your Console & Opening New Scripts
+* (**00:58**) Arithmetic Operations in R
+* (**03:38**) Order of Operations ("PEMDAS")
+* (**05:30**) Creating Objects with Assignment
+* (**07:00**) Assigning Multiple Values with 'c()'
+* (**08:12**) Assigning Tabular Data to Objects
+* (**12:46**) Assigning Functions to Objects
+* (**14:50**) Using Objects Algebraically
+* (**16:20**) Object Naming Limitations
+* (**17:17**) Common Object Naming Conventions
+* (**21:03**) Be Consistent in Your Naming!
+* (**21:33**) Conventions as "Calling Cards"
+* (**24:00**) Conclusions
+
+<br>
+
 ## Functions in R
 
 Play the video below for an overview of functions in R.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* What are functions?
+* Exploring function internals
+* How to create new functions in R
+* How to explore function documentation
+* What are function arguments and how are they used?
 
 <br>
 
@@ -307,11 +334,35 @@ Play the video below for an overview of functions in R.
 
 <br>
 
+Visit the [video](https://youtu.be/QoMX6ZauH5k) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:54**) What Are Functions?
+* (**01:45**) Example of a Function: 'mean()'
+* (**03:16**) Meta-Functions without Specifications: 'getwd()'
+* (**04:56**) Package Functions: 'read_csv()'
+* (**05:12**) Running Functions without Required Specifications
+* (**05:30**) Functions Under the Hood
+* (**06:52**) How to Create New Functions
+* (**09:45**) Function Documentation: 'help()'
+* (**10:24**) What Are Function Arguments?
+* (**11:34**) Using Autocomplete & Tool Tips
+* (**13:00**) Implicit (Unnamed) Argument Order
+* (**14:39**) Importance of Argument Order
+* (**16:58**) Default Argument Parameters
+* (**19:41**) Exploring New Package Functions
+
+<br>
+
 ## Understanding Vectors
 
-Play the video below for an overview of vectors: What they are, how to make them, and different types.
+Play the video below for an overview of vectors.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* What are they and how do you make them?
+* What are some different kinds of vectors?
+* What are common functions used for vectors?
+* What are factors and why are they important in R?
+* How do you change vector classes and what are some important nuances?
 
 <br>
 
@@ -319,15 +370,73 @@ Play the video below for an overview of vectors: What they are, how to make them
 
 <br>
 
+Visit the [video](https://youtu.be/2uavlW7Ytb8) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:57**) Reviewing Assignment & Objects
+* (**00:57**) Reviewing Assignment & Objects
+* (**01:31**) Creating Vectors with Function 'c()'
+* (**03:20**) Creating Integer Vectors
+* (**04:07**) Creating Character Vectors
+* (**04:50**) Creating Logical Vectors
+* (**06:00**) Creating Sequences with ':'
+* (**06:46**) Determining the Length of Vectors with 'length()'
+* (**09:06**) Determining Vector Classes with 'class()'
+* (**11:47**) "Casting" Vector Classes with 'as.*()' Functions
+* (**14:06**) What Are Factors?
+* (**15:12**) An Example of Categorical Values
+* (**15:45**) Specifying a Factor with 'as.factor()'
+* (**16:07**) Factor Levels in R
+* (**16:48**) The Importance of Identifying Factors in R
+* (**20:46**) Additional Casting, or 'as.*()' Functions
+* (**22:26**) Casting Data Structures with Data Frames
+* (**24:25**) Casting as Matrices
+* (**25:08**) Casting & Coercion
+* (**27:52**) Differing Lengths & Recycling in R
+* (**31:30**) Review & Conclusions
+
+<br>
+
 ## Exploring Vectors
 
 Play the video below for an overview of basic exploratory functions for a vector, i.e. a series of values.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* What constitutes tabular data?
+* Extracting variables as a separate vector
+* Common functions for tables and variables
+* How to extract and store variables as objects
+* Exploratory and summarizing functions for vectors
 
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6TF6UuM0IbI?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the [video](https://youtu.be/6TF6UuM0IbI) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:38**) Starting a New Script
+* (**01:23**) Practice Dataset 'mtcars'
+* (**01:56**) Exploring Documentation in R
+* (**03:22**) Anatomy of Tabular Data
+* (**04:21**) Listing Variables with Function 'names()'
+* (**04:56**) Listing Column & Row Names
+* (**05:32**) Dataset Dimensions with Function 'dim()'
+* (**05:56**) Row & Column Dimensions
+* (**06:22**) Previewing First Observations with 'head()'
+* (**07:09**) Summarizing Dataset Structures with 'str()'
+* (**08:10**) Summarizing Structures with 'glimpse()'
+* (**09:31**) Extracting & Operating on Variables as Vectors
+* (**11:20**) Storing Vectors as Objects
+* (**11:32**) Determining Total Elements with 'length()'
+* (**12:28**) Summing Numeric Variables with 'sum()'
+* (**13:26**) Arithmetic Functions with Missing Values & 'na.rm ='
+* (**14:32**) Calculating Averages with Function 'mean()'
+* (**15:23**) Summarizing Vectors with Function 'summary()'
+* (**16:49**) Tallying Unique Values & Occurrences with Functions 'unique()' & 'table()'
+* (**18:23**) Creating Crosstabs with Two Variables in 'table()'
+* (**19:56**) (Optional) Count & Proportion of 'TRUE' with Function 'mean()'
 
 <br>
 <br>
