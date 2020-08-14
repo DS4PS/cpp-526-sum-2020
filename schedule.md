@@ -82,21 +82,17 @@ In this course we cover the foundations of data programming with the R language.
 
 **R Markdown** is a specific version of Markdown that allows you to combine text and code to create data-driven documents. 
 
-* [Chapter 1: Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html): Understand the basics of R as both a language and an interactive environment
+* [Chapter 1: Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html): Learning the basics of R
 
-* [Chapter 2: RStudio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html): Learn about RStudio, a convenient and organized application for working with R
+* [Chapter 2: RStudio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html): RStudio's functionality and features
 
-* [Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html): Learn how R Markdown is used to create interactive and dynamically-updated reports
+* [Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html): How R Markdown is used for interactive and dynamic reports
 
-* [A Guide to Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html): How to use Markdown - an easy-to-learn language for formatting in R and online platforms
+* [A Guide to Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html): How to use Markdown - the easy-to-learn formatting syntax
 
 <br>
 
-<center>
-
 ![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
-
-</center>
 
 <br>
 
