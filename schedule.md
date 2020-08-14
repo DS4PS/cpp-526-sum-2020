@@ -128,6 +128,11 @@ RStudio is a graphical user interface (GUI) and integrated developer environment
 
 The following video provides a tour of the RStudio interface and key components for getting started.
 
+* What is RStudio?
+* Executing and scripting commands
+* Point-and-click and keyboard shorcuts
+* Major interface components and features
+
 <br>
  
 <iframe width="560" height="315" 
