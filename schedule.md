@@ -889,13 +889,40 @@ Lab 05 will use data on traffic accidents in the City of Tempe:
 
 ## Introducing dplyr
 
-Play the video below for an overview of package **dplyr**.
+Play the video below for an overview of data manipulation with package **dplyr**.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* New syntax, e.g. bare variable names, piping
+* Main "verbs" (functions) for data manipulation
+* Helper "verbs" (functions) for added modification
+* Examples of combining main and helper "verbs" in advanced expressions
 
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/M2QuERvxwm0?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the video on YouTube to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction & About Package 'dplyr'
+* (**02:12**) Opening RStudio & Creating Our Script
+* (**02:35**) Loading Package 'dplyr'
+* (**03:22**) An Example Expression Using 'dplyr' Verbs
+* (**04:43**) The "Pipe Operator"
+* (**05:46**) 'dplyr' Functions Without Pipe Operators
+* (**07:48**) Bare Variable Names
+* (**09:08**) Reviewing 'dplyr' Syntax
+* (**09:46**) Main Verbs: 'select()'
+* (**14:44**) Main Verbs: 'filter()'
+* (**19:15**) Main Verbs: 'arrange()'
+* (**24:26**) Main Verbs: 'mutate()'
+* (**27:30**) Main Verbs: 'summarize()'
+* (**33:20**) Main Verbs: 'group_by()'
+* (**34:41**) 'group_by()' & 'mutate()' Operations
+* (**37:37**) Don't Forget to 'ungroup()'!
+* (**39:04**) 'group_by()' & 'summarize()' Operations
+* (**41:36**) Helper Verbs in 'dplyr', e.g. 'desc()', 'pull()'
+* (**44:25**) Putting It All Together
 
 <br>
 <br>
