@@ -62,7 +62,7 @@ Visit the [video](https://youtu.be/xQA9OSjGQok) to navigate using timestamps in 
 
 ## Introducing R 
 
-R is a (roughly) 30-year-old statistical machine language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to statistical software for their students at the University of Auckland. In fact, its rich lineage can be directly traced back to inventor and scientist Alexander Graham Bell. 
+R is a 30-year-old statistical language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to proprietary software for their students at the University of Auckland. In fact, its rich lineage can be directly traced to inventor and scientist Alexander Graham Bell. 
 
 Watch the video below for a brief introduction to R as it's used today. 
 
@@ -76,11 +76,9 @@ Watch the video below for a brief introduction to R as it's used today.
 
 In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives. 
 
-**RStudio** helps you manage projects by organizing files, scripts, packages and output. 
+**RStudio** helps you manage projects by organizing files, scripts, packages and output. **Markdown** is a simple formatting convention that allows you to create publication-quality documents. **R Markdown** is a specific version of Markdown that allows you to combine text and code to create data-driven documents.
 
-**Markdown** is a simple formatting convention that allows you to create publication-quality documents. 
-
-**R Markdown** is a specific version of Markdown that allows you to combine text and code to create data-driven documents. 
+The following resources will help you get a better understanding of these tools.
 
 * [Chapter 1: Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html): Learning the basics of R
 
