@@ -62,38 +62,45 @@ Visit the [video](https://youtu.be/xQA9OSjGQok) to navigate using timestamps in 
 
 ## Introducing R 
 
-<br>
+R is a (roughly) 30-year-old statistical machine language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to statistical software for their students at the University of Auckland. In fact, its rich lineage can be directly traced back to inventor and scientist Alexander Graham Bell. 
+
+Watch the video below for a brief introduction to R as it's used today. 
+
 <br>
 
 <iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-<br>
 <br>
 
 ## The R Toolkit
 
 In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives. R Studio helps you manage projects by organizing files, scripts, packages and output. Markdown is a simple formatting convention that allows you to create publication-quality documents. And R Markdown is a specific version of Markdown that allows you to combine text and code to create data-driven documents. 
 
-[CH-01 Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
+* [Chapter 1: Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html): Understand the basics of R as both a language and an interactive environment
 
-[CH-02 R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
+* [Chapter 2: RStudio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html): Learn about RStudio, a convenient and organized application for working with R
 
-[Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)
+* [Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html): Learn how R Markdown is used to create interactive and dynamically-updated reports
 
-[A Markdown Guide](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+* [A Guide to Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html): How to use Markdown - an easy-to-learn language for formatting in R and onlien platforms
 
 <br>
+
+<center>
 
 ![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
 
-<br>
+</center>
+
 <br>
 
 ## R Markdown
 
-[Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+Learn more abour R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
 
-You will have plenty of practice with these tools this semester. You will submit your labs as knitted R Markdown (RMD) files.
+You will get plenty of practice with these tools and submit your labs as knitted R Markdown (`.RMD`) files.
+
+<br>
 
 [![](https://github.com/DS4PS/ds4ps.github.io/blob/master/gifs/NewCodeChunk/NewCodeChunk_media/NewCodeChunk.gif?raw=true)](../gifs/NewCodeChunk/NewCodeChunk.html)
 
