@@ -102,9 +102,10 @@ Each tool you'll use in this course has a corresponding image, summarized below.
 
 ## R Markdown
 
-Learn more abour R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
-
 You will get plenty of practice with these tools and submit your labs as knitted R Markdown (`.RMD`) files.
+
+* Learn more abour R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+* View R Markdown in action in the below image
 
 <br>
 
@@ -161,7 +162,7 @@ Visit the [video](https://youtu.be/xgPwDlAtuNI) to navigate using timestamps in 
 
 *** { @unit = "", @title = "Getting Help", @lecture, @foldout  }
 
-## Getting Help
+## Understand Your Resources
 
 Data analytics is a very social endeavor and real-world analytics projects are almost always collaborative. 
 
@@ -171,13 +172,21 @@ Learning how to seek help and use discussion boards will accelerate learning and
 
 We are going to throw a lot at you, but also provide a lot of support. Over these first couple of weeks feel free to reach out for anything you might need. 
 
+<br>
+
+### Troubleshooting & Clarification
+
 If you find something confusing let us know (likely others will find it confusing as well). 
 
 * You can schedule a Zoom call with your instructor to do a screen share if you want to walk through anything. 
 * You can post a question to the [homework discussion board](https://ds4ps.org/cpp-526-sum-2020/help/).  
 * Or you can request a walk-through of a problem. The instructor will provide an example and steps to solve. 
 
-As a general rule of thumb, if you are stuck on the math or code for a problem, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues then the help discussion page is the easiest and quickest way to get help. If you are confused about concepts or having a hard time even formulating your question then virtual office hours are your best option.
+As a general rule of thumb, if you are stuck on the math or code for a problem, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues then the help discussion page is the easiest and quickest way to get help. If you are confused about concepts or having a hard time even formulating your question, then virtual office hours are your best option.
+
+<br>
+
+### The Benefits of GitHub Issues
 
 Note that the discussion board is hosted by the GitHub issues feature. It is a great forum because:
 
@@ -194,7 +203,7 @@ lm( y ~ x1 + x2 )
 ```
 ````
 
-The fences are three back-ticks. These look like quotation marks, but are actually the character at the top left of your keyboard (if you have a US or European keyboard). 
+The fences are made of three back-ticks. These look like quotation marks, but are actually the character at the top left of your keyboard (if you have a US or European keyboard) and shared with the *tilde* (`~`). 
 
 ````
 ```
@@ -234,7 +243,9 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 2. Your previous experience with data analytics 
 3. One thing you hope to do with your new skills in data analytics 
 
-<a class="uk-button uk-button-default" href="https://canvas.asu.edu/courses/54986/assignments/1306428">Post to YellowDig</a>
+<br>
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/54986/assignments/1306428">Post to YellowDig</a>
 
 <br>
 <br>
