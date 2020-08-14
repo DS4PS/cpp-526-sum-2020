@@ -160,6 +160,52 @@ Visit the [video](https://youtu.be/xgPwDlAtuNI) to navigate using timestamps in 
 <br>
 <br>
 
+*** { @unit = "", @title = "GitHub Issues", @lecture, @foldout }
+
+<br>
+
+## Understanding GitHub Issues
+
+GitHub Issues allow you to quickly troubleshoot issues with instructors and peers by sharing code, reproducing errors, and thoroughly explaining complications as you learn R.
+
+<br>
+
+#### RStudio: A Guided Tour
+
+The following video provides a tutorial for using GitHub Issues.
+
+* Locating the Issues page
+* Exploring previous posts
+* Creating, labeling, and assigning collaborators
+
+<br>
+ 
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/cHBFusiPyLw??rel=0&modestbranding=1&autohide=1&showinfo=0" 
+frameborder="0" allow="accelerometer; 
+autoplay; encrypted-media; gyroscope; 
+picture-in-picture" allowfullscreen></iframe>
+ 
+<br>
+
+Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:55**) Getting to the Issues Page: A Shortcut
+* (**01:42**) The Issues Page
+* (**02:08**) Exploring Posted Issues
+* (**02:40**) Viewing an Example Issue
+* (**03:24**) Recommended: Browse Issues Before Posting
+* (**03:46**) Creating a New Issue: The Title
+* (**04:18**) Labeling Issues & Assigning Collaborators
+* (**04:46**) The Body Text: Explaining Your Issue
+* (**05:45**) Examples of Best Practices
+* (**06:19**) Formatting with Markdown
+* (**07:15**) Conclusion
+
+<br>
+<br>
+
 *** { @unit = "", @title = "Getting Help", @lecture, @foldout  }
 
 ## Understand Your Resources
