@@ -237,7 +237,7 @@ The following checklist will help you organize and prepare for success in this c
 
 ## Introduce Yourself to the Class
 
-We will be using a discussion board called YellowDig for this course. Introduce yourself to the class and share a bit about:
+We will be using a discussion board called **YellowDig** for this course. Introduce yourself to the class:
 
 1. A little about yourself
 2. Your previous experience with data analytics 
