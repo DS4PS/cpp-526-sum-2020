@@ -233,11 +233,11 @@ str(object = dat,
 
 <br>
 
-## Question 6: Neighborhoos & Vacant Lots
+## Question 6: Neighborhoods & Vacant Lots
 
 **Question:** *Which neighborhood contains the most vacant lots?*
 
-**Answer:** **[X]** containts the most vacant lots.
+**Answer:** **[X]** contains the most vacant lots.
 
 <br>
 
