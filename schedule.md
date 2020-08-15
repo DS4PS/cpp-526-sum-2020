@@ -211,6 +211,58 @@ Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in 
 <br>
 <br>
 
+*** { @unit = "", @title = "Markdown Basics", @lecture, @foldout }
+
+<br>
+
+## Easy Formatting with Markdown
+
+Markdown is a "lightweight", easy-to-learn syntax that allows you to format language with boldface, italicization, bullet points, and more, even when there's no "rich content editor" menu available.  Websites and applications that support Markdown may surprise you, including:
+
+* Reddit
+* GitHub
+* RStudio
+* OpenStreetMap
+* Stack Exchange
+* Microsoft Teams
+
+<br>
+
+#### Markdown Basics
+
+The following video provides a brief introduction to Markdown fundamentals.
+
+* Headers & Sub-Headers
+* Boldface & Italicization
+* Ordered & Unordered Lists
+* List Sub-Items & Hyperlinks
+
+<br>
+ 
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/oXgFrUq6btQ??rel=0&modestbranding=1&autohide=1&showinfo=0" 
+frameborder="0" allow="accelerometer; 
+autoplay; encrypted-media; gyroscope; 
+picture-in-picture" allowfullscreen></iframe>
+ 
+<br>
+
+Visit the [video](https://youtu.be/oXgFrUq6btQ) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) What Is Markdown?
+* (**01:17**) Demonstrating Markdown in RStudio
+* (**02:00**) Typing Human-Readable Language
+* (**02:27**) Creating Headers
+* (**02:57**) Creating Sub-Headers
+* (**04:35**) Formatting Boldface & Italicization
+* (**05:58**) Creating Unordered & Ordered Lists
+* (**07:04**) Creating List Sub-Items
+* (**08:23**) Formatting Hyperlinks
+* (**09:38**) Conclusion
+
+<br>
+<br>
+
 *** { @unit = "", @title = "Getting Help", @lecture, @foldout  }
 
 ## Understand Your Resources
