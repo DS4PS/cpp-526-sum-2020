@@ -217,7 +217,9 @@ Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in 
 
 ## Easy Formatting with Markdown
 
-Markdown is a "lightweight", easy-to-learn syntax that allows you to format language with boldface, italicization, bullet points, and more, even when there's no "rich content editor" menu available.  Websites and applications that support Markdown may surprise you, including:
+Markdown is a "lightweight", easy-to-learn syntax that allows you to format language with boldface, italicization, bullet points, and more, even when there's no "rich content editor" menu available.  
+
+Websites and applications that support Markdown may surprise you, including:
 
 * Reddit
 * GitHub
