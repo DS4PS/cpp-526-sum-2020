@@ -32,9 +32,13 @@ Submit Buttons -
 
 <br>
 
-## Introduction
+## About Your Instructor
 
-Play the video below to learn a bit more about Jamison Crawford, Associate Faculty member at Arizona State University and your instructor for Foundations of Data Science: Part I.
+Play the video below to learn a bit more about your instructor for the course, Jamison Crawford.
+
+* Visit his [GitHub](https://github.com/jamisoncrawford) profile
+* View his [RPubs](https://rpubs.com/jamisoncrawford) portfolio
+* Connect on [LinkedIn](https://www.linkedin.com/in/jamisoncrawford/)
 
 <br>
 
@@ -42,61 +46,92 @@ Play the video below to learn a bit more about Jamison Crawford, Associate Facul
 
 <br>
 
+Visit the [video](https://youtu.be/xQA9OSjGQok) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction & Welcome
+* (**00:47**) An Overview of What I Do Professionally
+* (**02:44**) My Background in Public Administration
+* (**03:22**) Where I'm From, Where I've Been, & My Teaching Career
+* (**03:54**) How I Became Involved in Co-Creating & Teaching the Course
+* (**05:18**) The Personal & Professional Importance of the Course
+* (**05:48**) Why I'm Excited to See What You Can Do!
+
+<br>
+
 *** { @unit = "", @title = "The R Toolkit", @lecture, @foldout }
 
 ## Introducing R 
 
-<br>
+R is a 30-year-old statistical language created by New Zealand statisticians Robert Gentleman and Ross Ihaka as a free alternative to proprietary software for their students at the University of Auckland. In fact, its rich lineage can be directly traced to inventor and scientist Alexander Graham Bell. 
+
+Watch the video below for a brief introduction to R as it's used today. 
+
 <br>
 
 <iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 <br>
-<br>
 
 ## The R Toolkit
 
-In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives. R Studio helps you manage projects by organizing files, scripts, packages and output. Markdown is a simple formatting convention that allows you to create publication-quality documents. And R Markdown is a specific version of Markdown that allows you to combine text and code to create data-driven documents. 
+In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives. 
 
-[CH-01 Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
+**RStudio** helps you manage projects by organizing files, scripts, packages and output. **Markdown** is a simple formatting convention that allows you to create publication-quality documents. **R Markdown** is a specific version of Markdown that allows you to combine text and code to create data-driven documents.
 
-[CH-02 R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
+The following resources will help you get a better understanding of these tools.
 
-[Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)
+* [Chapter 1: Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html): Learning the basics of R
 
-[A Markdown Guide](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+* [Chapter 2: RStudio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html): RStudio's functionality and features
+
+* [Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html): How R Markdown is used for interactive and dynamic reports
+
+* [A Guide to Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html): How to use Markdown - the easy-to-learn formatting syntax
+
+<br>
+
+## Visualizing Tooling
+
+Each tool you'll use in this course has a corresponding image, summarized below. 
 
 <br>
 
 ![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
 
 <br>
-<br>
 
 ## R Markdown
 
-[Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+You will get plenty of practice with these tools and submit your labs as knitted R Markdown (`.RMD`) files.
 
-You will have plenty of practice with these tools this semester. You will submit your labs as knitted R Markdown (RMD) files.
+* Learn more abour R Markdown here: [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+* View R Markdown in action in the below image
+
+<br>
 
 [![](https://github.com/DS4PS/ds4ps.github.io/blob/master/gifs/NewCodeChunk/NewCodeChunk_media/NewCodeChunk.gif?raw=true)](../gifs/NewCodeChunk/NewCodeChunk.html)
 
 <br>
 <br>
 
-*** { @unit = "", @title = "Tour of R Studio", @lecture, @foldout }
+*** { @unit = "", @title = "RStudio: A Guided Tour", @lecture, @foldout }
 
 <br>
 
 ## Getting to Know RStudio
 
-RStudio is a graphical user interface (GUI) and integrated developer environment (IDE) that makes it much easier to use R for writing code, importing and exporting data, installing extensions, and many other features.
+RStudio is a graphical user interface (GUI) and integrated developer environment (IDE) that makes it much easier to use R for writing code, importing data, installing packages, and other features.
 
 <br>
 
 #### RStudio: A Guided Tour
 
 The following video provides a tour of the RStudio interface and key components for getting started.
+
+* What is RStudio?
+* Executing and scripting commands
+* Point-and-click and keyboard shorcuts
+* Major interface components and features
 
 <br>
  
@@ -108,7 +143,7 @@ picture-in-picture" allowfullscreen></iframe>
  
 <br>
 
-Visit the video on YouTube to use bookmarks in the description or chapters in the progress bar.
+Visit the [video](https://youtu.be/xgPwDlAtuNI) to navigate using timestamps in the description or bookmarks in the progress bar.
 
 * (**00:00**) Introduction & Defining Integrated Development Environments (IDE)
 * (**00:41**) The Five Key Components of RStudio
@@ -130,9 +165,109 @@ Visit the video on YouTube to use bookmarks in the description or chapters in th
 <br>
 <br>
 
+*** { @unit = "", @title = "GitHub Issues", @lecture, @foldout }
+
+<br>
+
+## Understanding GitHub Issues
+
+GitHub Issues allow you to quickly troubleshoot issues with instructors and peers by sharing code, reproducing errors, and thoroughly explaining complications as you learn R.
+
+<br>
+
+#### GitHub Issues: A Tutorial
+
+The following video provides a tutorial for using GitHub Issues.
+
+* Locating the Issues page
+* Exploring previously posted Issues
+* Creating, labeling, and assigning collaborators
+
+<br>
+ 
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/cHBFusiPyLw??rel=0&modestbranding=1&autohide=1&showinfo=0" 
+frameborder="0" allow="accelerometer; 
+autoplay; encrypted-media; gyroscope; 
+picture-in-picture" allowfullscreen></iframe>
+ 
+<br>
+
+Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:55**) Getting to the Issues Page: A Shortcut
+* (**01:42**) The Issues Page
+* (**02:08**) Exploring Posted Issues
+* (**02:40**) Viewing an Example Issue
+* (**03:24**) Recommended: Browse Issues Before Posting
+* (**03:46**) Creating a New Issue: The Title
+* (**04:18**) Labeling Issues & Assigning Collaborators
+* (**04:46**) The Body Text: Explaining Your Issue
+* (**05:45**) Examples of Best Practices
+* (**06:19**) Formatting with Markdown
+* (**07:15**) Conclusion
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Markdown Basics", @lecture, @foldout }
+
+<br>
+
+## Easy Formatting with Markdown
+
+Markdown is a "lightweight", easy-to-learn syntax that allows you to format language with boldface, italicization, bullet points, and more, even when there's no "rich content editor" menu available.  
+
+Websites and applications that support Markdown may surprise you, including:
+
+* Reddit
+* GitHub
+* RStudio
+* OpenStreetMap
+* Stack Exchange
+* Microsoft Teams
+
+<br>
+
+#### Markdown Basics
+
+The following video provides a brief introduction to Markdown fundamentals.
+
+* Headers & Sub-Headers
+* Boldface & Italicization
+* Ordered & Unordered Lists
+* List Sub-Items & Hyperlinks
+
+<br>
+ 
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/oXgFrUq6btQ??rel=0&modestbranding=1&autohide=1&showinfo=0" 
+frameborder="0" allow="accelerometer; 
+autoplay; encrypted-media; gyroscope; 
+picture-in-picture" allowfullscreen></iframe>
+ 
+<br>
+
+Visit the [video](https://youtu.be/oXgFrUq6btQ) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) What Is Markdown?
+* (**01:17**) Demonstrating Markdown in RStudio
+* (**02:00**) Typing Human-Readable Language
+* (**02:27**) Creating Headers
+* (**02:57**) Creating Sub-Headers
+* (**04:35**) Formatting Boldface & Italicization
+* (**05:58**) Creating Unordered & Ordered Lists
+* (**07:04**) Creating List Sub-Items
+* (**08:23**) Formatting Hyperlinks
+* (**09:38**) Conclusion
+
+<br>
+<br>
+
 *** { @unit = "", @title = "Getting Help", @lecture, @foldout  }
 
-## Getting Help
+## Understand Your Resources
 
 Data analytics is a very social endeavor and real-world analytics projects are almost always collaborative. 
 
@@ -142,13 +277,21 @@ Learning how to seek help and use discussion boards will accelerate learning and
 
 We are going to throw a lot at you, but also provide a lot of support. Over these first couple of weeks feel free to reach out for anything you might need. 
 
-If you find something confusing let us know (likely others will find it confusing as well). 
+<br>
 
-* You can schedule a Zoom call with your instructor to do a screen share if you want to walk through anything. 
-* You can post a question to the [homework discussion board](https://ds4ps.org/cpp-526-sum-2020/help/).  
-* Or you can request a walk-through of a problem. The instructor will provide an example and steps to solve. 
+### Troubleshooting & Clarification
 
-As a general rule of thumb, if you are stuck on the math or code for a problem, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues then the help discussion page is the easiest and quickest way to get help. If you are confused about concepts or having a hard time even formulating your question then virtual office hours are your best option.
+If you find something confusing, let us know (likely others will find it confusing as well). 
+
+* Schedule a Zoom call with your instructor and screen share to walk through issues
+* Post a question to the [course discussion board](https://ds4ps.org/cpp-526-sum-2020/help/)
+* Request a walk-through and your instructor will provide examples and steps 
+
+As a general rule of thumb, if you are stuck on the math or code for a problem, need clarification about what the question is asking, want to make sure you understand a formula, or are having similar issues then the help discussion page is the easiest and quickest way to get help. If you are confused about concepts or having a hard time even formulating your question, then virtual office hours are your best option.
+
+<br>
+
+### The Benefits of GitHub Issues
 
 Note that the discussion board is hosted by the GitHub issues feature. It is a great forum because:
 
@@ -165,7 +308,7 @@ lm( y ~ x1 + x2 )
 ```
 ````
 
-The fences are three back-ticks. These look like quotation marks, but are actually the character at the top left of your keyboard (if you have a US or European keyboard). 
+The fences are made of three back-ticks. These look like quotation marks, but are actually the character at the top left of your keyboard (if you have a US or European keyboard) and shared with the *tilde* (`~`). 
 
 ````
 ```
@@ -182,7 +325,9 @@ b1 = cov(x,y) / var(x)
 
 *** { @unit = "", @title = "Your Course Prep Checklist", @assignment, @foldout }
 
-<br>
+## Getting Started
+
+The following checklist will help you organize and prepare for success in this course.
 
 - [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-spr-2020/) 
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
@@ -197,13 +342,13 @@ b1 = cov(x,y) / var(x)
 
 ## Introduce Yourself to the Class
 
-We will be using a discussion board called YellowDig for this course. Introduce yourself to the class and share a bit about:
+We will be using a discussion board called **YellowDig** for this course. Introduce yourself to the class:
 
 1. A little about yourself
 2. Your previous experience with data analytics 
 3. One thing you hope to do with your new skills in data analytics 
 
-<a class="uk-button uk-button-default" href="https://canvas.asu.edu/courses/54986/assignments/1306428">Post to YellowDig</a>
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/54986/assignments/1306428">Post to YellowDig</a>
 
 <br>
 <br>
@@ -285,9 +430,13 @@ Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels with singl
 
 ## Objects & Assignment
 
-Play the video below for an overview of objects and assignment in R. 
+Play the video below for an overview of objects and assignment in R.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* How to open a new script in RStudio
+* Arithmetic and the order of operations
+* Creating different objects with assignments
+* Using objects algebraically and arithmetically
+* Common conventions and limitations in naming objects
 
 <br>
 
@@ -295,11 +444,34 @@ Play the video below for an overview of objects and assignment in R.
 
 <br>
 
+Visit the [video](https://youtu.be/q6kdjxSlq40) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:36**) Clearing Your Console & Opening New Scripts
+* (**00:58**) Arithmetic Operations in R
+* (**03:38**) Order of Operations ("PEMDAS")
+* (**05:30**) Creating Objects with Assignment
+* (**07:00**) Assigning Multiple Values with `c()`
+* (**08:12**) Assigning Tabular Data to Objects
+* (**12:46**) Assigning Functions to Objects
+* (**14:50**) Using Objects Algebraically
+* (**16:20**) Object Naming Limitations
+* (**17:17**) Common Object Naming Conventions
+* (**21:03**) Be Consistent in Your Naming!
+* (**21:33**) Conventions as "Calling Cards"
+* (**24:00**) Conclusions
+
+<br>
+
 ## Functions in R
 
 Play the video below for an overview of functions in R.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* What are functions?
+* Exploring function internals
+* How to create new functions in R
+* How to explore function documentation
+* What are function arguments and how are they used?
 
 <br>
 
@@ -307,11 +479,35 @@ Play the video below for an overview of functions in R.
 
 <br>
 
+Visit the [video](https://youtu.be/QoMX6ZauH5k) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:54**) What Are Functions?
+* (**01:45**) Example of a Function: `mean()`
+* (**03:16**) Meta-Functions without Specifications: `getwd()`
+* (**04:56**) Package Functions: `read_csv()`
+* (**05:12**) Running Functions without Required Specifications
+* (**05:30**) Functions Under the Hood
+* (**06:52**) How to Create New Functions
+* (**09:45**) Function Documentation: `help()`
+* (**10:24**) What Are Function Arguments?
+* (**11:34**) Using Autocomplete & Tool Tips
+* (**13:00**) Implicit (Unnamed) Argument Order
+* (**14:39**) Importance of Argument Order
+* (**16:58**) Default Argument Parameters
+* (**19:41**) Exploring New Package Functions
+
+<br>
+
 ## Understanding Vectors
 
-Play the video below for an overview of vectors: What they are, how to make them, and different types.
+Play the video below for an overview of vectors.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* What are they and how do you make them?
+* What are some different kinds of vectors?
+* What are common functions used for vectors?
+* What are factors and why are they important in R?
+* How do you change vector classes and what are some important nuances?
 
 <br>
 
@@ -319,15 +515,73 @@ Play the video below for an overview of vectors: What they are, how to make them
 
 <br>
 
+Visit the [video](https://youtu.be/2uavlW7Ytb8) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:57**) Reviewing Assignment & Objects
+* (**00:57**) Reviewing Assignment & Objects
+* (**01:31**) Creating Vectors with Function `c()`
+* (**03:20**) Creating Integer Vectors
+* (**04:07**) Creating Character Vectors
+* (**04:50**) Creating Logical Vectors
+* (**06:00**) Creating Sequences with `:`
+* (**06:46**) Determining the Length of Vectors with `length()`
+* (**09:06**) Determining Vector Classes with `class()`
+* (**11:47**) "Casting" Vector Classes with `as.*()` Functions
+* (**14:06**) What Are Factors?
+* (**15:12**) An Example of Categorical Values
+* (**15:45**) Specifying a Factor with `as.factor()`
+* (**16:07**) Factor Levels in R
+* (**16:48**) The Importance of Identifying Factors in R
+* (**20:46**) Additional Casting, or `as.*()` Functions
+* (**22:26**) Casting Data Structures with Data Frames
+* (**24:25**) Casting as Matrices
+* (**25:08**) Casting & Coercion
+* (**27:52**) Differing Lengths & Recycling in R
+* (**31:30**) Review & Conclusions
+
+<br>
+
 ## Exploring Vectors
 
 Play the video below for an overview of basic exploratory functions for a vector, i.e. a series of values.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* What constitutes tabular data?
+* Extracting variables as a separate vector
+* Common functions for tables and variables
+* How to extract and store variables as objects
+* Exploratory and summarizing functions for vectors
 
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6TF6UuM0IbI?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the [video](https://youtu.be/6TF6UuM0IbI) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:38**) Starting a New Script
+* (**01:23**) Practice Dataset 'mtcars'
+* (**01:56**) Exploring Documentation in R
+* (**03:22**) Anatomy of Tabular Data
+* (**04:21**) Listing Variables with Function `names()`
+* (**04:56**) Listing Column & Row Names
+* (**05:32**) Dataset Dimensions with Function `dim()`
+* (**05:56**) Row & Column Dimensions
+* (**06:22**) Previewing First Observations with `head()`
+* (**07:09**) Summarizing Dataset Structures with `str()`
+* (**08:10**) Summarizing Structures with `glimpse()`
+* (**09:31**) Extracting & Operating on Variables as Vectors
+* (**11:20**) Storing Vectors as Objects
+* (**11:32**) Determining Total Elements with `length()`
+* (**12:28**) Summing Numeric Variables with `sum()`
+* (**13:26**) Arithmetic Functions with Missing Values & `na.rm =`
+* (**14:32**) Calculating Averages with Function `mean()`
+* (**15:23**) Summarizing Vectors with Function `summary()`
+* (**16:49**) Tallying Unique Values & Occurrences with Functions `unique()` & `table()`
+* (**18:23**) Creating Crosstabs with Two Variables in `table()`
+* (**19:56**) (**Optional**) Count & Proportion of `TRUE` with Function `mean()`
 
 <br>
 <br>
@@ -769,18 +1023,42 @@ But we will now add an input widget that allows users to select one team that wi
 
 ## Introducing Shiny
 
-Play the video below for an overview of interactive graphics with Shiny. Specifically:
+Play the video below for an overview of interactive graphics with Shiny.
 
 * How to create a hard-coded graphic
 * The logic behind making graphics dynamic
 * An example of a dynamic Shiny app in RStudio
 * How to create a new Shiny app with user inputs
 
-*Click on the video to navigate using bookmarks and timestamps.*
-
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/UF7T7kAtetQ?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the [video](https://youtu.be/UF7T7kAtetQ) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:38**) What Is a Shiny App?
+* (**02:07**) Exploring Practice Data `faithful`
+* (**03:24**) Recreating a Histogram of Wait Times
+* (**04:59**) Adjusting Argument `breaks =` with "Hard" Values
+* (**05:36**) Adjusting Argument `breaks =` with a Dynamic Values
+* (**06:43**) Understanding Shiny Logic
+* (**07:19**) Opening a New Shiny App
+* (**08:41**) Cleaning RStudio's Example Shiny App
+* (**09:43**) Comparing the App and Code
+* (**10:25**) User Interfaces (UI)
+* (**12:28**) Connecting Inputs (UI) with the Backend (Server)
+* (**14:11**) Creating a New Shiny App
+* (**15:01**) Connecting UI & Server-Side Plots ID
+* (**15:32**) Using a New Input Widget - Radio Buttons
+* (**16:55**) Creating a Dynamic Plot
+* (**17:38**) Critical Arguments for Input Widget Functions
+* (**19:43**) Inserting Server-Side Dynamic Values from User Inputs
+* (**22:44**) Tying It All Together
+* (**24:05**) Additional Notes
+* (**25:13**) Conclusions
 
 <br>
 <br>
@@ -887,15 +1165,42 @@ Lab 05 will use data on traffic accidents in the City of Tempe:
 
 <br>
 
-## Introducing Shiny
+## Introducing dplyr
 
-Play the video below for an overview of package **dplyr**.
+Play the video below for an overview of data manipulation with package **dplyr**.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* New syntax, e.g. bare variable names, piping
+* Main "verbs" (functions) for data manipulation
+* Helper "verbs" (functions) for added modification
+* Examples of combining main and helper "verbs" in advanced expressions
 
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/M2QuERvxwm0?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the [video](https://youtu.be/M2QuERvxwm0) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction & About Package 'dplyr'
+* (**02:12**) Opening RStudio & Creating Our Script
+* (**02:35**) Loading Package 'dplyr'
+* (**03:22**) An Example Expression Using 'dplyr' Verbs
+* (**04:43**) The "Pipe Operator"
+* (**05:46**) 'dplyr' Functions Without Pipe Operators
+* (**07:48**) Bare Variable Names
+* (**09:08**) Reviewing 'dplyr' Syntax
+* (**09:46**) Main Verbs: `select()`
+* (**14:44**) Main Verbs: `filter()`
+* (**19:15**) Main Verbs: `arrange()`
+* (**24:26**) Main Verbs: `mutate()`
+* (**27:30**) Main Verbs: `summarize()`
+* (**33:20**) Main Verbs: `group_by()`
+* (**34:41**) `group_by()` & `mutate()` Operations
+* (**37:37**) Don't Forget to `ungroup()`!
+* (**39:04**) `group_by()` & `summarize()` Operations
+* (**41:36**) Helper Verbs in 'dplyr', e.g. `desc()`, `pull()`
+* (**44:25**) Putting It All Together
 
 <br>
 <br>
