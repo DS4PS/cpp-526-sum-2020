@@ -269,9 +269,9 @@ Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in 
 
 <br>
 
-## The Basics of R Markdown
+## What Is R Markdown?
 
-R Markdown is one of the most powerful tools you'll learn. It allows the synthesis of human-readable language and R to perform processing and analysis tasks while explaining your process to broad audiences.
+R Markdown is one of the most powerful tools you'll learn. It allows the synthesis of human language and code to perform processing and analysis tasks while explaining them to broad audiences.
 
 <br>
 
@@ -283,6 +283,7 @@ The following video provides a tutorial and demonstration of R Markdown.
 * Creating New R Markdown Files
 * The Benefits of R Markdown
 * Customizing & Compiling
+* Completing Assignments
 
 <br>
  
