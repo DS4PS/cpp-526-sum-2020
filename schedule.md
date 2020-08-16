@@ -165,52 +165,6 @@ Visit the [video](https://youtu.be/xgPwDlAtuNI) to navigate using timestamps in 
 <br>
 <br>
 
-*** { @unit = "", @title = "GitHub Issues", @lecture, @foldout }
-
-<br>
-
-## Understanding GitHub Issues
-
-GitHub Issues allow you to quickly troubleshoot issues with instructors and peers by sharing code, reproducing errors, and thoroughly explaining complications as you learn R.
-
-<br>
-
-#### GitHub Issues: A Tutorial
-
-The following video provides a tutorial for using GitHub Issues.
-
-* Locating the Issues page
-* Exploring previously posted Issues
-* Creating, labeling, and assigning collaborators
-
-<br>
- 
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/cHBFusiPyLw??rel=0&modestbranding=1&autohide=1&showinfo=0" 
-frameborder="0" allow="accelerometer; 
-autoplay; encrypted-media; gyroscope; 
-picture-in-picture" allowfullscreen></iframe>
- 
-<br>
-
-Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**00:55**) Getting to the Issues Page: A Shortcut
-* (**01:42**) The Issues Page
-* (**02:08**) Exploring Posted Issues
-* (**02:40**) Viewing an Example Issue
-* (**03:24**) Recommended: Browse Issues Before Posting
-* (**03:46**) Creating a New Issue: The Title
-* (**04:18**) Labeling Issues & Assigning Collaborators
-* (**04:46**) The Body Text: Explaining Your Issue
-* (**05:45**) Examples of Best Practices
-* (**06:19**) Formatting with Markdown
-* (**07:15**) Conclusion
-
-<br>
-<br>
-
 *** { @unit = "", @title = "Markdown Basics", @lecture, @foldout }
 
 <br>
@@ -261,6 +215,96 @@ Visit the [video](https://youtu.be/oXgFrUq6btQ) to navigate using timestamps in 
 * (**07:04**) Creating List Sub-Items
 * (**08:23**) Formatting Hyperlinks
 * (**09:38**) Conclusion
+
+<br>
+<br>
+
+*** { @unit = "", @title = "GitHub Issues", @lecture, @foldout }
+
+<br>
+
+## Understanding GitHub Issues
+
+GitHub Issues allow you to quickly troubleshoot issues with instructors and peers by sharing code, reproducing errors, and thoroughly explaining complications as you learn R.
+
+<br>
+
+#### GitHub Issues: A Tutorial
+
+The following video provides a tutorial for using GitHub Issues.
+
+* Locating the Issues page
+* Exploring previously posted Issues
+* Creating, labeling, and assigning collaborators
+
+<br>
+ 
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/cHBFusiPyLw??rel=0&modestbranding=1&autohide=1&showinfo=0" 
+frameborder="0" allow="accelerometer; 
+autoplay; encrypted-media; gyroscope; 
+picture-in-picture" allowfullscreen></iframe>
+ 
+<br>
+
+Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**00:55**) Getting to the Issues Page: A Shortcut
+* (**01:42**) The Issues Page
+* (**02:08**) Exploring Posted Issues
+* (**02:40**) Viewing an Example Issue
+* (**03:24**) Recommended: Browse Issues Before Posting
+* (**03:46**) Creating a New Issue: The Title
+* (**04:18**) Labeling Issues & Assigning Collaborators
+* (**04:46**) The Body Text: Explaining Your Issue
+* (**05:45**) Examples of Best Practices
+* (**06:19**) Formatting with Markdown
+* (**07:15**) Conclusion
+
+<br>
+<br>
+
+*** { @unit = "", @title = "R Markdown", @lecture, @foldout }
+
+<br>
+
+## The Basics of R Markdown
+
+R Markdown is one of the most powerful tools you'll learn. It allows the synthesis of human-readable language and R to perform processing and analysis tasks while explaining your process to broad audiences.
+
+<br>
+
+#### R Markdown: An Introduction
+
+The following video provides a tutorial and demonstration of R Markdown.
+
+* Locating Lab Assignment Templates
+* Creating New R Markdown Files
+* The Benefits of R Markdown
+* Customizing & Compiling
+
+<br>
+ 
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/ALwHaNzQub0??rel=0&modestbranding=1&autohide=1&showinfo=0" 
+frameborder="0" allow="accelerometer; 
+autoplay; encrypted-media; gyroscope; 
+picture-in-picture" allowfullscreen></iframe>
+ 
+<br>
+
+Visit the [video](https://youtu.be/ALwHaNzQub0) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction & Contents
+* (**00:22**) Locating R Markdown Templates
+* (**01:20**) Creating a New R Markdown File
+* (**02:36**) Machine- & Human-Readable Code
+* (**05:41**) Creating & Formatting from Scratch
+* (**06:19**) Creating Code Chunks
+* (**07:37**) Code Chunk Options
+* (**09:55**) Lab Templates
+* (**12:25**) Discussion
 
 <br>
 <br>
