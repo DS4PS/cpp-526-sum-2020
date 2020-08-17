@@ -165,7 +165,17 @@ Each week you will receive a short lab that will help you synthesize the lecture
 
 ### Code-Through Assignment (10%)
 
-You are invited to pick one topic from the class that you want to learn more about, or that you think might provide value to your classmates. Create a short tutorial to make your topic accessible to your peers. It can be a blog post, a video, a GIF, or a tutorial that explains an important concept from data programming, presents a helpful framework, illustrates a useful R tool or approach to data programming, or introduces classmates to a new package or function.
+You will pick one topic from the class that you want to learn more about, or that you think might provide value to your classmates. Create a short tutorial to make your topic accessible to your peers. It can be a blog post, a video, a GIF, or a tutorial that explains an important concept from data programming, presents a helpful framework, illustrates a useful R tool or approach to data programming, or introduces classmates to a new package or function.
+
+The following criteria, description, and corresponding points are used to evaluate the project (10 points total):
+
+  - **Novelty & Value:** Focuses on a new, valuable topic or expansion of existing course material (**2 pts**)
+  - **Exposition:** Topic is thoroughly explained, e.g. purpose, theory, framework, etc. (**2 pts**)
+  - **Appearance:** Consistent code conventions and style; proper spelling, formatting, etc. (**2 pts**)
+  - **Demonstration:** Includes examples of application and relevance; 75% or more is original (**2 pts**)
+  - **Resources:** Topic-related resources are provided, described, and organized (**2 pts**)
+  
+**Note:** *Proper in-line and closing attribution of works cited is mandatory. See III. A. for more information.*
 
 ### Final Dashboard Project (30%)  
 
@@ -204,7 +214,7 @@ In general, any submitted work work is assessed on these evaluative criteria:
 
 Most assignments in this course are labs that are graded pass-fail based upon completeness and correctness of responses (every attempt must be made to complete labs, and they must be more than 50% correct to receive credit). Discussion boards that accumulate points through each activity on the board. 
 
-The final project will be accompanied by a rubric describing the allocation of points and criteria for evaluation. 
+The final projects will be accompanied by a rubric describing the allocation of points and criteria for evaluation. 
 
 ## E. Late and Missing Assignments
 
