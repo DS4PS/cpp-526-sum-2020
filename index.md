@@ -137,10 +137,10 @@ We will use a custom textbook for this course available at the link above.
 
 The following texts are recommended as good reference material for topics covered in this course:
 
-* Wickham, H., &amp; Grolemund, G. (2016). _R for Data Science._ O&#39;Reilly Press_. (free online)_  
-* Teetor, P. (2011). _R Cookbook: Proven recipes for data analysis, statistics, and graphics_. &quot; O&#39;Reilly Media, Inc.&quot;.  
+* Wickham, H., &amp; Grolemund, G. (2016). _R for Data Science._ O&#39;Reilly Press. 
+* Teetor, P. (2011). _R Cookbook: Proven recipes for data analysis, statistics, and graphics_. O&#39;Reilly Media.  
 * Sanchez, G. (2013). _Handling and processing strings in R._ Berkeley: Trowchez Editions. _(free online)_  
-* Peng, R. D., &amp; Matsui, E. (2015). _The Art of Data Science._ _A Guide for Anyone Who Works with Data._ Skybrude Consulting, 200, 162.  
+* Peng, R. D., &amp; Matsui, E. (2015). _The Art of Data Science._ Skybrude Consulting, 200, 162.  
 
 In addition to the required textbooks, the instructor will supplement the assigned unit readings with various journal articles, policy reports, or other related material.  These will be made available in the course shell in Blackboard.
 
