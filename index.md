@@ -230,15 +230,17 @@ Grades for the course are largely based on weekly labs. Assigned work is accompa
 
 ## F. Course Communications and Instructor Feedback:
 
-**Course content** is hosted on this website. Lecture files, assignments and other course communications will be transmitted via this site and/or through the class email list. **All assignment submissions** will be made through the [Canvas shell](https://canvas.asu.edu). 
+**Course content** is hosted on this website. Lecture files, assignments and other course communications will be transmitted via this site and/or through the class email list. **All assignment submissions** will be made through the [**Canvas shell**](https://canvas.asu.edu). 
 
-Please post lab questions on the [Get Help](https://ds4ps.org/cpp-526-sum-2020/help/) page on this site, schedule individual office hours using the Calendly link provided above, and email the instructor directly instead of using the Canvas system. 
+Please post lab questions on the [**Get Help**](https://ds4ps.org/cpp-526-sum-2020/help/) page on this site, schedule individual office hours using the Calendly link provided above, and email the instructor directly instead of using the Canvas system. 
 
 Students should be aware that the course instructor will attempt to respond to any course-related email as quickly as possible. Students are asked to allow between 24 and 48 hours for replies to direct instructor emails, generally, as a reasonable time to reply to questions or other issues posed in an email. Additionally, the general timeline for instructor grading or other feedback on assignments, either writer work or online discussion work, is between 5 and 10 work days.
 
 ## G. Student Conduct: Expectation of Professional Behavior
 
-Respectful conversations and tolerance of others&#39; opinions will be strictly enforced. Any inappropriate language, threatening, harassing, or otherwise inappropriate behavior during discussion could result in the student(s) being administratively dropped from the course with no refund, per ASU policy [USI 201-10](http://www.asu.edu/aad/manuals/usi). Students are required to adhere to the behavior standards listed in the [Arizona Board of Regents Policy Manual Chapter V—Campus and Student Affairs](http://azregents.asu.edu/rrc/Policy%20Manual/5-308-Student%20Code%20of%20Conduct.pdf) .
+Respectful conversations and tolerance of others&#39; opinions will be strictly enforced. Any inappropriate language, threatening, harassing, or otherwise inappropriate behavior during discussion could result in the student(s) being administratively dropped from the course with no refund, per [**ASU Policy USI 201-10**](http://www.asu.edu/aad/manuals/usi). 
+
+Students are required to adhere to the behavior standards listed in the [**Arizona Board of Regents Policy Manual Chapter V: Campus and Student Affairs**](http://azregents.asu.edu/rrc/Policy%20Manual/5-308-Student%20Code%20of%20Conduct.pdf) .
 
 # H. Academic Integrity and Honesty
 
