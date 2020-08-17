@@ -195,12 +195,12 @@ YellowDig discussion topics are used to introduce you to the data science ecosys
 
 ## D. General Grading Rubric for Written Work
 
-In general, any submitted work written work (assignments and/or exams) is assessed on these evaluative criteria:
+In general, any submitted work work is assessed on these evaluative criteria:
 
-- Assignment completeness – all elements of the assignment are addressed
-- Quality of analysis – substantively rigorous in addressing the assignment
-- Demonstrated synthesis of core concepts from lecture notes and ability to apply to new problems
-- Consistent use of formatting, style, and conventions in code; proper grammer, spelling, and formatting in text
+- **Completeness:** All elements of the assignment are addressed
+- **Quality of Analysis:** Substantively rigorous in addressing the assignment
+- **Understanding:** Demonstrated synthesis of core concepts from lecture notes and ability to apply to new problems
+- **Appearance:** Consistent formatting, style, and conventions in code; proper grammer, spelling, and formatting in text
 
 Most assignments in this course are labs that are graded pass-fail based upon completeness and correctness of responses (every attempt must be made to complete labs, and they must be more than 50% correct to receive credit). Discussion boards that accumulate points through each activity on the board. 
 
