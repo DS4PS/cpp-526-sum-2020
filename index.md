@@ -226,7 +226,7 @@ Respectful conversations and tolerance of others&#39; opinions will be strictly 
 
 ASU expects the highest standards of academic integrity. Violations of academic integrity include but are not limited to cheating, plagiarism, fabrication, etc. or facilitating any of these activities. This course relies heavily on writing and original critical thought. Any student who is suspected of not producing his or her own original work will be reported to the College of Public Programs for investigation. 
 
-**Plagiarism will not be tolerated**. **Any student who plagiarizes or otherwise fabricates his or her work will receive no credit for that assignment. It will be recorded as zero points—and the student will risk a failing grade for the course.** 
+**Plagiarism will not be tolerated**. **Any student who plagiarizes or fabricates her or his work will receive no credit the assignment. Additional disciplinary action following investigation may occur at the discretion of the instructor, up to and including course failure.** 
 
 For more information, refer to the [**Office of the Provost's Guide to Academic Integrity**](http://provost.asu.edu/academicintegrity).
 
