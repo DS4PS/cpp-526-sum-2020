@@ -761,13 +761,33 @@ Lab-02 covers the following topics:
 
 ## Logical Vectors
 
-Play the video below for an overview of logical vectors, i.e. a series of `TRUE` and `FALSE` values. 
+Play the video below for an overview of logical vectors, i.e. a series of `TRUE` and `FALSE` values.
 
-*Click on the video to navigate using bookmarks and timestamps.*
+* What are logical values?
+* Creating logical vectors
+* Using relational and logical operators
+* Subsetting data with conditional statements
 
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/l9WhjLMMWH4?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the [video](https://youtu.be/l9WhjLMMWH4) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**01:15**) What Is a Logical Vector?
+* (**03:30**) Logicals "Under the Hood" & Arithmetic
+* (**05:45**) Creating Logical Vectors with Conditions
+* (**08:05**) Using Different Relational Operators
+* (**12:06**) Multiple Conditions with Logical Operators
+* (**18:07**) "Selector Vectors" & Subsetting Rows
+* (**19:08**) Subsetting by Row & Column Positions
+* (**23:13**) Assigning Position Indices to Objects
+* (**25:57**) Notable Nuances of Logical Vectors
+* (**27:00**) Finding & Replacing Values
+* (**34:16**) Conclusions
 
 <br>
 <br>
