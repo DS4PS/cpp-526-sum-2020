@@ -131,9 +131,7 @@ The online discussions are explicitly intended to meet the objectives stated abo
 
 ## B. Assigned Reading Materials
 
-We will use a custom textbook for this course available at the link above. 
-
-* [Course Textbook](https://ds4ps.org/dp4ss/)
+We will use a custom textbook for this course available. Visit the [**Course Textbook**](https://ds4ps.org/dp4ss/).
 
 The following texts are recommended as good reference material for topics covered in this course:
 
