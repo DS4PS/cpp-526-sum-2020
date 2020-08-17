@@ -71,13 +71,7 @@ textbooks:
   
 --- 
 
-
-
-
-
-
-
-# I.  Course Description, Course Goal and Course Learning Objectives
+# I. Course Description, Goal, & Learning Objectives
 
 Data is an essential ingredient of any program evaluation or performance management system. Organizations that want to embrace an evidence-based approach to management need to develop processes for gathering data, linking multiple datasets, running analysis, and sharing results with stakeholders through reports, dashboards, or web applications. The ability to collect, organize and analyze data is a desirable skill set for professional knowledge workers, high-level management, and evaluators.
 
@@ -119,9 +113,9 @@ Students will demonstrate competency in understanding, producing and communicati
 
 Assigned work, including the course final project, and the quality of active participation in the regular online discussion sessions that are a critical part of the course learning strategy are the tools the instructors will use to measure comprehension and skill; the student&#39;s course grade is a direct reflection of demonstrated performance. Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflective of outstanding performance.  Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above) all assigned work should completed on time with careful attention to assignment details.
 
-# III. Course Structure and Operations; Performance Expectations
+# III. Course Structure, Operations, & Expectations
 
-## A. Format and Pedagogical Theory
+## A. Format & Pedagogical Theory
 
 Mastering advanced analytical techniques and data programming is like learning a language. You start by mastering basic vocabulary that is specific to statistics and data science. Through your coursework you will become conversant in the domains of regression analysis, research design, and data science. Progress might be slow at first as you work to master core concepts, integrate the building blocks into a coherent mental model of real-world problems, learn to translate technical results into clear narratives for non-technical audiences, and become comfortable with data programming skills. Over time you will find that your thought processes change as you approach problem-solving in a more structured and evidence-based manner, you apply counter-factual reasoning to performance problems, and you start reading the news and viewing scientific evidence differently. You begin to think and speak like a program evaluator.
 
@@ -132,10 +126,6 @@ Similar to immersion in a language, the best way to learn the material is to be 
 Online discussion boards are design for students to engage with the material together. The purpose of online discussion sessions is threefold: (1) the online discussion sessions allow students to interact with their peers and share ideas and interpretations of the assigned material, (2) such peer-to-peer discussion online helps build professional relationships with potential future colleagues in the field, and (3) the discussions permit the instructor to assess student engagement with the assigned material.
 
 The online discussions are explicitly intended to meet the objectives stated above.  They are not intended as another form of &quot;lecture&quot; where the instructor provides commentary and students simply react to that.  Rather, the discussions are a chance for peer-to-peer interaction and proactive engagement by each individual student.
-
-
-
-
 
 ## B. Assigned Reading Materials
 
@@ -150,11 +140,9 @@ The following texts are recommended as good reference material for topics covere
 * Sanchez, G. (2013). _Handling and processing strings in R._ Berkeley: Trowchez Editions. _(free online)_  
 * Peng, R. D., &amp; Matsui, E. (2015). _The Art of Data Science._ _A Guide for Anyone Who Works with Data._ Skybrude Consulting, 200, 162.  
 
-
-
 In addition to the required textbooks, the instructor will supplement the assigned unit readings with various journal articles, policy reports, or other related material.  These will be made available in the course shell in Blackboard.
 
-## C. Course Grading System for Assigned Work, including Final Project:
+## C. Course Grading System for Assigned Work & Final Projects
 
 Letter grades comport with a traditional set of intervals:
 
@@ -230,7 +218,7 @@ The final project will be accompanied by a rubric describing the allocation of p
 
 Grades for the course are largely based on weekly labs. Assigned work is accompanied by detailed instructions, adequate time for completion and opportunities to consult the instructor with questions. As a result, each assignment element in the course is expected to be completed in a timely fashion by the due date. Once solutions are posted it is no longer possible to receive points for assignments. 
 
-## F.  Course Communications and Instructor Feedback:
+## F. Course Communications and Instructor Feedback:
 
 **Course content** is hosted on this website. Lecture files, assignments and other course communications will be transmitted via this site and/or through the class email list. **All assignment submissions** will be made through the [Canvas shell](https://canvas.asu.edu). 
 
@@ -238,17 +226,15 @@ Please post lab questions on the [Get Help](https://ds4ps.org/cpp-526-sum-2020/h
 
 Students should be aware that the course instructor will attempt to respond to any course-related email as quickly as possible. Students are asked to allow between 24 and 48 hours for replies to direct instructor emails, generally, as a reasonable time to reply to questions or other issues posed in an email. Additionally, the general timeline for instructor grading or other feedback on assignments, either writer work or online discussion work, is between 5 and 10 work days.
 
-## G.  Student Conduct: Expectation of Professional Behavior:
+## G. Student Conduct: Expectation of Professional Behavior
 
 Respectful conversations and tolerance of others&#39; opinions will be strictly enforced. Any inappropriate language, threatening, harassing, or otherwise inappropriate behavior during discussion could result in the student(s) being administratively dropped from the course with no refund, per ASU policy [USI 201-10](http://www.asu.edu/aad/manuals/usi). Students are required to adhere to the behavior standards listed in the [Arizona Board of Regents Policy Manual Chapter V—Campus and Student Affairs](http://azregents.asu.edu/rrc/Policy%20Manual/5-308-Student%20Code%20of%20Conduct.pdf) .
 
-# H.  Academic Integrity and Honesty
+# H. Academic Integrity and Honesty
 
 ASU expects the highest standards of academic integrity. Violations of academic integrity include but are not limited to cheating, plagiarism, fabrication, etc. or facilitating any of these activities. This course relies heavily on writing and original critical thought. Any student who is suspected of not producing his or her own original work will be reported to the College of Public Programs for investigation. **Plagiarism will not be tolerated**. **Any student who plagiarizes or otherwise fabricates his or her work will receive no credit for that assignment. It will be recorded as zero points—and the student will risk a failing grade for the course.** For more information, refer to [http://provost.asu.edu/academicintegrity](http://provost.asu.edu/academicintegrity).
 
-
-
-# I.  Student Learning Environment: Accommodations
+# I. Student Learning Environment: Accommodations
 
 **Disability Accommodations:**  Students should be fully aware that the Arizona State University, the MA in EMHS program, and all program course instructors are committed to providing reasonable accommodation and access to programs and services to persons with disabilities. Students with disabilities who wish to seek academic accommodations must contact the ASU Disability Resources Center directly.  Information on the Center&#39;s procedures, resources and how to contact its staff can be found here: [https://eoss.asu.edu/drc/](https://eoss.asu.edu/drc/).  The Disability Resources Center is responsible for reviewing any student&#39;s requests; once that review has taken place, the Center will provide the student with appropriate information on academic accommodations which in turn will be provided to the course instructor.
 
@@ -256,53 +242,18 @@ ASU expects the highest standards of academic integrity. Violations of academic 
 
 **Military Accommodations:** A student who is a member of the National Guard, Reserve, or other branch of the armed forces and is unable to complete classes because of military activation may request complete or partial unrestricted administrative withdrawals or incompletes depending on the timing of the activation. For more information see ASU policy [USI 201-18](http://www.asu.edu/aad/manuals/usi).
 
-# IV. Course Schedule and Unit-specific Learning Objectives
+# IV. Course Schedule
 
 ## A. Schedule: Overview of Readings and Assignments
 
-As students are all aware, ASU Online courses are typically offered on a seven and a half week schedule. A schedule for each week of the term is outlined here; the course is divided into seven units with specific learning objectives for each unit.
+As students are all aware, ASU Online courses are typically offered on a seven and a half week schedule. A schedule for each week of the term is outlined in the Course Schedule; the course is divided into seven units with specific learning objectives for each unit.
 
-Please note: the course instructor may from time to time adjust assigned readings or adjust the due dates for assignment. The basic course content approach and learning objectives will not change, but slight modifications are possible if circumstances warrant an adjustment.
+**Note:** The course instructor may from time to time adjust assigned readings or adjust the due dates for assignment. The basic course content approach and learning objectives will not change, but slight modifications are possible if circumstances warrant an adjustment.
 
-[Schedule](cpp-526-sum-2020/schedule/)
-
-## Couse Schedule
-
-### Unit 0: R Data Science Toolkit 
-- CH-01 Core R 
-- CH-02 R Studio
-- CH-03 Data-Driven Docs & RMD
-
-
-### Unit 1: Functions and Vectors
-- CH-03, CH-04
-- Lab #1 
-
-### Unit 2: Operators and Descriptives
-- Lab #2 
-
-### Unit 3: Visualization
-- Lab #3
-
-### Unit 4: Dynamic Visualization
-- Lab #4 
-
-### Unit 5: Data Wrangling
-- Lab #5
-
-### Unit 6: Data IO and Joins
-- Lab #6
-
-### Unit 7: Dashboards
-- Start Final Project
-
+Visit the [**Course Schedule**](cpp-526-sum-2020/schedule/).
 
 <br>
 <br>
-
-
-
-
 
 <style> 
     
