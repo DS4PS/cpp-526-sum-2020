@@ -648,7 +648,7 @@ Required:
 
 Background Chapters:
 
-**You will start simple and get practice with these tools on labs. Skim these, then return for reference as you get stuck or want to deepend your knowledge.**
+**You will start simple and get practice with these tools on labs. Skim these, then return for reference as you get stuck or want to deepen your knowledge.**
 
 [Learning to Learn R](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html)
 
