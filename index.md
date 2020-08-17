@@ -97,7 +97,7 @@ The five main learning objectives for the course are:
 4. Ability to build custom visualizations through the base R graphics package
 5. Creation of dynamic graphics and data dashboards using R shiny tools
 
-# Course Prerequisites:
+## D. Course Prerequisites:
 
 There are no prerequisites, and we do not assume any prior background in computer programming or statistics. Students should, however, have installed R and R Studio, and worked through a basic tutorial on R Studio.
 
