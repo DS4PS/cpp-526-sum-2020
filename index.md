@@ -154,7 +154,7 @@ Above 98%   |  **A+**
  93 – 90%   |  **A-**
  89 – 87%   |  **B+**
  86 – 84%   |  **B**
- 83 – 80%   |  **B–**
+ 83 – 80%   |  **B-**
 Below 80%   |  **C, D, F**  
 
 The assigned work for the term comes in the form of four elements, described below.
