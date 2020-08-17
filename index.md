@@ -73,23 +73,29 @@ textbooks:
 
 # I. Course Description, Goal, & Learning Objectives
 
+## A. Overview
+
 Data is an essential ingredient of any program evaluation or performance management system. Organizations that want to embrace an evidence-based approach to management need to develop processes for gathering data, linking multiple datasets, running analysis, and sharing results with stakeholders through reports, dashboards, or web applications. The ability to collect, organize and analyze data is a desirable skill set for professional knowledge workers, high-level management, and evaluators.
+
+## B. About the Course
 
 The course introduces students to the R data programming language, an open source platform that has become an industry standard because of its flexibility and power. It was designed to allow people to quickly develop and share new statistical tools. It has evolved into a more general data analytics platform that can be used for analytics, customized visualizations, GIS applications, text analysis, building web applications, and much more. It has a large and active user community that has developed thousands of free custom programs.
 
-Typically only 10-20% of a project is spent analyzing data. The other 80-90% consists of merging data sources, cleaning data, defining new variables, and arranging data into the proper format. These steps require knowledge about data wrangling as well as general project management process. The Foundations of Data Science sequence teaches both the data programming fundamentals and well as project management skills to ensure that analysis is transparent, error-free and reproducible.
+Typically only 10-20% of a project is spent analyzing data. The other 80-90% consists of merging data sources, cleaning data, defining new variables, and arranging data into the proper format. These steps require knowledge about data wrangling as well as general project management process. The *Foundations of Data Science* sequence teaches both data programming fundamentals as well as project management skills to ensure that analysis is transparent, error-free, and reproducible.
 
 The Foundations of Data Science course sequence will cover the fundamentals of data programming – building unique datasets using APIs and custom tools, importing data from the cloud, linking multiple data sources, and wrangling processes to clean, transform, and reshape datasets. Advanced topics will be introduced such as writing functions, running simulations, writing packages for R, and de-bugging techniques. We will spend roughly a third of the units on graphing procedures and reporting packages.
 
+## C. Course Objectives
+
 This course, Foundations of Data Science I, will cover the building blocks of data programming in R. We will learn about variables, operators, functions, dataset construction, group structure in data, visualization, and simulation. Students will also be introduced to markdown documents and automated reporting.
 
-The six main learning objectives for the course are:
+The five main learning objectives for the course are:
 
-- Mastery of functions as the building blocks of all R programs, including arguments and scope
-- Knowledge of variable types and data structures in R, including construction and manipulation of data sets
-- Use of logical statements to create and analyze groups within data
-- Ability to build custom visualizations through the base R graphics package
-- Creation of dynamic graphics and data dashboards using R shiny tools
+1. Mastery of functions and arguments as the building blocks of R
+2. Knowledge of variable types and data structures in R, including construction and manipulation
+3. Use of logical statements to create and analyze groups within data
+4. Ability to build custom visualizations through the base R graphics package
+5. Creation of dynamic graphics and data dashboards using R shiny tools
 
 # Course Prerequisites:
 
@@ -97,7 +103,7 @@ There are no prerequisites, and we do not assume any prior background in compute
 
 # II. Assessment of Student Performance & Proficiency
 
-## A. Keys to Student Success
+## A. Performance Assessment
 
 Assessment of student performance in this course is based on indications that the course learning objectives stated above have been achieved.  Several areas of measurement will be used to produce a final student performance rating.  These areas of performance assessment include the following:
 
@@ -106,14 +112,16 @@ Assessment of student performance in this course is based on indications that th
 3. Communicating information by developing custom visualizations and graphics.
 4. Using markdown documents to generate data-driven reports and data dashboards.
 
+## B. Demonstrating Proficiency
+
 Students will demonstrate competency in understanding, producing and communicating results of their analyses through the following assignments:
 
-1. In-lecture assessment questions to ensure basic comprehension of key concepts and to help students and instructors track progress through the course.
-2. Weekly labs that provide opportunities to consolidate and apply material from the lectures.
-3. Discussion topics on broad data science trends. 
-4. A final project that integrates several skills to create a data dashboard. 
+1. In-lecture assessment questions to ensure basic comprehension of key concepts and track progress
+2. Weekly labs that provide opportunities to consolidate and apply material from the lectures
+3. Discussion topics on broad data science concepts, news, and trends
+4. Final projects that integrate several skills  
 
-Assigned work, including the course final project, and the quality of active participation in the regular online discussion sessions that are a critical part of the course learning strategy are the tools the instructors will use to measure comprehension and skill; the student&#39;s course grade is a direct reflection of demonstrated performance. Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflective of outstanding performance.  Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above) all assigned work should completed on time with careful attention to assignment details.
+Assigned work, including the final course projects as well as regular, active participation in online discussion sessions (a critical part of the course learning strategy) are the tools the instructor will use to measure comprehension and skill; the student&#39;s course grade is a direct reflection of demonstrated performance. Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflecting outstanding performance.  Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above), all assigned work should completed on time with careful attention to assignment details.
 
 # III. Course Structure, Operations, & Expectations
 
