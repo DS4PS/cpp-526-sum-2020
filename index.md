@@ -107,10 +107,10 @@ There are no prerequisites, and we do not assume any prior background in compute
 
 Assessment of student performance in this course is based on indications that the course learning objectives stated above have been achieved.  Several areas of measurement will be used to produce a final student performance rating.  These areas of performance assessment include the following:
 
-1. The ability to build a custom dataset by important data from multiple sources, merging data, and reshaping, filtering or subsetting as necessary.
-2. Translating from plain English business cases to logical statements in R using logical operators and analytical techniques applied to groups.
-3. Communicating information by developing custom visualizations and graphics.
-4. Using markdown documents to generate data-driven reports and data dashboards.
+1. The ability to build a custom dataset by important data from multiple sources, merging data, and reshaping, filtering or subsetting as necessary
+2. Translating from plain English business cases to logical statements in R using logical operators and analytical techniques applied to groups
+3. Communicating information by developing custom visualizations and graphics
+4. Using markdown documents to generate data-driven reports and data dashboards
 
 ## B. Demonstrating Proficiency
 
@@ -121,21 +121,41 @@ Students will demonstrate competency in understanding, producing and communicati
 3. Discussion topics on broad data science concepts, news, and trends
 4. Final projects that integrate several skills  
 
-Assigned work, including the final course projects as well as regular, active participation in online discussion sessions (a critical part of the course learning strategy) are the tools the instructor will use to measure comprehension and skill; the student&#39;s course grade is a direct reflection of demonstrated performance. Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflecting outstanding performance.  Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above), all assigned work should completed on time with careful attention to assignment details.
+Assigned work, including the final course projects as well as regular, active participation in online discussion sessions (a critical part of the course learning strategy) are the tools the instructor will use to measure comprehension and skill; the student&#39;s course grade is a direct reflection of demonstrated performance. Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflecting outstanding performance.  
+
+**Note:** Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above), all assigned work should completed on time with careful attention to assignment details.
 
 # III. Course Structure, Operations, & Expectations
 
 ## A. Format & Pedagogical Theory
 
-Mastering advanced analytical techniques and data programming is like learning a language. You start by mastering basic vocabulary that is specific to statistics and data science. Through your coursework you will become conversant in the domains of regression analysis, research design, and data science. Progress might be slow at first as you work to master core concepts, integrate the building blocks into a coherent mental model of real-world problems, learn to translate technical results into clear narratives for non-technical audiences, and become comfortable with data programming skills. Over time you will find that your thought processes change as you approach problem-solving in a more structured and evidence-based manner, you apply counter-factual reasoning to performance problems, and you start reading the news and viewing scientific evidence differently. You begin to think and speak like a program evaluator.
+### Incremental Progression
 
-By the end of this degree you will be conversant in statistics, research design, and data programming. Fluency takes time and will be developed through professional experience. It requires you to practice these skills to develop muscle memory. You can do this through participating in evaluations on the job and gaining experience building and cleaning data sets from scratch. Understand, though, that this degree focuses on building foundations for your career. Don&#39;t be nervous if it feels like it&#39;s impossible to master all of the material in this program – it is impossible to learn everything in this field in a year.
+Mastering advanced analytical techniques and data programming is like learning a language. You start by mastering basic vocabulary that is specific to statistics and data science. Through your coursework you will become conversant in the domains of regression analysis, research design, and data science. Progress might be slow at first as you work to master core concepts, integrate the building blocks into a coherent mental model of real-world problems, learn to translate technical results into clear narratives for non-technical audiences, and become comfortable with data programming skills. 
 
-Similar to immersion in a language, the best way to learn the material is to be consistent in doing course work each day. The more frequently you revisit concepts and practice data programming the more you will absorb. The curriculum has been designed around this approach. Lectures are split into small units, and each unit includes questions to test your understanding of the material. Weekly labs allow you to spend some time applying the material to a specific problem. The final exam at the end of the semester is designed to help you make connections between concepts and consolidate knowledge. You will be much better off spending a small amount of time each day on the material instead of trying to cram everything into a couple of days a week.
+Over time you will find that your thought processes change as you approach problem-solving in a more structured and evidence-based manner, you apply counter-factual reasoning to performance problems, and you start reading the news and viewing scientific evidence differently. You begin to think and speak like a program evaluator.
+
+### Fluency
+
+By the end of this degree you will be conversant in statistics, research design, and data programming. Fluency takes time and will be developed through professional experience. It requires you to practice these skills to develop muscle memory. You can do this through participating in evaluations on the job and gaining experience building and cleaning data sets from scratch. Understand, though, that this degree focuses on building foundations for your career. 
+
+Don&#39;t be nervous if it feels like it&#39;s impossible to master all of the material in this program – it is impossible to learn everything in this field in one lifetime.
+
+### Retention 
+
+Similar to immersion in a language, the best way to learn the material is to be consistent in doing course work each day. The more frequently you revisit concepts and practice data programming the more you will absorb. The curriculum has been designed around this approach. Lectures are split into small units, and each unit includes questions to test your understanding of the material. Weekly labs allow you to spend some time applying the material to a specific problem. The final projects at the end of the semester are designed to help you make connections between concepts and consolidate knowledge. 
+
+You will be much better off spending a small amount of time each day on the material instead of trying to cram everything into a couple of days a week.
+
+### Discussion
 
 Online discussion boards are design for students to engage with the material together. The purpose of online discussion sessions is threefold: (1) the online discussion sessions allow students to interact with their peers and share ideas and interpretations of the assigned material, (2) such peer-to-peer discussion online helps build professional relationships with potential future colleagues in the field, and (3) the discussions permit the instructor to assess student engagement with the assigned material.
 
 The online discussions are explicitly intended to meet the objectives stated above.  They are not intended as another form of &quot;lecture&quot; where the instructor provides commentary and students simply react to that.  Rather, the discussions are a chance for peer-to-peer interaction and proactive engagement by each individual student.
+
+### Video Lectures
+
+Several videos are provided throughout the course.  They are not mandatory viewing, however we have recently integrated them into the Course Schedule and elsewhere to provide an additional medium for audio-visual learning in demonstrating core concepts.  We recommend reproducing the data analytic tasks you see while watching each in order to ensure retention.  Video lectures are designed as a supplement and not intended for use in lieu of assigned reading.  Take advantage of the bookmarks and timestamps to quickly navigate to topics of interest in each video and consider subscribing as new course content is published frequently.
 
 ## B. Assigned Reading Materials
 
