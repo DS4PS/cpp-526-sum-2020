@@ -107,8 +107,8 @@ There are no prerequisites, and we do not assume any prior background in compute
 
 Assessment of student performance in this course is based on indications that the course learning objectives stated above have been achieved.  Several areas of measurement will be used to produce a final student performance rating.  These areas of performance assessment include the following:
 
-1. The ability to build a custom dataset by important data from multiple sources, merging data, and reshaping, filtering or subsetting as necessary
-2. Translating from plain English business cases to logical statements in R using logical operators and analytical techniques applied to groups
+1. The ability to build a custom dataset by importing, merging, reshaping, filtering, and subsetting data
+2. Translating plain use cases to logical statements in R using operators and grouping techniques
 3. Communicating information by developing custom visualizations and graphics
 4. Using markdown documents to generate data-driven reports and data dashboards
 
