@@ -140,7 +140,9 @@ The following texts are recommended as good reference material for topics covere
 * Sanchez, G. (2013). _Handling and processing strings in R._ Berkeley: Trowchez Editions.
 * Peng, R. D., &amp; Matsui, E. (2015). _The Art of Data Science._ Skybrude Consulting, 200, 162.  
 
-A variety of free e-books are also available on [**LeanPub**](https://leanpub.com/bookstore/book?search=r%20data%20science). In addition to the required reading, the instructor will supplement these with video overviews, journal articles, policy reports, or other related material. These will be made available in the course shell. 
+A variety of free e-books are also available on [**LeanPub**](https://leanpub.com/bookstore/book?search=r%20data%20science).
+
+In addition to the required reading, the instructor will supplement these with video overviews, journal articles, policy reports, or other related material. These will be made available in the course shell. 
 
 ## C. Course Grading System for Assigned Work & Final Projects
 
@@ -222,7 +224,11 @@ Respectful conversations and tolerance of others&#39; opinions will be strictly 
 
 # H. Academic Integrity and Honesty
 
-ASU expects the highest standards of academic integrity. Violations of academic integrity include but are not limited to cheating, plagiarism, fabrication, etc. or facilitating any of these activities. This course relies heavily on writing and original critical thought. Any student who is suspected of not producing his or her own original work will be reported to the College of Public Programs for investigation. **Plagiarism will not be tolerated**. **Any student who plagiarizes or otherwise fabricates his or her work will receive no credit for that assignment. It will be recorded as zero points—and the student will risk a failing grade for the course.** For more information, refer to [http://provost.asu.edu/academicintegrity](http://provost.asu.edu/academicintegrity).
+ASU expects the highest standards of academic integrity. Violations of academic integrity include but are not limited to cheating, plagiarism, fabrication, etc. or facilitating any of these activities. This course relies heavily on writing and original critical thought. Any student who is suspected of not producing his or her own original work will be reported to the College of Public Programs for investigation. 
+
+**Plagiarism will not be tolerated**. **Any student who plagiarizes or otherwise fabricates his or her work will receive no credit for that assignment. It will be recorded as zero points—and the student will risk a failing grade for the course.** 
+
+For more information, refer to the [**Office of the Provost's Guide to Academic Integrity**](http://provost.asu.edu/academicintegrity).
 
 # I. Student Learning Environment: Accommodations
 
