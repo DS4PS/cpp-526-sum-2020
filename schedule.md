@@ -461,7 +461,6 @@ Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels with singl
 *** { @unit = "", @title = "Readings", @reading, @foldout  }
 
 <br>
-<br>
 
 ## Assigned Reading
 
@@ -487,7 +486,6 @@ Background Chapters:
 
 [Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
 
-<br>
 <br>
 
 *** { @unit = "", @title = "Videos", @lecture, @foldout }
@@ -794,7 +792,6 @@ Lab-02 covers the following topics:
 *** { @unit = "", @title = "Readings", @reading, @foldout }
 
 <br>
-<br>
 
 ## Assigned Reading
 
@@ -802,7 +799,6 @@ Required:
 
 [Group Construction with Logical Statements](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html)
 
-<br>
 <br>
 
 *** { @unit = "", @title = "Videos", @lecture, @foldout }
@@ -1012,7 +1008,6 @@ The lab requires you to re-create a graph that was featured in the New York Time
 *** { @unit = "", @title = "Readings", @reading, @foldout }
 
 <br>
-<br>
 
 ## Assigned Reading
 
@@ -1025,7 +1020,6 @@ Suggested:
 
 [Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
 
-<br>
 <br>
 
 *** { @unit = "", @title = "Checklist", @assignment, @foldout }
@@ -1139,7 +1133,6 @@ But we will now add an input widget that allows users to select one team that wi
 *** { @unit = "", @title = "Readings", @reading, @foldout }
 
 <br>
-<br>
 
 ## Assigned Reading
 
@@ -1149,7 +1142,6 @@ Required:
 * [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)
 * [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 
-<br>
 <br>
 
 *** { @unit = "", @title = "Videos", @lecture, @foldout }
@@ -1312,7 +1304,6 @@ Lab 05 will use data on traffic accidents in the City of Tempe:
 *** { @unit = "", @title = "Readings", @reading, @foldout }
 
 <br>
-<br>
 
 ## Assigned Reading
 
@@ -1322,7 +1313,6 @@ Required:
 * [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html)  
 * [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html)  
 
-<br>
 <br>
 
 *** { @unit = "", @title = "Videos", @lecture, @foldout }
@@ -1489,13 +1479,14 @@ We will join the Salaries table to player bios (Master table) and performance da
 
 *** { @unit = "", @title = "Readings", @reading, @foldout }
 
+<br>
+
 ## Assigned Reading
 
 Read the notes on data joins: 
 
 * [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
 
-<br>
 <br>
 
 *** { @unit = "", @title = "Checklist", @assignment, @foldout }
@@ -1602,6 +1593,18 @@ Click to download the lab template. Modify and submit using the instructions.
 “With very few exceptions, there is no shortcut between not knowing something and knowing it. There is a beauty to awkwardness, a wisdom in the wobble.”
 
 ~Maya Stein
+
+<br>
+
+*** { @unit = "", @title = "Checklist", @assignment, @foldout }
+
+## Your Final Week
+
+The following checklist will help you stay organized for your final week.
+
+- [ ] Finalize & Submit Your [Final Code-Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
+- [ ] Finalize & Submit Your [Final Dashboard Project](https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html)
+- [ ] (Recommended) Submit a Course Evaluation
 
 <br>
 
