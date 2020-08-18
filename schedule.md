@@ -356,7 +356,7 @@ b1 = cov(x,y) / var(x)
 <br>
 <br>
 
-*** { @unit = "", @title = "Your Course Prep Checklist", @assignment, @foldout }
+*** { @unit = "", @title = "Checklist", @assignment, @foldout }
 
 ## Getting Started
 
@@ -365,7 +365,8 @@ The following checklist will help you organize and prepare for success in this c
 - [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-spr-2020/) 
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
-- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (see below)
+- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (See Below)
+- [ ] (Recommended) Videos
 
 <br>
 
@@ -657,7 +658,7 @@ Visit the [video](https://youtu.be/6TF6UuM0IbI) to navigate using timestamps in 
 <br>
 <br>
 
-*** { @unit = "", @title = "Week 1 Checklist", @assignment, @foldout }
+*** { @unit = "", @title = "Checklist", @assignment, @foldout }
 
 ## Your First Week
 
@@ -665,7 +666,7 @@ The following checklist will help you stay organized in your first week.
 
 - [ ] Complete Assigned Readings: [Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html), [Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html), & [Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)
 - [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
-- [ ] Complete & Submit Lab 01 (See Below)
+- [ ] Complete & Submit [Lab 01](https://ds4ps.org/cpp-526-sum-2020/labs/lab-01-instructions.html) (See Below)
 - [ ] (Recommended) Videos
 
 <br>
@@ -842,7 +843,7 @@ Visit the [video](https://youtu.be/l9WhjLMMWH4) to navigate using timestamps in 
 <br>
 <br>
 
-*** { @unit = "", @title = "Week 2 Checklist", @assignment, @foldout }
+*** { @unit = "", @title = "Checklist", @assignment, @foldout }
 
 ## Your Second Week
 
@@ -850,7 +851,8 @@ The following checklist will help you stay organized in your second week.
 
 - [ ] Complete Assigned Readings: [Group Construction with Logical Statements](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html)
 - [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
-- [ ] Complete & Submit Lab 02 (See Below)
+- [ ] Complete & Submit [Lab 02](https://ds4ps.org/cpp-526-sum-2020/labs/lab-02-instructions-v2.html) (See Below)
+- [ ] (Recommended) Explore Packages for [Code Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
 - [ ] (Recommended) Videos
 
 <br>
@@ -1005,6 +1007,20 @@ Lab-03 introduces the primary plotting functions used to build graphics.
 The lab requires you to re-create a graph that was featured in the New York Times:
 
 ![](assets/img/pitcher-dominance.png)
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Checklist", @assignment, @foldout }
+
+## Your Third Week
+
+The following checklist will help you stay organized in your third week.
+
+- [ ] Complete Assigned Readings: [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html) & [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+- [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
+- [ ] Complete & Submit [Lab 03](https://ds4ps.org/cpp-526-sum-2020/labs/lab-03-instructions.html) (See Below)
+- [ ] (Recommended) Read [Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
 
 <br>
 <br>
