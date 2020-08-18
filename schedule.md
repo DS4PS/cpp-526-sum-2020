@@ -669,7 +669,7 @@ The following checklist will help you stay organized in your first week.
 
 <br>
 
-*** { @unit = "Due May 22nd", @title = "Discussion Topic: The Promise of Big and Open Data", @assignment, @foldout  }
+*** { @unit = "Due May 22nd", @title = "Discussion Topic", @assignment, @foldout  }
 
 ## The Promise of Big, Open Data
 
@@ -852,7 +852,7 @@ The following checklist will help you stay organized in your second week.
 
 <br>
 
-*** { @unit = "FRI May 29", @title = "Discussion Topic: A Tour of R Packages", @assignment, @foldout  }
+*** { @unit = "FRI May 29", @title = "Discussion Topic", @assignment, @foldout  }
 
 <br>
 
@@ -1035,7 +1035,7 @@ The following checklist will help you stay organized in your third week.
 
 <br>
 
-*** { @unit = "FRI Jun 5th", @title = "Discussion Topic: Data Viz Packages", @assignment, @foldout  }
+*** { @unit = "FRI Jun 5th", @title = "Discussion Topic", @assignment, @foldout  }
 
 <br>
 <br>
@@ -1373,7 +1373,7 @@ The following checklist will help you stay organized in your fifth week.
 
 <br>
 
-*** { @unit = "FRI June 19th", @title = "Discussion Topic Data APIs", @assignment, @foldout  }
+*** { @unit = "FRI June 19th", @title = "Discussion Topic", @assignment, @foldout  }
 
 <br>
 <br>
