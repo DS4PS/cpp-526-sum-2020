@@ -286,7 +286,7 @@ As students are all aware, ASU Online courses are typically offered on a seven a
 
 **Note:** The course instructor may from time to time adjust assigned readings or adjust the due dates for assignment. The basic course content approach and learning objectives will not change, but slight modifications are possible if circumstances warrant an adjustment.
 
-Visit the [**Course Schedule**](cpp-526-sum-2020/schedule/).
+Visit the [**Course Schedule**](https://ds4ps.org/cpp-526-sum-2020/schedule/).
 
 <br>
 <br>
