@@ -58,7 +58,7 @@ Visit the [video](https://youtu.be/xQA9OSjGQok) to navigate using timestamps in 
 
 <br>
 
-*** { @unit = "", @title = "The R Toolkit", @lecture, @foldout }
+*** { @unit = "", @title = "The R Toolkit", @reading, @lecture, @foldout }
 
 ## Introducing R 
 
@@ -298,7 +298,7 @@ Visit the [video](https://youtu.be/ALwHaNzQub0) to navigate using timestamps in 
 <br>
 <br>
 
-*** { @unit = "", @title = "Getting Help", @lecture, @foldout  }
+*** { @unit = "", @title = "Getting Help", @reading, @foldout  }
 
 ## Understand Your Resources
 
