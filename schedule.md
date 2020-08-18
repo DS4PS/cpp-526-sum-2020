@@ -114,7 +114,7 @@ You will get plenty of practice with these tools and submit your labs as knitted
 <br>
 <br>
 
-*** { @unit = "", @title = "RStudio: A Guided Tour", @lecture, @foldout }
+*** { @unit = "", @title = "Videos", @lecture, @foldout }
 
 <br>
 
@@ -163,10 +163,6 @@ Visit the [video](https://youtu.be/xgPwDlAtuNI) to navigate using timestamps in 
 * (**17:01**) Conclusions
 
 <br>
-<br>
-
-*** { @unit = "", @title = "Markdown Basics", @lecture, @foldout }
-
 <br>
 
 ## Easy Formatting with Markdown
@@ -219,10 +215,6 @@ Visit the [video](https://youtu.be/oXgFrUq6btQ) to navigate using timestamps in 
 <br>
 <br>
 
-*** { @unit = "", @title = "GitHub Issues", @lecture, @foldout }
-
-<br>
-
 ## Understanding GitHub Issues
 
 GitHub Issues allow you to quickly troubleshoot issues with instructors and peers by sharing code, reproducing errors, and thoroughly explaining complications as you learn R.
@@ -263,10 +255,6 @@ Visit the [video](https://youtu.be/cHBFusiPyLw) to navigate using timestamps in 
 * (**07:15**) Conclusion
 
 <br>
-<br>
-
-*** { @unit = "", @title = "R Markdown", @lecture, @foldout }
-
 <br>
 
 ## What Is R Markdown?
