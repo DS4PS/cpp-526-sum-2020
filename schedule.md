@@ -1011,6 +1011,25 @@ The lab requires you to re-create a graph that was featured in the New York Time
 <br>
 <br>
 
+*** { @unit = "", @title = "Readings", @reading, @foldout }
+
+<br>
+<br>
+
+## Assigned Reading
+
+Required:
+
+[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
+[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+
+Suggested:
+
+[Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
+
+<br>
+<br>
+
 *** { @unit = "", @title = "Checklist", @assignment, @foldout }
 
 ## Your Third Week
@@ -1120,6 +1139,22 @@ But we will now add an input widget that allows users to select one team that wi
 <br>
 <br>
 
+*** { @unit = "", @title = "Readings", @reading, @foldout }
+
+<br>
+<br>
+
+## Assigned Reading
+
+Required:
+
+* [Notes on R Shiny](https://github.com/DS4PS/cpp-526-spr-2020/raw/master/lectures/shiny-widgets.pdf)
+* [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)
+* [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
+
+<br>
+<br>
+
 *** { @unit = "", @title = "Videos", @lecture, @foldout }
 
 <br>
@@ -1169,11 +1204,25 @@ Visit the [video](https://youtu.be/UF7T7kAtetQ) to navigate using timestamps in 
 *** { @unit = "", @title = "Demo of Shiny Widgets", @reading, @foldout }
 
 <br>
-[Download Shiny Widgets Demo](https://cdn.rawgit.com/DS4PS/Data-Science-Class/53c986f1/TEMPLATES/ShinyWidgetsDemo.Rmd
-)
+[Download Shiny Widgets Demo](https://cdn.rawgit.com/DS4PS/Data-Science-Class/53c986f1/TEMPLATES/ShinyWidgetsDemo.Rmd)
 
 For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html) and the [R Shiny Gallery](https://shiny.rstudio.com/gallery/).  
 
+<br>
+
+*** { @unit = "", @title = "Checklist", @assignment, @foldout }
+
+## Your Fourth Week
+
+The following checklist will help you stay organized in your fourth week.
+
+- [ ] Complete Assigned Readings: [Notes on R Shiny](https://github.com/DS4PS/cpp-526-spr-2020/raw/master/lectures/shiny-widgets.pdf), [Dynamic Graph Example](https://shiny.rstudio.com/gallery/kmeans-example.html), [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
+- [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
+- [ ] Complete & Submit [Lab 04](https://ds4ps.org/cpp-526-sum-2020/labs/lab-04-instructions.html) (See Below)
+- [ ] (Recommended) Videos
+- [ ] (Recommended) Familiarize Yourself with the [Final Dashboard Project](https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html)
+
+<br>
 <br>
 
 *** { @unit = "FRI June 12th", @title = "Discussion Topic", @assignment, @foldout  }
@@ -1264,6 +1313,22 @@ Lab 05 will use data on traffic accidents in the City of Tempe:
 <br>
 <br>
 
+*** { @unit = "", @title = "Readings", @reading, @foldout }
+
+<br>
+<br>
+
+## Assigned Reading
+
+Required:
+
+* [Data Verbs in dplyr](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html)  
+* [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html)  
+* [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html)  
+
+<br>
+<br>
+
 *** { @unit = "", @title = "Videos", @lecture, @foldout }
 
 <br>
@@ -1304,6 +1369,21 @@ Visit the [video](https://youtu.be/M2QuERvxwm0) to navigate using timestamps in 
 * (**39:04**) `group_by()` & `summarize()` Operations
 * (**41:36**) Helper Verbs in 'dplyr', e.g. `desc()`, `pull()`
 * (**44:25**) Putting It All Together
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Checklist", @assignment, @foldout }
+
+## Your Fifth Week
+
+The following checklist will help you stay organized in your fifth week.
+
+- [ ] Complete Assigned Readings: [Data Verbs in dplyr](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html), [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html), [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html) 
+- [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
+- [ ] Complete & Submit [Lab 05](https://ds4ps.org/cpp-526-sum-2020/labs/lab-05-instructions.html) (See Below)
+- [ ] (Recommended) Videos
+- [ ] (Recommended) Begin Planning [Final Code-Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
 
 <br>
 <br>
@@ -1366,7 +1446,7 @@ Click to download the lab template. Modify and submit using the instructions.
 <br>
 <br>
 
-** Week 5 - Data IO and Joins
+** Week 6 - Data IO and Joins
 
 *** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
@@ -1408,6 +1488,32 @@ We will join the Salaries table to player bios (Master table) and performance da
 <br>
 
 ![](assets/img/moneyball.jpg)
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Readings", @reading, @foldout }
+
+## Assigned Reading
+
+Read the notes on data joins: 
+
+* [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Checklist", @assignment, @foldout }
+
+## Your Sixth Week
+
+The following checklist will help you stay organized in your sixth week.
+
+- [ ] Complete Assigned Readings: [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html) 
+- [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
+- [ ] Complete & Submit [Lab 06](https://ds4ps.org/cpp-526-sum-2020/labs/lab-06-instructions.html) (See Below)
+- [ ] (Recommended) Begin [Final Code-Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
+- [ ] (Recommended) Begin [Final Dashboard Project](https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html)
 
 <br>
 <br>
@@ -1505,7 +1611,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 <br>
 
-*** { @unit = "FRI June 26th", @title = "Code-Through Assignment", @assignment, @foldout  }
+*** { @unit = "FRI June 26th", @title = "Code-Through Project", @assignment, @foldout  }
 
 <br>
 
@@ -1534,7 +1640,7 @@ Download the recommended template for your code-through with the below link.
 <br>
 <br>
 
-*** { @unit = "FRI June 26th", @title = "Final Project", @assignment, @foldout  }
+*** { @unit = "FRI June 26th", @title = "Final Dashboard Project", @assignment, @foldout  }
 
 <br>
 
