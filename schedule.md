@@ -388,7 +388,7 @@ We will be using a discussion board called **YellowDig** for this course. Introd
 
 ** Week 1 - Functions and Vectors 
 
-*** { @unit = "", @title = "Unit Overview", @foldout  }
+*** { @unit = "", @title = "Unit Overview", @reading, @foldout  }
 
 ## Description
 
@@ -718,7 +718,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ** Week 2 - Operators and Descriptives
 
-*** { @unit = "", @title = "Unit Overview", @foldout }
+*** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
 <br>
 
@@ -749,7 +749,7 @@ Lab-02 covers the following topics:
 <br>
 <br>
 
-*** { @unit = "", @title = "Week 2 Reflection Point", @reading, @foldout }
+*** { @unit = "", @title = "Reflection", @reading, @foldout }
 
 # Beginning
 
@@ -901,7 +901,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ** Week 3 - Visualization
 
-*** { @unit = "", @title = "Week 3 Reflection Point", @foldout  }
+*** { @unit = "", @title = "Reflection", @reading, @foldout  }
 
 <br>
 
@@ -918,7 +918,7 @@ Click to download the lab template. Modify and submit using the instructions.
 <br>
 <br>
 
-*** { @unit = "", @title = "Unit Overview", @foldout }
+*** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
 <br>
 
@@ -1032,7 +1032,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ** Week 4 - Dynamic Visualization 
 
-*** { @unit = "", @title = "Unit Overview", @foldout }
+*** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
 <br>
 
@@ -1122,7 +1122,7 @@ Visit the [video](https://youtu.be/UF7T7kAtetQ) to navigate using timestamps in 
 <br>
 <br>
 
-*** { @unit = "", @title = "Demo of Shiny Widgets", @foldout }
+*** { @unit = "", @title = "Demo of Shiny Widgets", @reading, @foldout }
 
 <br>
 [Download Shiny Widgets Demo](https://cdn.rawgit.com/DS4PS/Data-Science-Class/53c986f1/TEMPLATES/ShinyWidgetsDemo.Rmd
@@ -1178,7 +1178,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ** Week 5 - Data Wrangling 
 
-*** { @unit = "", @title = "Unit Overview", @foldout }
+*** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
 <br>
 
@@ -1324,7 +1324,7 @@ Click to download the lab template. Modify and submit using the instructions.
 
 ** Week 5 - Data IO and Joins
 
-*** { @unit = "", @title = "Unit Overview", @foldout }
+*** { @unit = "", @title = "Unit Overview", @reading, @foldout }
 
 <br>
 
@@ -1451,7 +1451,7 @@ Click to download the lab template. Modify and submit using the instructions.
 ** FINAL PROJECTS
 
 
-*** { @unit = "", @title = "Reflection", @foldout }
+*** { @unit = "", @title = "Reflection", @reading, @foldout }
 
 <br>
 
