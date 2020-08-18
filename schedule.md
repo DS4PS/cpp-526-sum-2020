@@ -368,6 +368,8 @@ The following checklist will help you organize and prepare for success in this c
 - [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (See Below)
 - [ ] (Recommended) Videos
 
+<br>
+
 *** { @unit = "Due May 20", @title = "Introduce Yourself", @assignment, @foldout }
 
 <br>
@@ -667,6 +669,8 @@ The following checklist will help you stay organized in your first week.
 - [ ] Complete & Submit [Lab 01](https://ds4ps.org/cpp-526-sum-2020/labs/lab-01-instructions.html) (See Below)
 - [ ] (Recommended) Videos
 
+<br>
+
 *** { @unit = "Due May 22nd", @title = "Discussion Topic: The Promise of Big and Open Data", @assignment, @foldout  }
 
 ## The Promise of Big, Open Data
@@ -849,6 +853,8 @@ The following checklist will help you stay organized in your second week.
 - [ ] Complete & Submit [Lab 02](https://ds4ps.org/cpp-526-sum-2020/labs/lab-02-instructions-v2.html) (See Below)
 - [ ] (Recommended) Explore Packages for [Code Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
 - [ ] (Recommended) Videos
+
+<br>
 
 *** { @unit = "FRI May 29", @title = "Discussion Topic: A Tour of R Packages", @assignment, @foldout  }
 
@@ -1033,6 +1039,8 @@ The following checklist will help you stay organized in your third week.
 - [ ] Complete & Submit [Lab 03](https://ds4ps.org/cpp-526-sum-2020/labs/lab-03-instructions.html) (See Below)
 - [ ] (Recommended) Read [Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
 
+<br>
+
 *** { @unit = "FRI Jun 5th", @title = "Discussion Topic: Data Viz Packages", @assignment, @foldout  }
 
 <br>
@@ -1211,6 +1219,8 @@ The following checklist will help you stay organized in your fourth week.
 - [ ] (Recommended) Videos
 - [ ] (Recommended) Familiarize Yourself with the [Final Dashboard Project](https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html)
 
+<br>
+
 *** { @unit = "FRI June 12th", @title = "Discussion Topic", @assignment, @foldout  }
 
 <br>
@@ -1371,6 +1381,8 @@ The following checklist will help you stay organized in your fifth week.
 - [ ] (Recommended) Videos
 - [ ] (Recommended) Begin Planning [Final Code-Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
 
+<br>
+
 *** { @unit = "FRI June 19th", @title = "Discussion Topic Data APIs", @assignment, @foldout  }
 
 <br>
@@ -1497,6 +1509,8 @@ The following checklist will help you stay organized in your sixth week.
 - [ ] Complete & Submit [Lab 06](https://ds4ps.org/cpp-526-sum-2020/labs/lab-06-instructions.html) (See Below)
 - [ ] (Recommended) Begin [Final Code-Through Project](https://ds4ps.org/cpp-526-spr-2020/labs/code-through-assignment.html)
 - [ ] (Recommended) Begin [Final Dashboard Project](https://ds4ps.org/cpp-526-spr-2020/labs/final-project-instructions.html)
+
+<br>
 
 *** { @unit = "FRI June 19th", @title = "Discussion Topic", @assignment, @foldout  }
 
