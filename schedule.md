@@ -657,6 +657,20 @@ Visit the [video](https://youtu.be/6TF6UuM0IbI) to navigate using timestamps in 
 <br>
 <br>
 
+*** { @unit = "", @title = "Week 1 Checklist", @assignment, @foldout }
+
+## Your First Week
+
+The following checklist will help you stay organized in your first week.
+
+- [ ] Complete Assigned Readings: [Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html), [Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html), & [Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)
+- [ ] Post & Exchange on Discussion Topic, Maximum 20 Points (See Below)
+- [ ] Complete & Submit Lab 01 (See Below)
+- [ ] (Recommended) Videos
+
+<br>
+<br>
+
 *** { @unit = "Due May 22nd", @title = "Discussion Topic: The Promise of Big and Open Data", @assignment, @foldout  }
 
 ## The Promise of Big, Open Data
@@ -824,6 +838,20 @@ Visit the [video](https://youtu.be/l9WhjLMMWH4) to navigate using timestamps in 
 * (**25:57**) Notable Nuances of Logical Vectors
 * (**27:00**) Finding & Replacing Values
 * (**34:16**) Conclusions
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Week 2 Checklist", @assignment, @foldout }
+
+## Your Second Week
+
+The following checklist will help you stay organized in your second week.
+
+- [ ] Complete Assigned Readings: [Group Construction with Logical Statements](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html)
+- [ ] Post & Exchange on Discussion Topic, 20 Points Max (See Below)
+- [ ] Complete & Submit Lab 02 (See Below)
+- [ ] (Recommended) Videos
 
 <br>
 <br>
