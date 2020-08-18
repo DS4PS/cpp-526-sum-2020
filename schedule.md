@@ -1307,7 +1307,7 @@ You can find APIs through a Google search, or browse datasets on the [DS4PS Open
 
 This lab offers practice analyzing traffic accident patterns using **dplyr** data wrangling functions. 
 
-*Note that these data and techniques will be used for your final project - building an interactive dashboard.*
+**Note:** *These data and techniques will be used for your final project in building an interactive dashboard.*
 
 <a class="uk-button uk-button-default" onclick="window.open('https://ds4ps.org/cpp-526-sum-2020/labs/lab-05-instructions.html')">LAB-05 Instructions</a>
 
