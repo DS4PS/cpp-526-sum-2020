@@ -469,7 +469,39 @@ Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels with singl
 <br>
 <br>
 
-*** { @unit = "", @title = "Video Overviews", @lecture, @foldout }
+*** { @unit = "", @title = "Readings", @reading, @foldout  }
+
+<br>
+<br>
+
+## Assigned Reading
+
+Required:
+
+[Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html)
+
+[Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html)
+
+[Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)
+
+Background Chapters:
+
+**You will start simple and get practice with these tools on labs. Skim these, then return for reference as you get stuck or want to deepen your knowledge.**
+
+[Learning to Learn R](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html)
+
+[Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
+
+[R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
+
+[Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)
+
+[Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Videos", @lecture, @foldout }
 
 <br>
 
@@ -482,6 +514,8 @@ Play the video below for an overview of objects and assignment in R.
 * Creating different objects with assignments
 * Using objects algebraically and arithmetically
 * Common conventions and limitations in naming objects
+
+Visit the [chapter](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html).
 
 <br>
 
@@ -518,6 +552,8 @@ Play the video below for an overview of functions in R.
 * How to explore function documentation
 * What are function arguments and how are they used?
 
+Visit the [chapter](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html).
+
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QoMX6ZauH5k?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -553,6 +589,8 @@ Play the video below for an overview of vectors.
 * What are common functions used for vectors?
 * What are factors and why are they important in R?
 * How do you change vector classes and what are some important nuances?
+
+Visit the [chapter](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html).
 
 <br>
 
@@ -597,6 +635,8 @@ Play the video below for an overview of basic exploratory functions for a vector
 * How to extract and store variables as objects
 * Exploratory and summarizing functions for vectors
 
+Visit the [chapter](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html).
+
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6TF6UuM0IbI?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -627,38 +667,6 @@ Visit the [video](https://youtu.be/6TF6UuM0IbI) to navigate using timestamps in 
 * (**16:49**) Tallying Unique Values & Occurrences with Functions `unique()` & `table()`
 * (**18:23**) Creating Crosstabs with Two Variables in `table()`
 * (**19:56**) (**Optional**) Count & Proportion of `TRUE` with Function `mean()`
-
-<br>
-<br>
-
-*** { @unit = "", @title = "Readings", @reading, @foldout  }
-
-<br>
-<br>
-
-## Assigned Reading
-
-Required:
-
-[Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html)
-
-[Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html)
-
-[Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)
-
-Background Chapters:
-
-**You will start simple and get practice with these tools on labs. Skim these, then return for reference as you get stuck or want to deepen your knowledge.**
-
-[Learning to Learn R](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html)
-
-[Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
-
-[R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
-
-[Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)
-
-[Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
 
 <br>
 <br>
@@ -755,43 +763,6 @@ Lab-02 covers the following topics:
 <br>
 <br>
 
-*** { @unit = "", @title = "Video Overviews", @lecture, @foldout }
-
-<br>
-
-## Logical Vectors
-
-Play the video below for an overview of logical vectors, i.e. a series of `TRUE` and `FALSE` values.
-
-* What are logical values?
-* Creating logical vectors
-* Using relational and logical operators
-* Subsetting data with conditional statements
-
-<br>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/l9WhjLMMWH4?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br>
-
-Visit the [video](https://youtu.be/l9WhjLMMWH4) to navigate using timestamps in the description or bookmarks in the progress bar.
-
-* (**00:00**) Introduction
-* (**01:15**) What Is a Logical Vector?
-* (**03:30**) Logicals "Under the Hood" & Arithmetic
-* (**05:45**) Creating Logical Vectors with Conditions
-* (**08:05**) Using Different Relational Operators
-* (**12:06**) Multiple Conditions with Logical Operators
-* (**18:07**) "Selector Vectors" & Subsetting Rows
-* (**19:08**) Subsetting by Row & Column Positions
-* (**23:13**) Assigning Position Indices to Objects
-* (**25:57**) Notable Nuances of Logical Vectors
-* (**27:00**) Finding & Replacing Values
-* (**34:16**) Conclusions
-
-<br>
-<br>
-
 *** { @unit = "", @title = "Week 2 Reflection Point", @reading, @foldout }
 
 # Beginning
@@ -830,6 +801,43 @@ Visit the [video](https://youtu.be/l9WhjLMMWH4) to navigate using timestamps in 
 Required:
 
 [Group Construction with Logical Statements](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html)
+
+<br>
+<br>
+
+*** { @unit = "", @title = "Videos", @lecture, @foldout }
+
+<br>
+
+## Logical Vectors
+
+Play the video below for an overview of logical vectors, i.e. a series of `TRUE` and `FALSE` values.
+
+* What are logical values?
+* Creating logical vectors
+* Using relational and logical operators
+* Subsetting data with conditional statements
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l9WhjLMMWH4?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br>
+
+Visit the [video](https://youtu.be/l9WhjLMMWH4) to navigate using timestamps in the description or bookmarks in the progress bar.
+
+* (**00:00**) Introduction
+* (**01:15**) What Is a Logical Vector?
+* (**03:30**) Logicals "Under the Hood" & Arithmetic
+* (**05:45**) Creating Logical Vectors with Conditions
+* (**08:05**) Using Different Relational Operators
+* (**12:06**) Multiple Conditions with Logical Operators
+* (**18:07**) "Selector Vectors" & Subsetting Rows
+* (**19:08**) Subsetting by Row & Column Positions
+* (**23:13**) Assigning Position Indices to Objects
+* (**25:57**) Notable Nuances of Logical Vectors
+* (**27:00**) Finding & Replacing Values
+* (**34:16**) Conclusions
 
 <br>
 <br>
@@ -1082,7 +1090,7 @@ But we will now add an input widget that allows users to select one team that wi
 <br>
 <br>
 
-*** { @unit = "", @title = "Video Overviews", @lecture, @foldout }
+*** { @unit = "", @title = "Videos", @lecture, @foldout }
 
 <br>
 
@@ -1226,7 +1234,7 @@ Lab 05 will use data on traffic accidents in the City of Tempe:
 <br>
 <br>
 
-*** { @unit = "", @title = "Video Overviews", @lecture, @foldout }
+*** { @unit = "", @title = "Videos", @lecture, @foldout }
 
 <br>
 
