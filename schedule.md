@@ -635,8 +635,6 @@ Play the video below for an overview of basic exploratory functions for a vector
 * How to extract and store variables as objects
 * Exploratory and summarizing functions for vectors
 
-Visit the [chapter](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html).
-
 <br>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6TF6UuM0IbI?rel=0&modestbranding=1&autohide=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
