@@ -393,40 +393,39 @@ We will be using a discussion board called **YellowDig** for this course. Introd
 
 ## Description
 
-This section introduces functions and vectors, two important building blocks of data programming. 
+This unit introduces the most fundamental building blocks of data programming in R. 
+
+* **Vectors** are one or more values of the same type - each column in a table is a vector
+* **Functions** are defined operations that transform individual or summarize multiple values
+* **Objects** are named representations of values, datasets, functions, and other information
+* **Assignment** is the act of naming and creating an object
 
 ## Learning Objectives
 
-Once you have completed this section you will be able to:
+Once you have completed this unit, you will be able to:
 
-* Create new objects in R 
-* Use functions 
-* Summarize vectors by type
-  - numeric vectors 
-  - character vectors 
-  - logical vectors 
+1. Create new objects with assignment
+2. Understand the basic anatomy and application of functions
+3. Summarize vectors of various classes e.g. numeric, character, and logical
 
-## Lab 
+## Lab Assignment
 
-Lab-01 covers the following topics:
+Lab-01 is your first opportunity to combine human language and R code in R Markdown. You will practice using tax parcel data from Syracuse, NY (USA), including:
 
-* R Markdown (template provided)
-* Vectors
-  - Numeric 
-  - Character 
-  - Factor 
-  - Logical 
+* Summarizing dataset characteristics, e.g. dimensions
+* Use arithmetic functions to summarize and average data
+* Determine the number of occurrences of qualitative data
 
 ### Functions
 
 ```r
-names()                 # variable names
-head()                  # preview dataset
-$ operator              # reference a vector inside a dataset
-length()                # vector dimensions
-dim(), nrow(), ncol()   # dataset dimensions
-sum(), summary()        # summarize numeric vectors
-table()                 # summarize factors / character vectors
+names()                 # Variable names
+head()                  # Preview dataset
+$ operator              # Reference a vector inside a dataset
+length()                # Vector dimensions
+dim(), nrow(), ncol()   # Dataset dimensions
+sum(), summary()        # Summarize numeric vectors
+table()                 # Tally factors and character values
 ```
 
 ### Practice Data
