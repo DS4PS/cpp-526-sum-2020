@@ -468,27 +468,19 @@ Syracuse, NY contains over 42,000 tax parcels.  Below depicts parcels with singl
 
 ## Assigned Reading
 
-Required:
+Required reading for this unit includes:
 
-[Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html)
+1. **[Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html)**: Creating objects that represent data and operations
+2. **[Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html)**: Data transforming or summarizing operations in R
+3. **[Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)**: Arrays of values of the same class, e.g. variables
 
-[Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html)
+The following background chapters are recommended for skimming and as a touchstone for future reference:
 
-[Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)
-
-Background Chapters:
-
-**You will start simple and get practice with these tools on labs. Skim these, then return for reference as you get stuck or want to deepen your knowledge.**
-
-[Learning to Learn R](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html)
-
-[Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
-
-[R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
-
-[Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)
-
-[Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+1. **[Learning to Learn R](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html)**: Preparing for lifelong learning in R
+2. **[Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)**: The basics of vanilla R
+3. **[RStudio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)**: Components and features of RStudio
+4. **[Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)**: Creating dynamic reports in R Mrkdown
+5. **[Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)**: Basic Markdown syntax
 
 <br>
 
