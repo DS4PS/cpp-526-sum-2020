@@ -366,6 +366,7 @@ The following checklist will help you organize and prepare for success in this c
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
 - [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (See Below)
+- [ ] (Recommended) Readings
 - [ ] (Recommended) Videos
 
 <br>
@@ -418,15 +419,20 @@ Lab-01 is your first opportunity to combine human language and R code in R Markd
 
 ### Functions
 
-```r
-names()                 # Variable names
-head()                  # Preview dataset
-$ operator              # Reference a vector inside a dataset
-length()                # Vector dimensions
-dim(), nrow(), ncol()   # Dataset dimensions
-sum(), summary()        # Summarize numeric vectors
-table()                 # Tally factors and character values
-```
+This assignment requires some combination of the following functions and operators:
+
+* `names()`: Returns the variable names of a dataset
+* `head()`: Returns the initial values of a dataset; default is 6 rows
+* `$`: Extracts a variable from a dataset using `data$variable` syntax
+* `length()`: Returnes the total number of values in a vector
+* `dim()`: Returns the total rows and columns of a dataset, respectively
+* `nrow()`: Returns the total rows of a dataset
+* `ncol()`: Returns the total columns of a dataset
+* `sum()`: Returns the sum of:
+    - All values in a numeric vector
+    - Total `TRUE` values of a logical vector
+* `summary()`: Returns summary statistics for a dataset or individual vectors
+* `table()`: Returns a tally of the number of occurences of unique values in a vector
 
 ### Practice Data
 
@@ -435,11 +441,10 @@ This assignement uses Downtown Syracuse tax parcel data. View the documentation 
 These data are imported using the following code.
 
 ```r
-
 url <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv"
 dat <- read.csv(url, stringsAsFactors = FALSE)
-head(dat)
 
+head(dat)
 ```
 
 #### Downtown Syracuse
