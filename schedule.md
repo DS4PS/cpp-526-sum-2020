@@ -366,7 +366,7 @@ The following checklist will help you organize and prepare for success in this c
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
 - [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/54986/assignments/1306428) (See Below)
-- [ ] (Recommended) Readings
+- [ ] (Recommended) Skim Readings
 - [ ] (Recommended) Videos
 
 <br>
