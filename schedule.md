@@ -326,13 +326,7 @@ As a general rule of thumb, if you are stuck on the math or code for a problem, 
 
 ![](https://i.imgur.com/FNGjWce.png)
 
-<center>
-
-*We all started somewhere.*
-
-Adapted from [SRGRAFO](https://www.srgrafo.com/).
-  
-</center>
+Adapted from **[SRGRAFO](https://www.srgrafo.com/)**.
 
 <br>
 
