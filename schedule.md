@@ -324,9 +324,9 @@ As a general rule of thumb, if you are stuck on the math or code for a problem, 
 
 <br>
 
-<center>
-
 ![](https://i.imgur.com/FNGjWce.png)
+
+<center>
 
 *We all started somewhere.*
 
