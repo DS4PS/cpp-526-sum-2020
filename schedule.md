@@ -324,6 +324,18 @@ As a general rule of thumb, if you are stuck on the math or code for a problem, 
 
 <br>
 
+<center>
+
+![](https://i.imgur.com/FNGjWce.png)
+
+*We all started somewhere.*
+
+Source: [SRGRAFO](https://www.srgrafo.com/)
+  
+</center>
+
+<br>
+
 ### The Benefits of GitHub Issues
 
 Note that the discussion board is hosted by the GitHub issues feature. It is a great forum because:
