@@ -330,7 +330,7 @@ As a general rule of thumb, if you are stuck on the math or code for a problem, 
 
 *We all started somewhere.*
 
-Source: [SRGRAFO](https://www.srgrafo.com/)
+Adapted from [SRGRAFO](https://www.srgrafo.com/).
   
 </center>
 
